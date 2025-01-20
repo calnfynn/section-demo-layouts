@@ -1,0 +1,72 @@
+.image-grid {
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.fullimage {
+  max-height: 100vh;
+  min-height: 0;
+  max-width: 100vw;
+  min-width: 0;
+  object-fit: contain;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.img_square {
+  height: 240px;
+  width: 240px;
+  overflow: hidden;
+  margin: 0.5em;
+  object-fit: cover;
+}
+
+.img_popover {
+  max-height: 95vh;
+  min-height: 0;
+  max-width: 95vw;
+  min-width: 0;
+  object-fit: contain;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  z-index: 10;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 100px;  /* Distance from the top */
+  right: 10px;  /* Distance from the right */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; 
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+:popover-open {
+  max-height: 95vh;
+  min-height: 0;
+  max-width: 95vw;
+  min-width: 0;
+  object-fit: contain;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+
+::backdrop {
+/*  backdrop-filter: blur(5px); */
+  pointer-events: none;
+}
