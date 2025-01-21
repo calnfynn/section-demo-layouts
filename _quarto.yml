@@ -6,13 +6,13 @@ project:
 # https://quarto.org/docs/reference/projects/books.html
 book:
   title: "Die barocken Ahnenporträts"
-  author: "Simon Worthington"
+  author: "ASKCR"
   date: today
   # this section determines which files will be added to the book as chapters
   chapters:
     - index.qmd
-    - section.ipynb
-    - section-bs.ipynb
+    - section-grid.ipynb
+    
   #repo-url: https://github.com/TIBHannover/section-demo
   #repo-actions: [issue]
   #downloads: [pdf,docx,epub]
@@ -23,8 +23,8 @@ book:
     left:
       - text: "Home"
         href: index.qmd
-      - section.ipynb
-      - section-bs.ipynb
+      - section-grid.ipynb
+      
   sidebar: false
 
 # Quarto allows commenting using either Hypothesis or Utterances

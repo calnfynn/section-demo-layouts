@@ -73,10 +73,6 @@
   display: none;
 }
 
-#quarto-content {
-
-}
-
 ::backdrop {
   backdrop-filter: blur(5px); 
   pointer-events: none;
