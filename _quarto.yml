@@ -25,6 +25,7 @@ book:
         href: index.qmd
       - section.ipynb
       - section-bs.ipynb
+  sidebar: false
 
 # Quarto allows commenting using either Hypothesis or Utterances
 # https://quarto.org/docs/reference/projects/books.html#comments
@@ -45,7 +46,7 @@ format:
     grid:
       sidebar-width: 0px
       margin-width: 0px
-      body-width: 1200px
+      body-width: 2000px
   # options for PDF output 
   # https://quarto.org/docs/reference/formats/pdf.html
   #pdf:
