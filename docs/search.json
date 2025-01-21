@@ -6,8 +6,19 @@
     "section": "",
     "text": "Katalog zur Ausstellung: Der Große Saal (Rittersaal)\nEin Katalog mit Kunstwerken aus der CbDD-Sammlung. Textteil: 6e73f774-4b7f-4e37-937b-e11cc35c5bc8\nGroßer Saal (Rittersaal) [Raum]\n This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License.",
     "crumbs": [
-      "Home",
+      "Masonry",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Katalog zur Ausstellung: Der Große Saal (Rittersaal)</span>"
+    ]
+  },
+  {
+    "objectID": "section-masonry.html",
+    "href": "section-masonry.html",
+    "title": "Gallery Masonry",
+    "section": "",
+    "text": ":::{.column-page}                                                                     :::",
+    "crumbs": [
+      "Masonry",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Gallery Masonry</span>"
     ]
   }
 ]

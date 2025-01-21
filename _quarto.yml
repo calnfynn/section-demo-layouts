@@ -11,6 +11,7 @@ book:
   # this section determines which files will be added to the book as chapters
   chapters:
     - index.qmd
+    - section-masonry.ipynb
     - section-grid.ipynb
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: [issue]
@@ -20,15 +21,16 @@ book:
     background: primary
     search: true
     left:
-      - text: "Home"
-        href: index.qmd
-      - section-grid.ipynb
+      - text: "Masonry"
+        href: section-masonry.ipynb
+      - text: "Grid"
+        href: section-grid.ipynb
   sidebar: false
 
 # Quarto allows commenting using either Hypothesis or Utterances
 # https://quarto.org/docs/reference/projects/books.html#comments
 comments:
-  hypothesis: true
+  hypothesis: false
 
 
 format:
