@@ -12,10 +12,9 @@ book:
   chapters:
     - index.qmd
     - section-grid.ipynb
-    
-  #repo-url: https://github.com/TIBHannover/section-demo
-  #repo-actions: [issue]
-  #downloads: [pdf,docx,epub]
+  repo-url: https://github.com/calnfynn/section-demo-layouts
+  repo-actions: [issue]
+  downloads: [pdf,docx,epub]
   cover-image: images/fmd10005860a.jpg
   navbar:
     background: primary
@@ -24,7 +23,6 @@ book:
       - text: "Home"
         href: index.qmd
       - section-grid.ipynb
-      
   sidebar: false
 
 # Quarto allows commenting using either Hypothesis or Utterances
