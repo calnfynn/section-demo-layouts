@@ -22,9 +22,9 @@ book:
     search: true
     left:
       - text: "Masonry"
-        href: section-masonry.ipynb
+        href: section-masonry.html
       - text: "Grid"
-        href: section-grid.ipynb
+        href: section-grid.html
   sidebar: false
 
 # Quarto allows commenting using either Hypothesis or Utterances
