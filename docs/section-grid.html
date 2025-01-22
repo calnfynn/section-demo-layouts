@@ -172,24 +172,19 @@ ul.task-list li input[type="checkbox"] {
 <script>
   function openPopover(imageUrl) {
     var popover = document.getElementById(imageUrl);
-    var closeButton = document.getElementById('close_button_' + imageUrl);
     var body = document.querySelector('body');
     // Show the popover
     popover.style.display = 'block';
-    closeButton.style.display = 'block';
     // Prevent scrolling of the background
-    body.style.overflow = 'hidden';
+    //body.style.overflow = 'hidden';
+    body.classList.add("stop-scrolling");
   }
 
   function closePopover(imageUrl) {
     var popover = document.getElementById(imageUrl);
-    var closeButton = document.getElementById('close_button_' + imageUrl);
     var body = document.querySelector('body');
-    // Hide the popover and close button
     popover.style.display = 'none';
-    closeButton.style.display = 'none';
-    // Restore scrolling for the background
-    body.style.overflow = 'auto';
+    body.classList.remove("stop-scrolling");
   }
           
 </script>
