@@ -15,7 +15,7 @@ book:
     - section-grid.ipynb
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: [issue]
-  downloads: [pdf,docx,epub]
+  # downloads: [pdf,docx,epub]
   cover-image: images/fmd10005860a.jpg
   navbar:
     background: primary
