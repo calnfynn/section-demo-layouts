@@ -11,9 +11,9 @@ book:
   # this section determines which files will be added to the book as chapters
   chapters:
     - index.qmd
+    - section-fullimg.ipynb
     - section-masonry.ipynb
     - section-grid.ipynb
-    - section-fullimg.ipynb
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: [issue]
   # downloads: [pdf,docx,epub]
@@ -22,12 +22,12 @@ book:
     background: primary
     search: true
     left:
+      - text: "Full Screen Image"
+        href: section-fullimg.html
       - text: "Masonry"
         href: section-masonry.html
       - text: "Grid"
         href: section-grid.html
-      - text: "Full Screen Image"
-        href: section-fullimg.html
   sidebar: false
 
 # Quarto allows commenting using either Hypothesis or Utterances

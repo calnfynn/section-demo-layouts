@@ -80,11 +80,14 @@
   display: none;
 }
 
-::backdrop {
-
-  pointer-events: none;
+.page-columns .column-page {
+  z-index: 8;
 }
 
-.quarto-header {
+#quarto-header {
   z-index: 9;
+}
+.navbar,
+.navbar-expand-lg {
+  height: 1px;
 }
