@@ -1,4 +1,21 @@
 .img_full {
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
+  margin-bottom: 3vh;
+  margin-top: 0;
+  display:inline-block;
+  visibility: visible;
+}
+
+.stop-scrolling {
+  height: 80vh;
+  overflow:hidden;
+}
+
+.stop-scrolling p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
 }
