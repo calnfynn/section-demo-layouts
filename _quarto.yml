@@ -5,7 +5,7 @@ project:
 # Quarto options for books
 # https://quarto.org/docs/reference/projects/books.html
 book:
-  title: "Die barocken Ahnenporträts"
+  title: "Demo V2 Layouts"
   author: "ASKCR"
   date: today
   # this section determines which files will be added to the book as chapters
@@ -13,6 +13,7 @@ book:
     - index.qmd
     - section-masonry.ipynb
     - section-grid.ipynb
+    - section-fullimg.ipynb
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: [issue]
   # downloads: [pdf,docx,epub]
@@ -25,6 +26,8 @@ book:
         href: section-masonry.html
       - text: "Grid"
         href: section-grid.html
+      - text: "Full Screen Image"
+        href: section-fullimg.html
   sidebar: false
 
 # Quarto allows commenting using either Hypothesis or Utterances
