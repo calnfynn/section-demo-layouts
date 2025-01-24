@@ -178,12 +178,12 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="./section-fullimg.css">
 <div class="navig">
-<input type="button" class="btn btn-secondary arrow arrowleft" value="❬">
+<input type="button" class="btn btn-secondary arrow arrowleft" onclick="openPrev()" value="❬">
 <div class="stop-scrolling">
 <img class="img_full" src="http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%2017th%20of%20May%20in%20a%20Small%2C%20Norwegian%20Town%20-%20MM.M.00681%20-%20Munch%20Museum.jpg" alt="Image">
 <script>
           // Store image URLs in a JavaScript array
-          const imgUrls = ["http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%2017th%20of%20May%20in%20a%20Small%2C%20Norwegian%20Town%20-%20MM.M.00681%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%2017th%20of%20May%20in%20a%20Small%2C%20Norwegian%20Town%20%281919%29.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Aase%20and%20Harald%20N%C3%B8rregaard%20-%20NG.M.01794%20-%20National%20Museum%20of%20Art%2C%20Architecture%20and%20Design.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Aasgaardstrand%20-%201974.57%20-%20Wadsworth%20Atheneum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Adam%20and%20Eve%20-%20MM.M.00391%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Adam%20and%20Eve%20-%20MM.M.00816%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20Adam%20and%20Eve%2C%201928%2C%20MM.M.00741.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20Adam%20and%20Eve%2C%201928%2C%20MM.M.00592.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/After%20the%20Bath%20%28Munch%29.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20After%20the%20Fall%2C%201924%E2%80%9325%2C%20MM.M.00293.jpg"];
+          const imgUrls = ["http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%2017th%20of%20May%20in%20a%20Small%2C%20Norwegian%20Town%20-%20MM.M.00681%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%2017th%20of%20May%20in%20a%20Small%2C%20Norwegian%20Town%20%281919%29.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Aase%20and%20Harald%20N%C3%B8rregaard%20-%20NG.M.01794%20-%20National%20Museum%20of%20Art%2C%20Architecture%20and%20Design.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Aasgaardstrand%20-%201974.57%20-%20Wadsworth%20Atheneum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Adam%20and%20Eve%20-%20MM.M.00391%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Adam%20and%20Eve%20-%20MM.M.00816%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20Adam%20and%20Eve%2C%201928%2C%20MM.M.00741.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20Adam%20and%20Eve%2C%201928%2C%20MM.M.00592.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/After%20the%20Bath%20%28Munch%29.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20After%20the%20Fall%2C%201924%E2%80%9325%2C%20MM.M.00293.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Afternoon%20Nap.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Afternoon%20Nap%20-%20MM.M.01055%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Afternoon%20on%20the%20Promenade%20des%20Anglais%20-%20Woll%20220.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Airdale%20Terrier%20-%20MM.M.00313%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Akerselva%20-%20Woll%2022.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Akerselva.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Akerselva%20by%20Nedre%20Foss%20-%20Woll%2066.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Akerselva%20by%20Sl%C3%A5motgangen%20-%20MEp0064p1.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/MunchAlbertKollmann1906.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch-Kolman-Drevsen.tif", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Alma%20Mater%20-%20MM.M.00965%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Alma%20Mater%20-%20MM.M.00773%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Alma%20Mater%20-%20MM.M.00660%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Alma%20Mater%20av%20Edvard%20Munch.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Alma%20Mater%20-%20MM.M.00659%20-%20Munch%20Museum.jpg"];
           let currentIndex = 0;
 
           function openNext() {
@@ -191,18 +191,16 @@ ul.task-list li input[type="checkbox"] {
               const image = document.getElementsByClassName("img_full")[0];
               image.src = imgUrls[currentIndex]; // Update image source
           }          
-          
+                    
           function openPrev() {
-              currentIndex = (currentIndex - 1) % imgUrls.length; // Increment index and loop back to 0
-              const image = document.getElementsByClassName("img_full")[0];
-              image.src = imgUrls[currentIndex]; // Update image source
+            currentIndex = (currentIndex - 1 + imgUrls.length) % imgUrls.length; // Ensure index wraps around correctly
+            const image = document.getElementsByClassName("img_full")[0];
+            image.src = imgUrls[currentIndex]; // Update image source
           }
+
       </script>
 </div>
 <p><input type="button" class="btn btn-secondary arrow arrowright" onclick="openNext()" value="❭"></p>
-</div>
-<div style="border:1px black solid; margin:1em;">
-Learned to row a boat away with just one finger<br> Cast but prayers into the bow<br> I hope I sink her<br> Watch me fall asleep in a bag of rope<br> If the storm comes back, cut my throat<br> Calm the storm with all I must<br> I must a-whimper<br> <br> Cause I been holding out this hand<br> <i>I been holding out this hand</i><br> Old sock money bank<br> I spent all that I had<br> Now we go round and around and around<br> Oh, we go around and around and around<br> <br> I cut the storm with just a stick to watch it splinter<br> Now I’m begging ??? to make a home for winter<br> Drew my children in the snow <br> And spilled my blood to watch them grow<br> Cast me off this boat<br> It’s me who sinks her<br> <br> Cause I been holding out this hand<br> <i>I been holding out this hand</i><br> Old sock money bank<br> I spent all that I had<br> Now we go round and around and around<br> Oh, we go around and around and around<br> Oh, we go around and around and around<br> Oh, we go around and around and around<br>
 </div>
 <hr>
 

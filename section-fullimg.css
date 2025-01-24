@@ -1,5 +1,7 @@
 .img_full {
   height: 90vh;
+  max-width: 70vw;
+  object-fit: contain;
   overflow: hidden;
   margin-bottom: 3vh;
   margin-top: 0;
