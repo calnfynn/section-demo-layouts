@@ -4,11 +4,6 @@
   margin: 0.2em;
   cursor: pointer;
 }
-/*
-.img_small:nth-child(3n+1) { order: 1; }
-.img_small:nth-child(3n+2) { order: 2; }
-.img_small:nth-child(3n)   { order: 3; }
-*/
 
 .img_popover {
   height: 100vh;
@@ -28,47 +23,6 @@
   display: block;
   clear: both;
 }
-
-
-/*https://tobiasahlin.com/blog/masonry-with-css/*/
-
-/*
-.image-grid > p {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-between;
-  height: 600px; 
-}
-  
-
-.img_small::before {
-  counter-increment: items;
-  content: counter(items);
-}
-
-.image-grid > p::before,
-.image-grid > p::after {
-  content: "";
-  flex-basis: 100%;
-  width: 0;
-  order: 2;
-}
-
-.break {
-  flex-basis: 100%;
-  width: 0;
-  margin: 0;
-}
-
-.column-page > p {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-flow: column;
-  flex-wrap: wrap;
-}
-  */
 
 .quarto-sidebar-toggle-title {
   display: none;
@@ -95,8 +49,3 @@
   height: 100%; 
   overflow: hidden; 
 } 
-
-::backdrop {
-
-  pointer-events: none;
-}
