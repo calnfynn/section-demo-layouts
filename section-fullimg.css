@@ -1,5 +1,5 @@
 .img_full {
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   margin-bottom: 3vh;
   margin-top: 0;
@@ -7,8 +7,20 @@
   visibility: visible;
 }
 
+.navig {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+.arrow {
+  font-size: 7em;
+  align-self:center;
+  color:grey;
+}
+
 .stop-scrolling {
-  height: 80vh;
+  height: 90vh;
   overflow:hidden;
 }
 
