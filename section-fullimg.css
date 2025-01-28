@@ -15,6 +15,10 @@
   justify-content: space-between;
 }
 
+.fixed-top {
+  position: absolute;
+} 
+
 .arrow {
   font-size: 7em;
   align-self:center;
@@ -34,4 +38,14 @@
   align-items: center;
   justify-content: center;
   visibility: hidden;
+}
+
+thead, tbody, tfoot, tr, td, th, .table th, .table td {
+  padding:0.25em;
+}
+
+.table {
+  width:70%;
+  margin-right: 15%;
+  margin-left: 15%;
 }
