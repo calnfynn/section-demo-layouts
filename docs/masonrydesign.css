@@ -24,16 +24,33 @@
 }
 
 .info-wd {
-  height:5vw;
+  height:6vh;
   position:fixed;
   align-items:baseline;
   z-index:100;
-  bottom: 0px;
+  bottom: 3vh;
+  left:7vw;
+  right:7vw;
+  margin-top:1vh;
   background-color: #fff;
   flex-direction: row;
-  width: 100vw;
-  justify-content: center;
+  width: 86vw;
+  justify-content: space-between;
+  opacity: 90%;
+}
 
+.info-wd > a {
+  flex-grow: 1;
+}
+
+a > .btn-light {
+  width: 100%;
+  text-decoration: underline;
+}
+
+.btn-secondary {
+  cursor:default !important;
+  flex-grow: 1;
 }
 
 .img_grid:after {
