@@ -178,54 +178,44 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="./section-fullimg.css">
 <div class="navig">
-<input type="button" class="btn btn-secondary arrow arrowleft" onclick="openPrev()" value="❬"> <img class="img_full" src="http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20at%20the%20helm.jpg" alt="Image"> <input type="button" class="btn btn-secondary arrow arrowright" onclick="openNext()" value="❭">
+<input type="button" class="btn btn-secondary arrow arrowleft" onclick="openPrev()" value="❬"> <img id="img_full" src="" alt="Painting by Edvard Munch"> <input type="button" class="btn btn-secondary arrow arrowright" onclick="openNext()" value="❭">
 <script>
-          // Store image URLs in a JavaScript array
-          const imgUrls = ["http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20at%20the%20helm.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20in%20the%20Sickroom%20-%20MM.M.00214%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%2C%20D%C3%B8dskamp.JPG", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Dance%20by%20the%20Sea%20-%20MM.M.00180%20-%20Munch%20Museum%20%28cropped%29.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elm%20Forest%20in%20Spring%20-%20MM.M.00799%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20Elm%20Forest%20in%20Autumn%2C%201919%E2%80%9320%2C%20MM.M.00302.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Dance%20on%20the%20Beach%20-%20MM.M.01031%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%2C%20Tanz%20am%20Meer%20%281904%2C%20Linde%20Frieze%29.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/%27Ducks%20and%20Turkeys%27%20by%20Edvard%20Munch%2C%201913.JPG", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Early%20Spring%20in%20%C3%85sg%C3%A5rdstrand.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elm%20Forest%20in%20Summer%20-%20MM.M.00201%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Digging%20Men%20with%20Horse%20and%20Cart%20-%20MM.M.00072%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20in%20the%20Sickroom%20-%20Google%20Art%20Project.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Conversation%20%28Munch%29.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20Ebba%20Ridderstad%20and%20Marika%20Pauli%2C%201935%2C%20MM.M.00616%20%28cropped%29.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Desire%20-%20MM.M.00720%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elm%20Forest%20in%20Autumn%20-%20MM.M.00675%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Cupido%20-%20MM.M.00683%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elm%20Forest%20in%20Spring%20-%20MM.M.00018%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elm%20Forest%20in%20Spring%20-%20MM.M.00308%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elm%20Forest%20in%20Autumn%20-%20MM.M.00879%20-%20Munch%20Museum.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Dance%20on%20the%20Beach%20Munch.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Dance%20on%20the%20Beach%20%28the%20Reinhardt%20Frieze%29.jpg", "http://commons.wikimedia.org/wiki/Special:FilePath/Wien-Innenstadt%2C%20Albertina%2C%20Edvard%20Munch%2C%20Winterlandschaft.JPG", "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elgersburg%20-%20MM.M.00457%20-%20Munch%20Museum%20%28cropped%29.jpg"];
-          let currentIndex = 0;
+        const paintings = [{"year": "1893", "name": "Death in the Sickroom", "link": "http://www.wikidata.org/entity/Q18889710", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20in%20the%20Sickroom%20-%20NG.M.00940%20-%20National%20Museum%20of%20Art%2C%20Architecture%20and%20Design.jpg"}, {"year": "1906", "name": "Desire (The Reinhardt Frieze)", "link": "http://www.wikidata.org/entity/Q18889719", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Begierde%20%28Reinhardt-Fries%29%20-%20NG%202266%20-%20Neue%20Nationalgalerie.jpg"}, {"year": "1915", "name": "Death Struggle", "link": "http://www.wikidata.org/entity/Q18889711", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20Struggle%20-%20MM.M.00002%20-%20Munch%20Museum.jpg"}, {"year": "1915", "name": "Coastal Landscape at Hvitsten", "link": "http://www.wikidata.org/entity/Q18889656", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wien-Innenstadt%2C%20Albertina%2C%20Edvard%20Munch%2C%20Winterlandschaft.JPG"}, {"year": "1899", "name": "Dark Spruce Forest", "link": "http://www.wikidata.org/entity/Q18889696", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Dark%20Spruce%20Forest%20-%20MM.M.00626%20-%20Munch%20Museum.jpg"}, {"year": "1899", "name": "Dark Spruce Forest", "link": "http://www.wikidata.org/entity/Q18889696", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Dark%20Spruce%20Forest%20%281%29.jpg"}, {"year": "1900", "name": "Dance on the Shore", "link": "http://www.wikidata.org/entity/Q18889684", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dance%20on%20the%20Beach%20Munch.jpg"}, {"year": "1893", "name": "Death at the Helm", "link": "http://www.wikidata.org/entity/Q18889706", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20at%20the%20helm.jpg"}, {"year": "1920", "name": "Elm Forest in Summer", "link": "http://www.wikidata.org/entity/Q18889809", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elm%20Forest%20in%20Summer%20-%20MM.M.00201%20-%20Munch%20Museum.jpg"}, {"year": "1893", "name": "Death and Spring", "link": "http://www.wikidata.org/entity/Q18889704", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20and%20Spring%20-%20MM.M.00516%20-%20Munch%20Museum.jpg"}, {"year": "1893", "name": "Death in the Sickroom", "link": "http://www.wikidata.org/entity/Q18889709", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20in%20the%20Sickroom%20-%20MM.M.00214%20-%20Munch%20Museum.jpg"}, {"year": "1917", "name": "Conversation", "link": "http://www.wikidata.org/entity/Q18889668", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Conversation%20%28Munch%29.jpg"}, {"year": "1915", "name": "Death Struggle", "link": "http://www.wikidata.org/entity/Q18889712", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%2C%20D%C3%B8dskamp.JPG"}, {"year": "1920", "name": "Digging Men with Horse and Cart", "link": "http://www.wikidata.org/entity/Q18889729", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Digging%20Men%20with%20Horse%20and%20Cart%20-%20MM.M.00072%20-%20Munch%20Museum.jpg"}, {"year": "1905", "name": "Elgersburg", "link": "http://www.wikidata.org/entity/Q18889794", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elgersburg%20-%20MM.M.00457%20-%20Munch%20Museum%20%28cropped%29.jpg"}, {"year": "1906", "name": "Desire", "link": "http://www.wikidata.org/entity/Q18889713", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Desire%20-%20MM.M.00720%20-%20Munch%20Museum.jpg"}, {"year": "1921", "name": "Dance on the Beach", "link": "http://www.wikidata.org/entity/Q18889685", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Dance%20on%20the%20Beach%20-%20MM.M.01031%20-%20Munch%20Museum.jpg"}, {"year": "1899", "name": "Death and the Child", "link": "http://www.wikidata.org/entity/Q18889705", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Death%20and%20the%20Child%20-%20MM.M.00420%20-%20Munch%20Museum.jpg"}, {"year": "1904", "name": "Dance on the Beach (The Linde Frieze)", "link": "http://www.wikidata.org/entity/Q18889687", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%2C%20Tanz%20am%20Meer%20%281904%2C%20Linde%20Frieze%29.jpg"}, {"year": "1919", "name": "Elm Forest in Autumn", "link": "http://www.wikidata.org/entity/Q18889799", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20Elm%20Forest%20in%20Autumn%2C%201919%E2%80%9320%2C%20MM.M.00302.jpg"}, {"year": "1920", "name": "Digging Men with Horse and Cart", "link": "http://www.wikidata.org/entity/Q18889732", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Digging%20Men%20with%20Horse%20and%20Cart%20-%20MM.M.00115%20-%20Munch%20Museum.jpg"}, {"year": "1927", "name": "Dog's Face", "link": "http://www.wikidata.org/entity/Q18889743", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Munch%20-%20Hundeansikt%2C%201927%2C%20RES.A.00301.jpg"}, {"year": "1906", "name": "Dance on the Beach (The Reinhardt Frieze)", "link": "http://www.wikidata.org/entity/Q18889688", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dance%20on%20the%20Beach%20%28the%20Reinhardt%20Frieze%29.jpg"}, {"year": "1923", "name": "Elm Forest in Spring", "link": "http://www.wikidata.org/entity/Q18889805", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Elm%20Forest%20in%20Spring%20-%20MM.M.00799%20-%20Munch%20Museum.jpg"}, {"year": "1917", "name": "Crouching Nude", "link": "http://www.wikidata.org/entity/Q18889673", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Crouching%20Nude%20-%20MM.M.00167%20-%20Munch%20Museum.jpg"}];
+        let currentIndex = 0;
+        document.getElementById("img_full").src = paintings[0].image;
 
-          function openNext() {
-              currentIndex = (currentIndex + 1) % imgUrls.length; // Increment index and loop back to 0
-              const image = document.getElementsByClassName("img_full")[0];
-              image.src = imgUrls[currentIndex]; // Update image source
-          }          
-                    
-          function openPrev() {
-            currentIndex = (currentIndex - 1 + imgUrls.length) % imgUrls.length; // Ensure index wraps around correctly
-            const image = document.getElementsByClassName("img_full")[0];
-            image.src = imgUrls[currentIndex]; // Update image source
-          }
+        function updateTable() {
+          const painting = paintings[currentIndex];
+          document.getElementById("paintingYear").innerText = painting.year;
+          document.getElementById("paintingName").innerText = painting.name;
+          document.getElementById("paintingLink").innerText = painting.link;
+          document.getElementById("img_full").src = painting.image;
+        }
 
-      </script>
+        function openNext() {
+          currentIndex = (currentIndex + 1) % paintings.length;
+          updateTable();
+        }
+
+        function openPrev() {
+          currentIndex = (currentIndex - 1 + paintings.length) % paintings.length;
+          updateTable();
+        }
+
+        document.addEventListener("DOMContentLoaded", updateTable);
+    </script>
 </div>
-<table class="table table-hover">
-<thead>
-<tr>
-<th scope="col">
-Name
-</th>
-<th scope="col">
-Year
-</th>
-<th scope="col">
-Wikidata
-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="table-active">
-<td>
-Column content
-</td>
-<td>
-Column contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent content
-</td>
-<td>
-Column content
-</td>
-</tr>
-</tbody>
-</table>
+<div id="outerflex">
+<div id="paintingName" class="biggerinfo">
+
+</div>
+<div id="paintingYear" class="smallerinfo">
+
+</div>
+<div id="paintingLink" class="biggerinfo">
+
+</div>
+</div>
 <hr>
 
 

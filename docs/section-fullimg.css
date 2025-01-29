@@ -1,4 +1,4 @@
-.img_full {
+#img_full {
   height: 90vh;
   max-width: 70vw;
   object-fit: contain;
@@ -44,8 +44,22 @@ thead, tbody, tfoot, tr, td, th, .table th, .table td {
   padding:0.25em;
 }
 
-.table {
-  width:70%;
-  margin-right: 15%;
-  margin-left: 15%;
+#outerflex {
+  width:70vw;
+  margin-right: auto;
+  margin-left: auto;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.biggerinfo {
+  margin:0.5em;
+  min-width:30%;
+}
+
+.smallerinfo {
+  width: 10%;
 }
