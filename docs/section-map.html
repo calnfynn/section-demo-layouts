@@ -1,0 +1,2737 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Gallery Map – Demo V2 Layouts</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./section-fullimg.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7001df8525f4743d1f4f68632e620571.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="griddesign.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Demo V2 Layouts</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./section-map.html" aria-current="page"> 
+<span class="menu-text">Map</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./section-fullimg.html"> 
+<span class="menu-text">Full Image</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./section-masonry.html"> 
+<span class="menu-text">Masonry</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./section-grid.html"> 
+<span class="menu-text">Grid</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/calnfynn/section-demo-layouts" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./Demo-V2-Layouts.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./section-map.html"><span class="chapter-title">Gallery Map</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Katalog zur Ausstellung: Der Große Saal (Rittersaal)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./section-map.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Gallery Map</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./section-fullimg.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Gallery Full Image</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./section-masonry.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Gallery Masonry</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./section-grid.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Gallery Grid</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Gallery Map</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<link rel="stylesheet" href="./masonrydesign.css">
+<div class="img_grid">
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;></script>
+    <script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;></script>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;></script>
+    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/>
+    
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
+            <style>
+                #map_238a0c2504dd72e8bde5b7810b245c1e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class=&quot;folium-map&quot; id=&quot;map_238a0c2504dd72e8bde5b7810b245c1e&quot; ></div>
+        
+</body>
+<script>
+    
+    
+            var map_238a0c2504dd72e8bde5b7810b245c1e = L.map(
+                &quot;map_238a0c2504dd72e8bde5b7810b245c1e&quot;,
+                {
+                    center: [40.7128, -74.006],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c47ef07ca857f93dfe2c446a8acc7d54 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_c47ef07ca857f93dfe2c446a8acc7d54.addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+            var marker_c67dcd4d38105ca806728b636502a022 = L.marker(
+                [45.4994, -73.5651],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_6b8670731de99e9b66b8e2fc0848772c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_905692f1de031c985dae7da863633713 = $(`<div id=&quot;html_905692f1de031c985dae7da863633713&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Place Bonaventure</b></div>`)[0];
+                popup_6b8670731de99e9b66b8e2fc0848772c.setContent(html_905692f1de031c985dae7da863633713);
+            
+        
+
+        marker_c67dcd4d38105ca806728b636502a022.bindPopup(popup_6b8670731de99e9b66b8e2fc0848772c)
+        ;
+
+        
+    
+    
+            marker_c67dcd4d38105ca806728b636502a022.bindTooltip(
+                `<div>
+                     Place Bonaventure
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_f4fb62acc3885b6a18b497ca63f1db0b = L.marker(
+                [47.491822222, 8.706305555],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_bac0add8e4849f8f9b272d692db297de = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_bad3deb96f3b07f509261ffff9186d5d = $(`<div id=&quot;html_bad3deb96f3b07f509261ffff9186d5d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q57585380</b></div>`)[0];
+                popup_bac0add8e4849f8f9b272d692db297de.setContent(html_bad3deb96f3b07f509261ffff9186d5d);
+            
+        
+
+        marker_f4fb62acc3885b6a18b497ca63f1db0b.bindPopup(popup_bac0add8e4849f8f9b272d692db297de)
+        ;
+
+        
+    
+    
+            marker_f4fb62acc3885b6a18b497ca63f1db0b.bindTooltip(
+                `<div>
+                     Q57585380
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_3b6f2e7242794c05f793b091e29d5f82 = L.marker(
+                [47.26529, 11.39827],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_cfc0b693dd529312a851b34946ab7fed = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_29a6824fd172814cd4e3a72f2c30e379 = $(`<div id=&quot;html_29a6824fd172814cd4e3a72f2c30e379&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q122949676</b></div>`)[0];
+                popup_cfc0b693dd529312a851b34946ab7fed.setContent(html_29a6824fd172814cd4e3a72f2c30e379);
+            
+        
+
+        marker_3b6f2e7242794c05f793b091e29d5f82.bindPopup(popup_cfc0b693dd529312a851b34946ab7fed)
+        ;
+
+        
+    
+    
+            marker_3b6f2e7242794c05f793b091e29d5f82.bindTooltip(
+                `<div>
+                     Q122949676
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_52c8d294eabc4e63dc28dc0bfd4b96d5 = L.marker(
+                [40.421352777, -3.679494444],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_f68567a7fcaa2d5d318b7145d2c0e1d1 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_132c398b318b6960f8f672e50970692e = $(`<div id=&quot;html_132c398b318b6960f8f672e50970692e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Torre de Valencia, Madrid</b></div>`)[0];
+                popup_f68567a7fcaa2d5d318b7145d2c0e1d1.setContent(html_132c398b318b6960f8f672e50970692e);
+            
+        
+
+        marker_52c8d294eabc4e63dc28dc0bfd4b96d5.bindPopup(popup_f68567a7fcaa2d5d318b7145d2c0e1d1)
+        ;
+
+        
+    
+    
+            marker_52c8d294eabc4e63dc28dc0bfd4b96d5.bindTooltip(
+                `<div>
+                     Torre de Valencia, Madrid
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_9005d6c1713ed92d6f076d7a6c7766e3 = L.marker(
+                [50.0759139, 14.4157161],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_4957fd69fb24ca7417e333a134185160 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_0ff5f72b1ac9df592b17847c6f95969a = $(`<div id=&quot;html_0ff5f72b1ac9df592b17847c6f95969a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q56651190</b></div>`)[0];
+                popup_4957fd69fb24ca7417e333a134185160.setContent(html_0ff5f72b1ac9df592b17847c6f95969a);
+            
+        
+
+        marker_9005d6c1713ed92d6f076d7a6c7766e3.bindPopup(popup_4957fd69fb24ca7417e333a134185160)
+        ;
+
+        
+    
+    
+            marker_9005d6c1713ed92d6f076d7a6c7766e3.bindTooltip(
+                `<div>
+                     Q56651190
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_2d93e1d1da6ff1ace06621b567324cc4 = L.marker(
+                [50.0487447, 14.4405583],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_17df5a8fc12f6cfbd2fc98204f39b69d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f3bf063d7166fb52c9ede7b024f5aaaa = $(`<div id=&quot;html_f3bf063d7166fb52c9ede7b024f5aaaa&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Na Strži 40</b></div>`)[0];
+                popup_17df5a8fc12f6cfbd2fc98204f39b69d.setContent(html_f3bf063d7166fb52c9ede7b024f5aaaa);
+            
+        
+
+        marker_2d93e1d1da6ff1ace06621b567324cc4.bindPopup(popup_17df5a8fc12f6cfbd2fc98204f39b69d)
+        ;
+
+        
+    
+    
+            marker_2d93e1d1da6ff1ace06621b567324cc4.bindTooltip(
+                `<div>
+                     Na Strži 40
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_03de0648e732ac65d3b9812a9c06287f = L.marker(
+                [-33.8577, 151.208],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_1ae105a24efe93e6e1caf97b827a44b1 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_63c0e3eb71f4f3421347c8fa06b6f734 = $(`<div id=&quot;html_63c0e3eb71f4f3421347c8fa06b6f734&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Sirius building</b></div>`)[0];
+                popup_1ae105a24efe93e6e1caf97b827a44b1.setContent(html_63c0e3eb71f4f3421347c8fa06b6f734);
+            
+        
+
+        marker_03de0648e732ac65d3b9812a9c06287f.bindPopup(popup_1ae105a24efe93e6e1caf97b827a44b1)
+        ;
+
+        
+    
+    
+            marker_03de0648e732ac65d3b9812a9c06287f.bindTooltip(
+                `<div>
+                     Sirius building
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_b119ce8beb58ce08ab21956eb7268dee = L.marker(
+                [47.491727554, 8.706268019],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_6caa10060dc063a53fc87ca269da3e8e = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_49b7345c834f88f1088b2a7ff1767459 = $(`<div id=&quot;html_49b7345c834f88f1088b2a7ff1767459&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q57585380</b></div>`)[0];
+                popup_6caa10060dc063a53fc87ca269da3e8e.setContent(html_49b7345c834f88f1088b2a7ff1767459);
+            
+        
+
+        marker_b119ce8beb58ce08ab21956eb7268dee.bindPopup(popup_6caa10060dc063a53fc87ca269da3e8e)
+        ;
+
+        
+    
+    
+            marker_b119ce8beb58ce08ab21956eb7268dee.bindTooltip(
+                `<div>
+                     Q57585380
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_610d3dd0069222c99e5f611776f44c30 = L.marker(
+                [52.39638, 13.059824],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_3ab1708776af8cb73b17d27d8926eb0c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_10f2895f8cbd6d50db272960c1613d1b = $(`<div id=&quot;html_10f2895f8cbd6d50db272960c1613d1b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Fachhochschulgebäude am Alten Markt</b></div>`)[0];
+                popup_3ab1708776af8cb73b17d27d8926eb0c.setContent(html_10f2895f8cbd6d50db272960c1613d1b);
+            
+        
+
+        marker_610d3dd0069222c99e5f611776f44c30.bindPopup(popup_3ab1708776af8cb73b17d27d8926eb0c)
+        ;
+
+        
+    
+    
+            marker_610d3dd0069222c99e5f611776f44c30.bindTooltip(
+                `<div>
+                     Fachhochschulgebäude am Alten Markt
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_cd3f5dd2b790ffe37a6e40848df2a5e2 = L.marker(
+                [52.346388888, 4.835555555],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_d62b9a03e92ae4e53e1f43bbb84d6376 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_ca1362dfb79d7f74da76be9878ffa362 = $(`<div id=&quot;html_ca1362dfb79d7f74da76be9878ffa362&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q125679319</b></div>`)[0];
+                popup_d62b9a03e92ae4e53e1f43bbb84d6376.setContent(html_ca1362dfb79d7f74da76be9878ffa362);
+            
+        
+
+        marker_cd3f5dd2b790ffe37a6e40848df2a5e2.bindPopup(popup_d62b9a03e92ae4e53e1f43bbb84d6376)
+        ;
+
+        
+    
+    
+            marker_cd3f5dd2b790ffe37a6e40848df2a5e2.bindTooltip(
+                `<div>
+                     Q125679319
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_01a44fb0fe888459aec3a53ba86b9108 = L.marker(
+                [52.346388888, 4.835555555],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_51c41ef6b15a7c7f1d1948c99d7f9d05 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_c02f3ffa043b3476bf94a732cd9fe8d6 = $(`<div id=&quot;html_c02f3ffa043b3476bf94a732cd9fe8d6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q125679319</b></div>`)[0];
+                popup_51c41ef6b15a7c7f1d1948c99d7f9d05.setContent(html_c02f3ffa043b3476bf94a732cd9fe8d6);
+            
+        
+
+        marker_01a44fb0fe888459aec3a53ba86b9108.bindPopup(popup_51c41ef6b15a7c7f1d1948c99d7f9d05)
+        ;
+
+        
+    
+    
+            marker_01a44fb0fe888459aec3a53ba86b9108.bindTooltip(
+                `<div>
+                     Q125679319
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_f6296c599d5ad68a8731eb1e5894583b = L.marker(
+                [52.346388888, 4.835555555],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_21659f3aca5d41980860d64bf37fbd95 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_42e0f7e7ab9ed447fa7a7be30e93be0b = $(`<div id=&quot;html_42e0f7e7ab9ed447fa7a7be30e93be0b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q125679319</b></div>`)[0];
+                popup_21659f3aca5d41980860d64bf37fbd95.setContent(html_42e0f7e7ab9ed447fa7a7be30e93be0b);
+            
+        
+
+        marker_f6296c599d5ad68a8731eb1e5894583b.bindPopup(popup_21659f3aca5d41980860d64bf37fbd95)
+        ;
+
+        
+    
+    
+            marker_f6296c599d5ad68a8731eb1e5894583b.bindTooltip(
+                `<div>
+                     Q125679319
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_9452d92abeba3b599e4b7744fef939e0 = L.marker(
+                [50.09152, 14.41957],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_8f03daf0fc5602b14c7f867e721c2395 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_4545c70988c51e25188e13395e7fd3ed = $(`<div id=&quot;html_4545c70988c51e25188e13395e7fd3ed&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Elišky Krásnohorské 16</b></div>`)[0];
+                popup_8f03daf0fc5602b14c7f867e721c2395.setContent(html_4545c70988c51e25188e13395e7fd3ed);
+            
+        
+
+        marker_9452d92abeba3b599e4b7744fef939e0.bindPopup(popup_8f03daf0fc5602b14c7f867e721c2395)
+        ;
+
+        
+    
+    
+            marker_9452d92abeba3b599e4b7744fef939e0.bindTooltip(
+                `<div>
+                     Elišky Krásnohorské 16
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_b97d5052b4fe32e4cffdc4748b25e5a6 = L.marker(
+                [50.64722, 5.60285],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_7e1e68f0dd8aadac96045f1c21f0c571 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_75fc7c8523d36bf0bc36136d9aa3f512 = $(`<div id=&quot;html_75fc7c8523d36bf0bc36136d9aa3f512&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>2 Avenue de Lille</b></div>`)[0];
+                popup_7e1e68f0dd8aadac96045f1c21f0c571.setContent(html_75fc7c8523d36bf0bc36136d9aa3f512);
+            
+        
+
+        marker_b97d5052b4fe32e4cffdc4748b25e5a6.bindPopup(popup_7e1e68f0dd8aadac96045f1c21f0c571)
+        ;
+
+        
+    
+    
+            marker_b97d5052b4fe32e4cffdc4748b25e5a6.bindTooltip(
+                `<div>
+                     2 Avenue de Lille
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_21307e8a2a49aa1eefaeb6dbfa52861f = L.marker(
+                [47.491727554, 8.706268019],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_930841896e7a1a731db0cfbe771a447e = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_edb34926c59ce146092dac107fb98ee4 = $(`<div id=&quot;html_edb34926c59ce146092dac107fb98ee4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q57585380</b></div>`)[0];
+                popup_930841896e7a1a731db0cfbe771a447e.setContent(html_edb34926c59ce146092dac107fb98ee4);
+            
+        
+
+        marker_21307e8a2a49aa1eefaeb6dbfa52861f.bindPopup(popup_930841896e7a1a731db0cfbe771a447e)
+        ;
+
+        
+    
+    
+            marker_21307e8a2a49aa1eefaeb6dbfa52861f.bindTooltip(
+                `<div>
+                     Q57585380
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_1ec85c32cd4e64d3644d7ca2e39e049b = L.marker(
+                [50.08888889, 14.42722222],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_efe457736d098e3489b93c79f7f2955d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_15292887d77b10084cee4cdd4221c176 = $(`<div id=&quot;html_15292887d77b10084cee4cdd4221c176&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Kotva Department Store</b></div>`)[0];
+                popup_efe457736d098e3489b93c79f7f2955d.setContent(html_15292887d77b10084cee4cdd4221c176);
+            
+        
+
+        marker_1ec85c32cd4e64d3644d7ca2e39e049b.bindPopup(popup_efe457736d098e3489b93c79f7f2955d)
+        ;
+
+        
+    
+    
+            marker_1ec85c32cd4e64d3644d7ca2e39e049b.bindTooltip(
+                `<div>
+                     Kotva Department Store
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_501623846cd276f8984d233b36ce0c44 = L.marker(
+                [-12.10092, -76.987034],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_ef7697accb9f52d99415d52167752c56 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_54b73568ab7500291a5d8ddee98edcf3 = $(`<div id=&quot;html_54b73568ab7500291a5d8ddee98edcf3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Ministerio de Defensa del Perú building</b></div>`)[0];
+                popup_ef7697accb9f52d99415d52167752c56.setContent(html_54b73568ab7500291a5d8ddee98edcf3);
+            
+        
+
+        marker_501623846cd276f8984d233b36ce0c44.bindPopup(popup_ef7697accb9f52d99415d52167752c56)
+        ;
+
+        
+    
+    
+            marker_501623846cd276f8984d233b36ce0c44.bindTooltip(
+                `<div>
+                     Ministerio de Defensa del Perú building
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_7e1573dd7593102c86a3f141e0ca2e9f = L.marker(
+                [-12.134931194, -77.021722],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_da8dc90e7ccc3329e56ace5cc5cc4fcc = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_17c93eba5f152bd071b4d36d04d9acfa = $(`<div id=&quot;html_17c93eba5f152bd071b4d36d04d9acfa&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>UTEC campus</b></div>`)[0];
+                popup_da8dc90e7ccc3329e56ace5cc5cc4fcc.setContent(html_17c93eba5f152bd071b4d36d04d9acfa);
+            
+        
+
+        marker_7e1573dd7593102c86a3f141e0ca2e9f.bindPopup(popup_da8dc90e7ccc3329e56ace5cc5cc4fcc)
+        ;
+
+        
+    
+    
+            marker_7e1573dd7593102c86a3f141e0ca2e9f.bindTooltip(
+                `<div>
+                     UTEC campus
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_cc1d41cd184be37ffedeb80a6b9a9b1b = L.marker(
+                [50.3072, 11.8977],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_b8df92d855baf94e0983fa7507353a3e = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_1895856babae2f584d6932415297f99b = $(`<div id=&quot;html_1895856babae2f584d6932415297f99b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Johann-Christian-Reinhart high school Hof</b></div>`)[0];
+                popup_b8df92d855baf94e0983fa7507353a3e.setContent(html_1895856babae2f584d6932415297f99b);
+            
+        
+
+        marker_cc1d41cd184be37ffedeb80a6b9a9b1b.bindPopup(popup_b8df92d855baf94e0983fa7507353a3e)
+        ;
+
+        
+    
+    
+            marker_cc1d41cd184be37ffedeb80a6b9a9b1b.bindTooltip(
+                `<div>
+                     Johann-Christian-Reinhart high school Hof
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_939debe596b4e1db337e17a6fecf4ce6 = L.marker(
+                [40.458333333, -3.688888888],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_d7b052c8a0dab757d13a14897e9878d4 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_ff72d044e7d151ad550b90c7c3fd3d95 = $(`<div id=&quot;html_ff72d044e7d151ad550b90c7c3fd3d95&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Edificio del Ministerio de Comercio</b></div>`)[0];
+                popup_d7b052c8a0dab757d13a14897e9878d4.setContent(html_ff72d044e7d151ad550b90c7c3fd3d95);
+            
+        
+
+        marker_939debe596b4e1db337e17a6fecf4ce6.bindPopup(popup_d7b052c8a0dab757d13a14897e9878d4)
+        ;
+
+        
+    
+    
+            marker_939debe596b4e1db337e17a6fecf4ce6.bindTooltip(
+                `<div>
+                     Edificio del Ministerio de Comercio
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_a417eeff6b93a15fb55bc0089eddb976 = L.marker(
+                [51.5094361, -0.1933275],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_02c9da8419e388c89e07006a67265a1b = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_7c24cd628daecbff2cb8f232a5a5723b = $(`<div id=&quot;html_7c24cd628daecbff2cb8f232a5a5723b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q105836074</b></div>`)[0];
+                popup_02c9da8419e388c89e07006a67265a1b.setContent(html_7c24cd628daecbff2cb8f232a5a5723b);
+            
+        
+
+        marker_a417eeff6b93a15fb55bc0089eddb976.bindPopup(popup_02c9da8419e388c89e07006a67265a1b)
+        ;
+
+        
+    
+    
+            marker_a417eeff6b93a15fb55bc0089eddb976.bindTooltip(
+                `<div>
+                     Q105836074
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_a5d47f1f1e0d8386c3e01c160e234444 = L.marker(
+                [50.874519444, 4.707372222],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_6cf7fae04285597fd9c24c337f4e4899 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_598ff56d53587aca3a4305a2f133f796 = $(`<div id=&quot;html_598ff56d53587aca3a4305a2f133f796&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Van Den Heuvelinstituut</b></div>`)[0];
+                popup_6cf7fae04285597fd9c24c337f4e4899.setContent(html_598ff56d53587aca3a4305a2f133f796);
+            
+        
+
+        marker_a5d47f1f1e0d8386c3e01c160e234444.bindPopup(popup_6cf7fae04285597fd9c24c337f4e4899)
+        ;
+
+        
+    
+    
+            marker_a5d47f1f1e0d8386c3e01c160e234444.bindTooltip(
+                `<div>
+                     Van Den Heuvelinstituut
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_30860125396559ba4a3ba0abd4edfcc4 = L.marker(
+                [50.2129819, 15.8177025],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_32fe0a1cd7296bc169bfea30c23b7308 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_4bcacdfd72b7c478309b06e29b55481e = $(`<div id=&quot;html_4bcacdfd72b7c478309b06e29b55481e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q30068974</b></div>`)[0];
+                popup_32fe0a1cd7296bc169bfea30c23b7308.setContent(html_4bcacdfd72b7c478309b06e29b55481e);
+            
+        
+
+        marker_30860125396559ba4a3ba0abd4edfcc4.bindPopup(popup_32fe0a1cd7296bc169bfea30c23b7308)
+        ;
+
+        
+    
+    
+            marker_30860125396559ba4a3ba0abd4edfcc4.bindTooltip(
+                `<div>
+                     Q30068974
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_ea747e22fcbd18ed3062a6503c766f0c = L.marker(
+                [50.085055555, 14.428361111],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_6bbc947d4ba372825ae2ff4c65e76f4c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_508bccd56f829a1a1c2962efe66222ec = $(`<div id=&quot;html_508bccd56f829a1a1c2962efe66222ec&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Omnipol building</b></div>`)[0];
+                popup_6bbc947d4ba372825ae2ff4c65e76f4c.setContent(html_508bccd56f829a1a1c2962efe66222ec);
+            
+        
+
+        marker_ea747e22fcbd18ed3062a6503c766f0c.bindPopup(popup_6bbc947d4ba372825ae2ff4c65e76f4c)
+        ;
+
+        
+    
+    
+            marker_ea747e22fcbd18ed3062a6503c766f0c.bindTooltip(
+                `<div>
+                     Omnipol building
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_8661a2b545247e500d775a6b77f5cc4f = L.marker(
+                [40.421352777, -3.679494444],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_b29c0107b2728528e400379c9c11c871 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_1d1fde6bcda107a033242c48e4a397c8 = $(`<div id=&quot;html_1d1fde6bcda107a033242c48e4a397c8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Torre de Valencia, Madrid</b></div>`)[0];
+                popup_b29c0107b2728528e400379c9c11c871.setContent(html_1d1fde6bcda107a033242c48e4a397c8);
+            
+        
+
+        marker_8661a2b545247e500d775a6b77f5cc4f.bindPopup(popup_b29c0107b2728528e400379c9c11c871)
+        ;
+
+        
+    
+    
+            marker_8661a2b545247e500d775a6b77f5cc4f.bindTooltip(
+                `<div>
+                     Torre de Valencia, Madrid
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_6f329fa80dd3854429e992dfe9ca5b64 = L.marker(
+                [47.491822222, 8.706305555],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_4897f621d364ffa35f6fe74d9193fec6 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_7c1e5cbaed136e7c8454e915c1c95ec8 = $(`<div id=&quot;html_7c1e5cbaed136e7c8454e915c1c95ec8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q57585380</b></div>`)[0];
+                popup_4897f621d364ffa35f6fe74d9193fec6.setContent(html_7c1e5cbaed136e7c8454e915c1c95ec8);
+            
+        
+
+        marker_6f329fa80dd3854429e992dfe9ca5b64.bindPopup(popup_4897f621d364ffa35f6fe74d9193fec6)
+        ;
+
+        
+    
+    
+            marker_6f329fa80dd3854429e992dfe9ca5b64.bindTooltip(
+                `<div>
+                     Q57585380
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_4bdfbf676b2237c997b633505b30211b = L.marker(
+                [43.323269346, -1.928465366],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_f7dbc52e59ed8d1224ef6d8538c3fa04 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_d083bdb86640396d23d44f45dea54717 = $(`<div id=&quot;html_d083bdb86640396d23d44f45dea54717&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Pasaua-Blas de Lezo BHI</b></div>`)[0];
+                popup_f7dbc52e59ed8d1224ef6d8538c3fa04.setContent(html_d083bdb86640396d23d44f45dea54717);
+            
+        
+
+        marker_4bdfbf676b2237c997b633505b30211b.bindPopup(popup_f7dbc52e59ed8d1224ef6d8538c3fa04)
+        ;
+
+        
+    
+    
+            marker_4bdfbf676b2237c997b633505b30211b.bindTooltip(
+                `<div>
+                     Pasaua-Blas de Lezo BHI
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_d0ef77ccf9fa3e2f00e7246ff909e4c7 = L.marker(
+                [32.08652, 34.76955],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_1c006eb2f70af21a78ed8b5d704ce400 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_0662307e9d5b5217a7547c346d7156ea = $(`<div id=&quot;html_0662307e9d5b5217a7547c346d7156ea&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Carlton Tel Aviv</b></div>`)[0];
+                popup_1c006eb2f70af21a78ed8b5d704ce400.setContent(html_0662307e9d5b5217a7547c346d7156ea);
+            
+        
+
+        marker_d0ef77ccf9fa3e2f00e7246ff909e4c7.bindPopup(popup_1c006eb2f70af21a78ed8b5d704ce400)
+        ;
+
+        
+    
+    
+            marker_d0ef77ccf9fa3e2f00e7246ff909e4c7.bindTooltip(
+                `<div>
+                     Carlton Tel Aviv
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_36961a05d9ce2297d3656f8d53616632 = L.marker(
+                [47.491822222, 8.706305555],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_dfbd62e8e3ffdb57ba190dac7829bfce = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_491b6cb877d6e9ecb1eec01cb57c932f = $(`<div id=&quot;html_491b6cb877d6e9ecb1eec01cb57c932f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q57585380</b></div>`)[0];
+                popup_dfbd62e8e3ffdb57ba190dac7829bfce.setContent(html_491b6cb877d6e9ecb1eec01cb57c932f);
+            
+        
+
+        marker_36961a05d9ce2297d3656f8d53616632.bindPopup(popup_dfbd62e8e3ffdb57ba190dac7829bfce)
+        ;
+
+        
+    
+    
+            marker_36961a05d9ce2297d3656f8d53616632.bindTooltip(
+                `<div>
+                     Q57585380
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_bf2706177cb931200f17ccb2e7385431 = L.marker(
+                [40.4279, -3.692433333],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_c5c860894b911fd2e1fc7deb026b24bc = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_092ada09b3e66915684096efb41ddea9 = $(`<div id=&quot;html_092ada09b3e66915684096efb41ddea9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Former British Embassy in Madrid</b></div>`)[0];
+                popup_c5c860894b911fd2e1fc7deb026b24bc.setContent(html_092ada09b3e66915684096efb41ddea9);
+            
+        
+
+        marker_bf2706177cb931200f17ccb2e7385431.bindPopup(popup_c5c860894b911fd2e1fc7deb026b24bc)
+        ;
+
+        
+    
+    
+            marker_bf2706177cb931200f17ccb2e7385431.bindTooltip(
+                `<div>
+                     Former British Embassy in Madrid
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_f7b05e922ac90775aaceed93529440f2 = L.marker(
+                [40.4279, -3.692433333],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_ed3e612a1c987c557eeaafb0d447f073 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_3d4e0a1ef9d66063c299ce47a5dd5be5 = $(`<div id=&quot;html_3d4e0a1ef9d66063c299ce47a5dd5be5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Former British Embassy in Madrid</b></div>`)[0];
+                popup_ed3e612a1c987c557eeaafb0d447f073.setContent(html_3d4e0a1ef9d66063c299ce47a5dd5be5);
+            
+        
+
+        marker_f7b05e922ac90775aaceed93529440f2.bindPopup(popup_ed3e612a1c987c557eeaafb0d447f073)
+        ;
+
+        
+    
+    
+            marker_f7b05e922ac90775aaceed93529440f2.bindTooltip(
+                `<div>
+                     Former British Embassy in Madrid
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_feba66f1abda8a3512792f8502eae21e = L.marker(
+                [55.693611, 12.56388],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_f418925dad0dcec5305c99bb0448f1c9 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_3ce6dd498d538510ab5b530e19394ab1 = $(`<div id=&quot;html_3ce6dd498d538510ab5b530e19394ab1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Panum Building</b></div>`)[0];
+                popup_f418925dad0dcec5305c99bb0448f1c9.setContent(html_3ce6dd498d538510ab5b530e19394ab1);
+            
+        
+
+        marker_feba66f1abda8a3512792f8502eae21e.bindPopup(popup_f418925dad0dcec5305c99bb0448f1c9)
+        ;
+
+        
+    
+    
+            marker_feba66f1abda8a3512792f8502eae21e.bindTooltip(
+                `<div>
+                     Panum Building
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_26860b6ad6c8eb46d79638187eca119d = L.marker(
+                [50.252527777, 19.032916666],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_56abf308891fda7e116b5215c4c64f5c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_8846c4acda4f10a00807fe9e335b0625 = $(`<div id=&quot;html_8846c4acda4f10a00807fe9e335b0625&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q123185168</b></div>`)[0];
+                popup_56abf308891fda7e116b5215c4c64f5c.setContent(html_8846c4acda4f10a00807fe9e335b0625);
+            
+        
+
+        marker_26860b6ad6c8eb46d79638187eca119d.bindPopup(popup_56abf308891fda7e116b5215c4c64f5c)
+        ;
+
+        
+    
+    
+            marker_26860b6ad6c8eb46d79638187eca119d.bindTooltip(
+                `<div>
+                     Q123185168
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_582c79734609b2315851a0f09a963ca5 = L.marker(
+                [41.2965, -72.9187],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_62af6b9bc48b45f866308854f9bbd492 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_9c38133e467dc9482f85bf6a06d71f46 = $(`<div id=&quot;html_9c38133e467dc9482f85bf6a06d71f46&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Hotel Marcel</b></div>`)[0];
+                popup_62af6b9bc48b45f866308854f9bbd492.setContent(html_9c38133e467dc9482f85bf6a06d71f46);
+            
+        
+
+        marker_582c79734609b2315851a0f09a963ca5.bindPopup(popup_62af6b9bc48b45f866308854f9bbd492)
+        ;
+
+        
+    
+    
+            marker_582c79734609b2315851a0f09a963ca5.bindTooltip(
+                `<div>
+                     Hotel Marcel
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_8a6eef6352b324fba08d6c8b98d2753f = L.marker(
+                [40.45851111, -3.68905],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_e62d5e995066d59074187295d1a3d5d6 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_03ff31c5603483f3cddcf2b45b910bec = $(`<div id=&quot;html_03ff31c5603483f3cddcf2b45b910bec&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Edificio del Ministerio de Comercio</b></div>`)[0];
+                popup_e62d5e995066d59074187295d1a3d5d6.setContent(html_03ff31c5603483f3cddcf2b45b910bec);
+            
+        
+
+        marker_8a6eef6352b324fba08d6c8b98d2753f.bindPopup(popup_e62d5e995066d59074187295d1a3d5d6)
+        ;
+
+        
+    
+    
+            marker_8a6eef6352b324fba08d6c8b98d2753f.bindTooltip(
+                `<div>
+                     Edificio del Ministerio de Comercio
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_5f2e58e61139def016880fd45efe6cd1 = L.marker(
+                [38.356328019, -0.472324374],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_7e49035f9229e9cddb4bd0d649a91287 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_9e54ff263fbb4e803983dd086c6612f2 = $(`<div id=&quot;html_9e54ff263fbb4e803983dd086c6612f2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Montreal Building (Alicante, Spain)</b></div>`)[0];
+                popup_7e49035f9229e9cddb4bd0d649a91287.setContent(html_9e54ff263fbb4e803983dd086c6612f2);
+            
+        
+
+        marker_5f2e58e61139def016880fd45efe6cd1.bindPopup(popup_7e49035f9229e9cddb4bd0d649a91287)
+        ;
+
+        
+    
+    
+            marker_5f2e58e61139def016880fd45efe6cd1.bindTooltip(
+                `<div>
+                     Montreal Building (Alicante, Spain)
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_2c00cddd4972347e20850272934068f6 = L.marker(
+                [43.5941658, 1.4316798],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_2f25ae5e04c88101d0b283d890dc1447 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_8922a1dc1387a094e161c0f4defff1cc = $(`<div id=&quot;html_8922a1dc1387a094e161c0f4defff1cc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Caserne Jacques Vion</b></div>`)[0];
+                popup_2f25ae5e04c88101d0b283d890dc1447.setContent(html_8922a1dc1387a094e161c0f4defff1cc);
+            
+        
+
+        marker_2c00cddd4972347e20850272934068f6.bindPopup(popup_2f25ae5e04c88101d0b283d890dc1447)
+        ;
+
+        
+    
+    
+            marker_2c00cddd4972347e20850272934068f6.bindTooltip(
+                `<div>
+                     Caserne Jacques Vion
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_7a0ec51963105f221a8058983e848b57 = L.marker(
+                [46.19035, 6.149183333],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_1f833724f5ff20795665bf5bea550e95 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_20722903b98ab621a192f6a60361b516 = $(`<div id=&quot;html_20722903b98ab621a192f6a60361b516&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>La Tulipe</b></div>`)[0];
+                popup_1f833724f5ff20795665bf5bea550e95.setContent(html_20722903b98ab621a192f6a60361b516);
+            
+        
+
+        marker_7a0ec51963105f221a8058983e848b57.bindPopup(popup_1f833724f5ff20795665bf5bea550e95)
+        ;
+
+        
+    
+    
+            marker_7a0ec51963105f221a8058983e848b57.bindTooltip(
+                `<div>
+                     La Tulipe
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_d703c62324223d8a5ef8bbd6c323f979 = L.marker(
+                [50.1028633, 14.4458586],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_619167ced33120f2ab8920b6750d99ba = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_a23c369a99cb8f9120222d2c0aca7f34 = $(`<div id=&quot;html_a23c369a99cb8f9120222d2c0aca7f34&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Rosmarin Business Center</b></div>`)[0];
+                popup_619167ced33120f2ab8920b6750d99ba.setContent(html_a23c369a99cb8f9120222d2c0aca7f34);
+            
+        
+
+        marker_d703c62324223d8a5ef8bbd6c323f979.bindPopup(popup_619167ced33120f2ab8920b6750d99ba)
+        ;
+
+        
+    
+    
+            marker_d703c62324223d8a5ef8bbd6c323f979.bindTooltip(
+                `<div>
+                     Rosmarin Business Center
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_d81a4a1a87204dd7f097871850f768ba = L.marker(
+                [-12.123235564, -77.029014227],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_93be773e005f57fc78ac7e47b8e2015f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_a530503bb80a46700c9a11a45eb45f70 = $(`<div id=&quot;html_a530503bb80a46700c9a11a45eb45f70&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Edificio Banco de Crédito Del Perú</b></div>`)[0];
+                popup_93be773e005f57fc78ac7e47b8e2015f.setContent(html_a530503bb80a46700c9a11a45eb45f70);
+            
+        
+
+        marker_d81a4a1a87204dd7f097871850f768ba.bindPopup(popup_93be773e005f57fc78ac7e47b8e2015f)
+        ;
+
+        
+    
+    
+            marker_d81a4a1a87204dd7f097871850f768ba.bindTooltip(
+                `<div>
+                     Edificio Banco de Crédito Del Perú
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_49e09ca064c394b25fff691d8cd6df95 = L.marker(
+                [40.712202777, -74.001677777],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_aed53318c44bdca5d3d6870dc8be1ebc = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_8a5f92700b71cea6c3347126cf7238ef = $(`<div id=&quot;html_8a5f92700b71cea6c3347126cf7238ef&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>1 Police Plaza</b></div>`)[0];
+                popup_aed53318c44bdca5d3d6870dc8be1ebc.setContent(html_8a5f92700b71cea6c3347126cf7238ef);
+            
+        
+
+        marker_49e09ca064c394b25fff691d8cd6df95.bindPopup(popup_aed53318c44bdca5d3d6870dc8be1ebc)
+        ;
+
+        
+    
+    
+            marker_49e09ca064c394b25fff691d8cd6df95.bindTooltip(
+                `<div>
+                     1 Police Plaza
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_30a4305fe4d0e507fe8a78454a08b98c = L.marker(
+                [-12.086805555, -77.001888888],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_0391edcc36c3316935a6b0262ceb7e74 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_424f84adc3f0d24788915d9373533cce = $(`<div id=&quot;html_424f84adc3f0d24788915d9373533cce&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q99762318</b></div>`)[0];
+                popup_0391edcc36c3316935a6b0262ceb7e74.setContent(html_424f84adc3f0d24788915d9373533cce);
+            
+        
+
+        marker_30a4305fe4d0e507fe8a78454a08b98c.bindPopup(popup_0391edcc36c3316935a6b0262ceb7e74)
+        ;
+
+        
+    
+    
+            marker_30a4305fe4d0e507fe8a78454a08b98c.bindTooltip(
+                `<div>
+                     Q99762318
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_df9ff8bef7bae3246fce05babf3cde9b = L.marker(
+                [47.491727554, 8.706268019],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_fd1751d6ed6de4d0318ca20e237b4bf7 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_c7db1c9cb4f34c935e8ce9d603d625cc = $(`<div id=&quot;html_c7db1c9cb4f34c935e8ce9d603d625cc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q57585380</b></div>`)[0];
+                popup_fd1751d6ed6de4d0318ca20e237b4bf7.setContent(html_c7db1c9cb4f34c935e8ce9d603d625cc);
+            
+        
+
+        marker_df9ff8bef7bae3246fce05babf3cde9b.bindPopup(popup_fd1751d6ed6de4d0318ca20e237b4bf7)
+        ;
+
+        
+    
+    
+            marker_df9ff8bef7bae3246fce05babf3cde9b.bindTooltip(
+                `<div>
+                     Q57585380
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_d12d370fc39375afd9518b5ab90125d9 = L.marker(
+                [50.085055555, 14.428361111],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_0c27551c16157cce7ff723b87e4e3962 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_3aa1da359f526773657706413df02470 = $(`<div id=&quot;html_3aa1da359f526773657706413df02470&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Omnipol building</b></div>`)[0];
+                popup_0c27551c16157cce7ff723b87e4e3962.setContent(html_3aa1da359f526773657706413df02470);
+            
+        
+
+        marker_d12d370fc39375afd9518b5ab90125d9.bindPopup(popup_0c27551c16157cce7ff723b87e4e3962)
+        ;
+
+        
+    
+    
+            marker_d12d370fc39375afd9518b5ab90125d9.bindTooltip(
+                `<div>
+                     Omnipol building
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_38ae88654ffe759f390c822c4272cdc9 = L.marker(
+                [40.421352777, -3.679494444],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_cc0a895c2aec1108f46a34ee0d700f05 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f3741009585176cd391cd09c67a5026d = $(`<div id=&quot;html_f3741009585176cd391cd09c67a5026d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Torre de Valencia, Madrid</b></div>`)[0];
+                popup_cc0a895c2aec1108f46a34ee0d700f05.setContent(html_f3741009585176cd391cd09c67a5026d);
+            
+        
+
+        marker_38ae88654ffe759f390c822c4272cdc9.bindPopup(popup_cc0a895c2aec1108f46a34ee0d700f05)
+        ;
+
+        
+    
+    
+            marker_38ae88654ffe759f390c822c4272cdc9.bindTooltip(
+                `<div>
+                     Torre de Valencia, Madrid
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_18d442789a47fe1658d6e1865eb310ef = L.marker(
+                [50.0734689, 14.4153219],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_8ac2dbc45764c4225b0dc6852108158d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_c73025634bbdaecabf7d192c2d47d996 = $(`<div id=&quot;html_c73025634bbdaecabf7d192c2d47d996&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Dům Metrostavu</b></div>`)[0];
+                popup_8ac2dbc45764c4225b0dc6852108158d.setContent(html_c73025634bbdaecabf7d192c2d47d996);
+            
+        
+
+        marker_18d442789a47fe1658d6e1865eb310ef.bindPopup(popup_8ac2dbc45764c4225b0dc6852108158d)
+        ;
+
+        
+    
+    
+            marker_18d442789a47fe1658d6e1865eb310ef.bindTooltip(
+                `<div>
+                     Dům Metrostavu
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_cf58e987d40b7e6310a7d7d46f1f5606 = L.marker(
+                [42.3604, -71.0891],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_ad3cbfcf63b6fe94ddd5871e2d2f9f55 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_a85f66dbabd9b3b612ac303b329e686f = $(`<div id=&quot;html_a85f66dbabd9b3b612ac303b329e686f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Green Building</b></div>`)[0];
+                popup_ad3cbfcf63b6fe94ddd5871e2d2f9f55.setContent(html_a85f66dbabd9b3b612ac303b329e686f);
+            
+        
+
+        marker_cf58e987d40b7e6310a7d7d46f1f5606.bindPopup(popup_ad3cbfcf63b6fe94ddd5871e2d2f9f55)
+        ;
+
+        
+    
+    
+            marker_cf58e987d40b7e6310a7d7d46f1f5606.bindTooltip(
+                `<div>
+                     Green Building
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_e27254e61f2a1c798080244a8ba8e1b5 = L.marker(
+                [45.790667, 15.968833],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_e70623b3f01c310c4c93079750e263ac = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f66b427e957840062323072572632f3e = $(`<div id=&quot;html_f66b427e957840062323072572632f3e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Kockica</b></div>`)[0];
+                popup_e70623b3f01c310c4c93079750e263ac.setContent(html_f66b427e957840062323072572632f3e);
+            
+        
+
+        marker_e27254e61f2a1c798080244a8ba8e1b5.bindPopup(popup_e70623b3f01c310c4c93079750e263ac)
+        ;
+
+        
+    
+    
+            marker_e27254e61f2a1c798080244a8ba8e1b5.bindTooltip(
+                `<div>
+                     Kockica
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_25bfe15091e9414a744cb0fbd59de0dd = L.marker(
+                [38.887, -77.026],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_c2ad6998ca739e5136b91e26a39e56e3 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_27d76c6a2813a45791b287004123ea77 = $(`<div id=&quot;html_27d76c6a2813a45791b287004123ea77&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>James V. Forrestal Building</b></div>`)[0];
+                popup_c2ad6998ca739e5136b91e26a39e56e3.setContent(html_27d76c6a2813a45791b287004123ea77);
+            
+        
+
+        marker_25bfe15091e9414a744cb0fbd59de0dd.bindPopup(popup_c2ad6998ca739e5136b91e26a39e56e3)
+        ;
+
+        
+    
+    
+            marker_25bfe15091e9414a744cb0fbd59de0dd.bindTooltip(
+                `<div>
+                     James V. Forrestal Building
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_9549b07510cbb1f7cf291d6591f149ac = L.marker(
+                [50.0799444, 14.4320833],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_857142b47b64622780e33f932b349c0c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_913076be70b2187866843f0e3b071a4b = $(`<div id=&quot;html_913076be70b2187866843f0e3b071a4b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Federální shromáždění</b></div>`)[0];
+                popup_857142b47b64622780e33f932b349c0c.setContent(html_913076be70b2187866843f0e3b071a4b);
+            
+        
+
+        marker_9549b07510cbb1f7cf291d6591f149ac.bindPopup(popup_857142b47b64622780e33f932b349c0c)
+        ;
+
+        
+    
+    
+            marker_9549b07510cbb1f7cf291d6591f149ac.bindTooltip(
+                `<div>
+                     Federální shromáždění
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_8a37bd6e044e134ca07c94e70635ac05 = L.marker(
+                [-12.098192285, -77.014875513],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_f74ccf3b14fb1c23c388e5643d0060f6 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_a19768aeddfe72eef2bed98100f5fa8a = $(`<div id=&quot;html_a19768aeddfe72eef2bed98100f5fa8a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q113322778</b></div>`)[0];
+                popup_f74ccf3b14fb1c23c388e5643d0060f6.setContent(html_a19768aeddfe72eef2bed98100f5fa8a);
+            
+        
+
+        marker_8a37bd6e044e134ca07c94e70635ac05.bindPopup(popup_f74ccf3b14fb1c23c388e5643d0060f6)
+        ;
+
+        
+    
+    
+            marker_8a37bd6e044e134ca07c94e70635ac05.bindTooltip(
+                `<div>
+                     Q113322778
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_75b3baa837e30409117c7a8042381e4b = L.marker(
+                [59.84398056, 17.62979444],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_070b74dc375dbe57b5f751c8d2513534 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_abad2b97976af412c25caf8ed90f0de2 = $(`<div id=&quot;html_abad2b97976af412c25caf8ed90f0de2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Villa Göth</b></div>`)[0];
+                popup_070b74dc375dbe57b5f751c8d2513534.setContent(html_abad2b97976af412c25caf8ed90f0de2);
+            
+        
+
+        marker_75b3baa837e30409117c7a8042381e4b.bindPopup(popup_070b74dc375dbe57b5f751c8d2513534)
+        ;
+
+        
+    
+    
+            marker_75b3baa837e30409117c7a8042381e4b.bindTooltip(
+                `<div>
+                     Villa Göth
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_cc27819299b4d4073ea099cc610c08dc = L.marker(
+                [32.08555556, 34.76944444],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_93319b45a2d8e3df95088d2214e6325c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f2c78f61d545f5a048bc2ca24b4e3a8a = $(`<div id=&quot;html_f2c78f61d545f5a048bc2ca24b4e3a8a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Atarim Square</b></div>`)[0];
+                popup_93319b45a2d8e3df95088d2214e6325c.setContent(html_f2c78f61d545f5a048bc2ca24b4e3a8a);
+            
+        
+
+        marker_cc27819299b4d4073ea099cc610c08dc.bindPopup(popup_93319b45a2d8e3df95088d2214e6325c)
+        ;
+
+        
+    
+    
+            marker_cc27819299b4d4073ea099cc610c08dc.bindTooltip(
+                `<div>
+                     Atarim Square
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_b50f274293f8567580734efd27a67cb4 = L.marker(
+                [40.44583333, -3.72833333],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_31e71820f4de4894260d2a45dc353284 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_cd6875a8a86c62ef5eb5a4e20adfe060 = $(`<div id=&quot;html_cd6875a8a86c62ef5eb5a4e20adfe060&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Old Building of the Facultad de Ciencias de la Información, Complutense University of Madrid</b></div>`)[0];
+                popup_31e71820f4de4894260d2a45dc353284.setContent(html_cd6875a8a86c62ef5eb5a4e20adfe060);
+            
+        
+
+        marker_b50f274293f8567580734efd27a67cb4.bindPopup(popup_31e71820f4de4894260d2a45dc353284)
+        ;
+
+        
+    
+    
+            marker_b50f274293f8567580734efd27a67cb4.bindTooltip(
+                `<div>
+                     Old Building of the Facultad de Ciencias de la Información, Complutense University of Madrid
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_6eaa8bf535b5402d42eef08cc59c1d05 = L.marker(
+                [-31.9433, 115.877],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_952d37873b571ccfbef236de13fdfc4e = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_10915d8d91eb0be6ef26e85498353dc3 = $(`<div id=&quot;html_10915d8d91eb0be6ef26e85498353dc3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Public Transport Centre</b></div>`)[0];
+                popup_952d37873b571ccfbef236de13fdfc4e.setContent(html_10915d8d91eb0be6ef26e85498353dc3);
+            
+        
+
+        marker_6eaa8bf535b5402d42eef08cc59c1d05.bindPopup(popup_952d37873b571ccfbef236de13fdfc4e)
+        ;
+
+        
+    
+    
+            marker_6eaa8bf535b5402d42eef08cc59c1d05.bindTooltip(
+                `<div>
+                     Public Transport Centre
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_5ecfb2196e79b003d01cbc867a77bcb8 = L.marker(
+                [52.35749, 4.856],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_3878167301643460a1c13ba5ad0b89ac = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_b45b6b1e6f32da0a4bc022ffb1874b37 = $(`<div id=&quot;html_b45b6b1e6f32da0a4bc022ffb1874b37&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Overtoom 527-545, Amsterdam</b></div>`)[0];
+                popup_3878167301643460a1c13ba5ad0b89ac.setContent(html_b45b6b1e6f32da0a4bc022ffb1874b37);
+            
+        
+
+        marker_5ecfb2196e79b003d01cbc867a77bcb8.bindPopup(popup_3878167301643460a1c13ba5ad0b89ac)
+        ;
+
+        
+    
+    
+            marker_5ecfb2196e79b003d01cbc867a77bcb8.bindTooltip(
+                `<div>
+                     Overtoom 527-545, Amsterdam
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_459f7ebcd4b54228e79490850acd1c24 = L.marker(
+                [52.35749, 4.856],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_60d5b70ca9562b255dfa21ee5b9d8329 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_31755ef447b40891f6e8993bd1a07ee6 = $(`<div id=&quot;html_31755ef447b40891f6e8993bd1a07ee6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Overtoom 527-545, Amsterdam</b></div>`)[0];
+                popup_60d5b70ca9562b255dfa21ee5b9d8329.setContent(html_31755ef447b40891f6e8993bd1a07ee6);
+            
+        
+
+        marker_459f7ebcd4b54228e79490850acd1c24.bindPopup(popup_60d5b70ca9562b255dfa21ee5b9d8329)
+        ;
+
+        
+    
+    
+            marker_459f7ebcd4b54228e79490850acd1c24.bindTooltip(
+                `<div>
+                     Overtoom 527-545, Amsterdam
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_ccde88103bf2c1dd8948c9332a514530 = L.marker(
+                [47.491822222, 8.706305555],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_8bc076933bc1d40cc04a1b6e5887d2ca = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_9294a108ea1fb0f3dc19fa6aee3b9cf3 = $(`<div id=&quot;html_9294a108ea1fb0f3dc19fa6aee3b9cf3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q57585380</b></div>`)[0];
+                popup_8bc076933bc1d40cc04a1b6e5887d2ca.setContent(html_9294a108ea1fb0f3dc19fa6aee3b9cf3);
+            
+        
+
+        marker_ccde88103bf2c1dd8948c9332a514530.bindPopup(popup_8bc076933bc1d40cc04a1b6e5887d2ca)
+        ;
+
+        
+    
+    
+            marker_ccde88103bf2c1dd8948c9332a514530.bindTooltip(
+                `<div>
+                     Q57585380
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_0afcfa8727c09ae960b9bf4f644ea627 = L.marker(
+                [50.0759139, 14.4157161],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_304795f22cbc8183005cfc24a0fbb18a = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_6e66f953e71d46e7e3e6d9aa5adaee66 = $(`<div id=&quot;html_6e66f953e71d46e7e3e6d9aa5adaee66&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q56651190</b></div>`)[0];
+                popup_304795f22cbc8183005cfc24a0fbb18a.setContent(html_6e66f953e71d46e7e3e6d9aa5adaee66);
+            
+        
+
+        marker_0afcfa8727c09ae960b9bf4f644ea627.bindPopup(popup_304795f22cbc8183005cfc24a0fbb18a)
+        ;
+
+        
+    
+    
+            marker_0afcfa8727c09ae960b9bf4f644ea627.bindTooltip(
+                `<div>
+                     Q56651190
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_8b9520cc42b0d2dcc2b19b7d95d030c5 = L.marker(
+                [47.491727554, 8.706268019],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_8d6ac4412220a21b17a6676740317bff = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_eef0be08be0f8c75dd8c14b5c0b9034a = $(`<div id=&quot;html_eef0be08be0f8c75dd8c14b5c0b9034a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q57585380</b></div>`)[0];
+                popup_8d6ac4412220a21b17a6676740317bff.setContent(html_eef0be08be0f8c75dd8c14b5c0b9034a);
+            
+        
+
+        marker_8b9520cc42b0d2dcc2b19b7d95d030c5.bindPopup(popup_8d6ac4412220a21b17a6676740317bff)
+        ;
+
+        
+    
+    
+            marker_8b9520cc42b0d2dcc2b19b7d95d030c5.bindTooltip(
+                `<div>
+                     Q57585380
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_1f8600223d0c70fd92f33a028218fd06 = L.marker(
+                [50.09152, 14.41957],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_a1c522281b880af72191931d9207f28f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_4adf5261d9694b2c7f9fdbf44d5e43cb = $(`<div id=&quot;html_4adf5261d9694b2c7f9fdbf44d5e43cb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Elišky Krásnohorské 16</b></div>`)[0];
+                popup_a1c522281b880af72191931d9207f28f.setContent(html_4adf5261d9694b2c7f9fdbf44d5e43cb);
+            
+        
+
+        marker_1f8600223d0c70fd92f33a028218fd06.bindPopup(popup_a1c522281b880af72191931d9207f28f)
+        ;
+
+        
+    
+    
+            marker_1f8600223d0c70fd92f33a028218fd06.bindTooltip(
+                `<div>
+                     Elišky Krásnohorské 16
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_f7c055266bb94eb5e1f6493a30efda07 = L.marker(
+                [41.0849, -81.5178],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_f26bd2833b61bb8db86037092814c132 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_5c8f68ee8eecc699d57f69f9ef4fa071 = $(`<div id=&quot;html_5c8f68ee8eecc699d57f69f9ef4fa071&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>John F. Seiberling Federal Building and United States Courthouse</b></div>`)[0];
+                popup_f26bd2833b61bb8db86037092814c132.setContent(html_5c8f68ee8eecc699d57f69f9ef4fa071);
+            
+        
+
+        marker_f7c055266bb94eb5e1f6493a30efda07.bindPopup(popup_f26bd2833b61bb8db86037092814c132)
+        ;
+
+        
+    
+    
+            marker_f7c055266bb94eb5e1f6493a30efda07.bindTooltip(
+                `<div>
+                     John F. Seiberling Federal Building and United States Courthouse
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_830394a89c01796ca4280de2a32f7c9c = L.marker(
+                [50.08888889, 14.42722222],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_fe9d0b84802f5b039a932b0dbabbd8f9 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_a60a66dddc3540d4dc7df71286e7862b = $(`<div id=&quot;html_a60a66dddc3540d4dc7df71286e7862b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Kotva Department Store</b></div>`)[0];
+                popup_fe9d0b84802f5b039a932b0dbabbd8f9.setContent(html_a60a66dddc3540d4dc7df71286e7862b);
+            
+        
+
+        marker_830394a89c01796ca4280de2a32f7c9c.bindPopup(popup_fe9d0b84802f5b039a932b0dbabbd8f9)
+        ;
+
+        
+    
+    
+            marker_830394a89c01796ca4280de2a32f7c9c.bindTooltip(
+                `<div>
+                     Kotva Department Store
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_f9d402cdc1ae1428fe2fe9a999c6cc78 = L.marker(
+                [51.528574, 9.940446],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_5b2611918112890eb0941eeae837a96f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_6e3450244e70a351ce987d754a7a7f20 = $(`<div id=&quot;html_6e3450244e70a351ce987d754a7a7f20&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Neues Rathaus, Göttingen</b></div>`)[0];
+                popup_5b2611918112890eb0941eeae837a96f.setContent(html_6e3450244e70a351ce987d754a7a7f20);
+            
+        
+
+        marker_f9d402cdc1ae1428fe2fe9a999c6cc78.bindPopup(popup_5b2611918112890eb0941eeae837a96f)
+        ;
+
+        
+    
+    
+            marker_f9d402cdc1ae1428fe2fe9a999c6cc78.bindTooltip(
+                `<div>
+                     Neues Rathaus, Göttingen
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_997afd4b4dcf12fe1e6a1d0c9e81a269 = L.marker(
+                [50.252527777, 19.032916666],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_73f411880ab7433ca119e58c758cfb59 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_9f4a9954819bca00a55e020eb058b4eb = $(`<div id=&quot;html_9f4a9954819bca00a55e020eb058b4eb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q123185168</b></div>`)[0];
+                popup_73f411880ab7433ca119e58c758cfb59.setContent(html_9f4a9954819bca00a55e020eb058b4eb);
+            
+        
+
+        marker_997afd4b4dcf12fe1e6a1d0c9e81a269.bindPopup(popup_73f411880ab7433ca119e58c758cfb59)
+        ;
+
+        
+    
+    
+            marker_997afd4b4dcf12fe1e6a1d0c9e81a269.bindTooltip(
+                `<div>
+                     Q123185168
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_a5761ca95a69c8e926ff68220570e4ca = L.marker(
+                [40.4279, -3.692433333],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_2a711a3fa7e11d27cc9522af99702173 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_9bd643f7985024dec2a0c73577b443b3 = $(`<div id=&quot;html_9bd643f7985024dec2a0c73577b443b3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Former British Embassy in Madrid</b></div>`)[0];
+                popup_2a711a3fa7e11d27cc9522af99702173.setContent(html_9bd643f7985024dec2a0c73577b443b3);
+            
+        
+
+        marker_a5761ca95a69c8e926ff68220570e4ca.bindPopup(popup_2a711a3fa7e11d27cc9522af99702173)
+        ;
+
+        
+    
+    
+            marker_a5761ca95a69c8e926ff68220570e4ca.bindTooltip(
+                `<div>
+                     Former British Embassy in Madrid
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_bfed714ef4db59d7f0bb427381adc995 = L.marker(
+                [-33.8837, 151.201],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_16901cea8c7f9a2597102822d81267c9 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_39af00fc8ddc21c08f00f557bdf05c46 = $(`<div id=&quot;html_39af00fc8ddc21c08f00f557bdf05c46&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>UTS Tower</b></div>`)[0];
+                popup_16901cea8c7f9a2597102822d81267c9.setContent(html_39af00fc8ddc21c08f00f557bdf05c46);
+            
+        
+
+        marker_bfed714ef4db59d7f0bb427381adc995.bindPopup(popup_16901cea8c7f9a2597102822d81267c9)
+        ;
+
+        
+    
+    
+            marker_bfed714ef4db59d7f0bb427381adc995.bindTooltip(
+                `<div>
+                     UTS Tower
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_a535f0849d8f8dcc27ff9a663562a2a1 = L.marker(
+                [50.0799444, 14.4320833],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_e7bbf98b10be5c70ac978ca5db949824 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_d9f2b4ee7399e5b60b277ca21a9f42a7 = $(`<div id=&quot;html_d9f2b4ee7399e5b60b277ca21a9f42a7&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Federální shromáždění</b></div>`)[0];
+                popup_e7bbf98b10be5c70ac978ca5db949824.setContent(html_d9f2b4ee7399e5b60b277ca21a9f42a7);
+            
+        
+
+        marker_a535f0849d8f8dcc27ff9a663562a2a1.bindPopup(popup_e7bbf98b10be5c70ac978ca5db949824)
+        ;
+
+        
+    
+    
+            marker_a535f0849d8f8dcc27ff9a663562a2a1.bindTooltip(
+                `<div>
+                     Federální shromáždění
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_b60c74dc998577853c5892f2fd315a75 = L.marker(
+                [52.041888888, 4.342194444],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_81ce13ae16564c5801ef4414f14921a5 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_18bf3ae544e23f1c088bd962458bfd4b = $(`<div id=&quot;html_18bf3ae544e23f1c088bd962458bfd4b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Q116741329</b></div>`)[0];
+                popup_81ce13ae16564c5801ef4414f14921a5.setContent(html_18bf3ae544e23f1c088bd962458bfd4b);
+            
+        
+
+        marker_b60c74dc998577853c5892f2fd315a75.bindPopup(popup_81ce13ae16564c5801ef4414f14921a5)
+        ;
+
+        
+    
+    
+            marker_b60c74dc998577853c5892f2fd315a75.bindTooltip(
+                `<div>
+                     Q116741329
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_d591174ed3c410efa79537f71326091f = L.marker(
+                [50.0487447, 14.4405583],
+                {}
+            ).addTo(map_238a0c2504dd72e8bde5b7810b245c1e);
+        
+    
+        var popup_4884bd9fac2450cde7c39b31789d4bf4 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_dfdf772b4739f787f8c161f2417e466d = $(`<div id=&quot;html_dfdf772b4739f787f8c161f2417e466d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><b>Na Strži 40</b></div>`)[0];
+                popup_4884bd9fac2450cde7c39b31789d4bf4.setContent(html_dfdf772b4739f787f8c161f2417e466d);
+            
+        
+
+        marker_d591174ed3c410efa79537f71326091f.bindPopup(popup_4884bd9fac2450cde7c39b31789d4bf4)
+        ;
+
+        
+    
+    
+            marker_d591174ed3c410efa79537f71326091f.bindTooltip(
+                `<div>
+                     Na Strži 40
+                 </div>`,
+                {&quot;sticky&quot;: true}
+            );
+        
+</script>
+</html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
+
+
+</div>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Katalog zur Ausstellung: Der Große Saal (Rittersaal)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Katalog zur Ausstellung: Der Große Saal (Rittersaal)</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./section-fullimg.html" class="pagination-link" aria-label="Gallery Full Image">
+        <span class="nav-page-text"><span class="chapter-title">Gallery Full Image</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/calnfynn/section-demo-layouts/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

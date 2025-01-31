@@ -11,6 +11,7 @@ book:
   # this section determines which files will be added to the book as chapters
   chapters:
     - index.qmd
+    - section-map.ipynb
     - section-fullimg.ipynb
     - section-masonry.ipynb
     - section-grid.ipynb
@@ -23,7 +24,9 @@ book:
     background: primary
     search: true
     left:
-      - text: "Full Screen Image"
+      - text: "Map"
+        href: section-map.ipynb
+      - text: "Full Image"
         href: section-fullimg.html
       - text: "Masonry"
         href: section-masonry.html
