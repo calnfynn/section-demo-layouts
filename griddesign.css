@@ -28,7 +28,7 @@
   padding: 1.5vw;
   border: 0;
   background: transparent;
-  z-index: 100;
+  z-index: 10;
   cursor: pointer;
   backdrop-filter: blur(5px); 
 }
@@ -88,4 +88,33 @@
 .navbar,
 .navbar-expand-lg {
   height: 1px;
+}
+.info-wd {
+  height:6vh;
+  position:fixed;
+  align-items:baseline;
+  z-index:100;
+  bottom: 3vh;
+  left:7vw;
+  right:7vw;
+  margin-top:1vh;
+  background-color: #fff;
+  flex-direction: row;
+  width: 86vw;
+  justify-content: space-between;
+  opacity: 90%;
+}
+
+.info-wd > a {
+  flex-grow: 1;
+}
+
+a > .btn-light {
+  width: 100%;
+  text-decoration: underline;
+}
+
+.btn-secondary {
+  cursor:default !important;
+  flex-grow: 1;
 }

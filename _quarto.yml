@@ -34,6 +34,8 @@ book:
         href: section-grid.html
   sidebar: false
 
+
+
 # Quarto allows commenting using either Hypothesis or Utterances
 # https://quarto.org/docs/reference/projects/books.html#comments
 comments:
@@ -54,11 +56,41 @@ format:
       sidebar-width: 0px
       margin-width: 0px
       body-width: 2000px
+    image-lazy-loading: true
+    #extract-media: ./extracted-media/
+  
   # options for PDF output 
   # https://quarto.org/docs/reference/formats/pdf.html
   pdf:
     documentclass: book
+    lang: de
+    number-sections: false
+    toc-depth: 3
+#    include-in-header: "in-header.tex"
+    pagestyle: plain # page numbers
+    geometry: # margins
+      - top=35mm
+      - right=25mm
+      - bottom=35mm
+      - left=25mm
+      - heightrounded
+    #classoption: openany 
+    #fontsize: 12pt
+    papersize: a4
+#    template-partials:
+#      - "_titlepage.tex" 
+#      - "before-body.tex"
+#    title-bg-image: "cover/thkoeln_cover.png"
+    # title-bg-location: "LR" # UL, UR, LR, LL, leave empty for centered
+    # title-bg-size: 0.30
+    # title-boxcolor: gray!15!black
+    # title-boxopacity: 0
+    # title-boxfontcolor: black
+    # boxlinks: true
+    #keep-tex: true 
+
   #docx: 
   #  toc: true
   #epub: 
   #  toc: true    
+
