@@ -22,8 +22,8 @@
   z-index:100;
 }
 .img_popover {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
   padding: 1.5vw;
   border: 0;
@@ -93,7 +93,7 @@
   height:6vh;
   position:fixed;
   align-items:baseline;
-  z-index:100;
+  z-index:200;
   bottom: 3vh;
   left:7vw;
   right:7vw;
@@ -103,6 +103,7 @@
   width: 86vw;
   justify-content: space-between;
   opacity: 90%;
+  backdrop-filter: none !important;
 }
 
 .info-wd > a {
@@ -117,4 +118,8 @@ a > .btn-light {
 .btn-secondary {
   cursor:default !important;
   flex-grow: 1;
+}
+
+.blur-active {
+    backdrop-filter: blur(5px);
 }

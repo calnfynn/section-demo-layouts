@@ -56,7 +56,7 @@ format:
       sidebar-width: 0px
       margin-width: 0px
       body-width: 2000px
-    image-lazy-loading: true
+    #image-lazy-loading: true
     #extract-media: ./extracted-media/
   
   # options for PDF output 
@@ -66,7 +66,6 @@ format:
     lang: de
     number-sections: false
     toc-depth: 3
-#    include-in-header: "in-header.tex"
     pagestyle: plain # page numbers
     geometry: # margins
       - top=35mm
@@ -87,7 +86,7 @@ format:
     # title-boxopacity: 0
     # title-boxfontcolor: black
     # boxlinks: true
-    #keep-tex: true 
+    keep-tex: true 
 
   #docx: 
   #  toc: true
