@@ -7,6 +7,7 @@
   margin-top: 0;
   display:inline-block;
   visibility: visible;
+  flex-grow:3;
 }
 
 .navig {
@@ -25,6 +26,8 @@
   color:grey;
   height: 90vh;
   height: 3em;
+  cursor:pointer !important;
+  flex-grow: 0.5;
 }
 
 .stop-scrolling {

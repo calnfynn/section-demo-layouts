@@ -14,11 +14,11 @@ book:
     - section-map.ipynb
     - section-fullimg.ipynb
     - section-masonry.ipynb
-    - section-grid.ipynb
+    # - section-grid.ipynb
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: [issue]
   # downloads: [pdf,docx,epub]
-  downloads: [pdf]
+  # downloads: [pdf]
   cover-image: images/fmd10005860a.jpg
   navbar:
     background: primary
@@ -86,7 +86,9 @@ format:
     # title-boxopacity: 0
     # title-boxfontcolor: black
     # boxlinks: true
-    keep-tex: true 
+    # keep-tex: true 
+    #extract-media: ./extracted-media/
+
 
   #docx: 
   #  toc: true
