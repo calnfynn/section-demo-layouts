@@ -4,7 +4,7 @@
 %
 \documentclass[
   a4paper,
-]{book}
+  openany]{book}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -94,7 +94,23 @@
 \def\fps@figure{htbp}
 \makeatother
 
-\flushbottom
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\usepackage{wallpaper} % for the background image on title page
+\usepackage{geometry} % for margins
+\usepackage{libertine}
+\usepackage[most]{tcolorbox}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{contour}
+\usepackage{imakeidx}
+
+
+
+\makeindex[intoc=true]
+\onehalfspacing % line spacing
+\setlength{\parskip}{1.5em}
+\setlength\parindent{0pt}
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -139,10 +155,6 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-\makeatletter
-\@ifpackageloaded{sidenotes}{}{\usepackage{sidenotes}}
-\@ifpackageloaded{marginnote}{}{\usepackage{marginnote}}
-\makeatother
 
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -170,17 +182,94 @@
 
 \title{Demo V2 Layouts}
 \author{ASKCR}
-\date{2025-02-07}
+\date{2025-02-26}
 
 \begin{document}
-\frontmatter
-\maketitle
+  \begin{frontmatter}
+  \begin{titlepage}
+  %  SOURCE: https://github.com/nmfs-opensci/quarto_titlepages_v1/tree/main
 
-\renewcommand*\contentsname{Inhaltsverzeichnis}
-{
-\setcounter{tocdepth}{2}
+  % This is a combination of Pandoc templating and LaTeX
+  % Pandoc templating https://pandoc.org/MANUAL.html#templates
+
+  \tcbset{ % parameters for text background 
+      frame code={},
+      left=0pt, % margins
+      right=0pt,
+      top=0pt,
+      bottom=0pt,
+      colback=gray!10!black, % box color
+      width=\dimexpr\textwidth\relax, 
+      boxsep=15pt, % spacing between boxes
+      arc=0pt, % no rounded edges
+      opacityback=0.35, % translucent-ish background
+      fontupper=\color{white}, % fontcolor
+      fontlower=\color{white}
+      }
+
+
+
+  % background image
+    \ThisLRCornerWallPaper{1.1}{images/fmd10024322a.jpg}  
+
+  \begin{tcolorbox}
+
+
+  \centering
+
+  % Title and subtitle
+  {\Huge\bfseries\nohyphens{Demo V2 Layouts}}\\[1\baselineskip]
+
+  \end{tcolorbox}
+
+  \bigbreak
+
+  % Authors
+  \begin{tcolorbox}
+
+    %
+      {\large{ASKCR}}%
+      %
+    %
+
+
+  %%%%%% Affiliations
+  \vspace{2\baselineskip} 
+
+  \hangindent=1em
+  \hangafter=1
+
+
+  %%%%%% Correspondence
+  \vspace{1\baselineskip} 
+
+
+  \end{tcolorbox}
+
+
+  %use \vfill instead to get the space to fill flexibly	
+  %\vspace{0.25\textheight} % Whitespace between the title block and the publisher
+
+  \vfill
+
+  % Whitespace between the title block and the tagline
+  \vspace{1\baselineskip} 
+
+  \begin{tcolorbox}
+  \centering
+
+  %%%%%% Tagline at bottom
+  {
+    TIB\\
+    Open Science Lab
+  }
+  \end{tcolorbox}
+  \end{titlepage}
+  \end{frontmatter}
+
+
 \tableofcontents
-}
+{\let\newpage\relax}
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -198,584 +287,437 @@ Attribution-NonCommercial-NoDerivs 4.0 International License.
 
 \bookmarksetup{startatroot}
 
+\chapter{Contributers}\label{contributers}
+
+Name 1, \emph{University X}, \href{https://orcid.org/}{Orchid}
+
+Name 2, \emph{University Y}, \href{https://orcid.org/}{Orchid}
+
+Name 3, \emph{University Z}, \href{https://orcid.org/}{Orchid}
+
+\part{Building}
+
 \chapter{Gallery Map}\label{gallery-map}
 
 \begin{verbatim}
 <folium.folium.Map at 0x1a52c44a410>
 \end{verbatim}
 
-\bookmarksetup{startatroot}
-
-\chapter{Gallery Full Image}\label{gallery-full-image}
-
-\phantomsection\label{infogrid}
-\phantomsection\label{paintingName}
-
-\phantomsection\label{paintingYear}
-
-\phantomsection\label{paintingSize}{} {Wikidata}
-
-\bookmarksetup{startatroot}
-
-\chapter{Gallery Masonry}\label{gallery-masonry}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ105576317}
-Wrapped in Loveby: Israel Tsvaygenbaum2014
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Israel\%20Tsvaygenbaum\%20Wrapped\%20in\%20Love.jpg\}
-\textbackslash label\{fig:\{images/Israel\%20Tsvaygenbaum\%20Wrapped\%20in\%20Love.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ55852280}
-Passarola de Bartolomeu de Gusmãoby: José Wasth Rodrigues2000
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Jos\%C3\%A9\%20Wasth\%20Rodrigues\%20-\%20Passarola\%20de\%20Bartolomeu\%20de\%20Gusm\%C3\%A3o\%2C\%20Acervo\%20do\%20Museu\%20Paulista\%20da\%20USP.jpg\}
-\textbackslash label\{fig:\{images/Jos\%C3\%A9\%20Wasth\%20Rodrigues\%20-\%20Passarola\%20de\%20Bartolomeu\%20de\%20Gusm\%C3\%A3o\%2C\%20Acervo\%20do\%20Museu\%20Paulista\%20da\%20USP.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ55852494}
-Passarola de Bartolomeu de Gusmãoby: José Wasth Rodrigues2000
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Jos\%C3\%A9\%20Wasth\%20Rodrigues\%20-\%20Passarola\%20de\%20Bartolomeu\%20de\%20Gusm\%C3\%A3o\%20-\%202\%2C\%20Acervo\%20do\%20Museu\%20Paulista\%20da\%20USP.jpg\}
-\textbackslash label\{fig:\{images/Jos\%C3\%A9\%20Wasth\%20Rodrigues\%20-\%20Passarola\%20de\%20Bartolomeu\%20de\%20Gusm\%C3\%A3o\%20-\%202\%2C\%20Acervo\%20do\%20Museu\%20Paulista\%20da\%20USP.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ56807932}
-Okutatami Lakeby: Li Mei-shu1980
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Okutatami\%20Lake.jpg\}
-\textbackslash label\{fig:\{images/Okutatami\%20Lake.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ19917454}
-Seneca Lakeby: Arthur Dove1935
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Seneca\%20Lake\%20MET\%20DP234290.jpg\}
-\textbackslash label\{fig:\{images/Seneca\%20Lake\%20MET\%20DP234290.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ50776315}
-Q50776315by: Villem Ormisson1934
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Varemed\%2C\%20Villem\%20Ormisson\%2C\%20TKM\%20TR\%205514\%20M\%20952.jpg\}
-\textbackslash label\{fig:\{images/Varemed\%2C\%20Villem\%20Ormisson\%2C\%20TKM\%20TR\%205514\%20M\%20952.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ20491060}
-Buffalo Sceneby: Emil W. Lenders1922
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Emil\%20W.\%20Lenders\%20-\%20Buffalo\%20Scene\%20-\%201985.66.362\%2C157\%20-\%20Smithsonian\%20American\%20Art\%20Museum.jpg\}
-\textbackslash label\{fig:\{images/Emil\%20W.\%20Lenders\%20-\%20Buffalo\%20Scene\%20-\%201985.66.362\%2C157\%20-\%20Smithsonian\%20American\%20Art\%20Museum.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ20191641}
-A Stormby: Georgia O'Keeffe1922
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/A\%20Storm\%20DT1394.jpg\}
-\textbackslash label\{fig:\{images/A\%20Storm\%20DT1394.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ50790393}
-Q50790393by: Konrad Mägi1922
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Konrad\%20M\%C3\%A4gi\%20TKM\%200077M.jpg\}
-\textbackslash label\{fig:\{images/Konrad\%20M\%C3\%A4gi\%20TKM\%200077M.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ64686030}
-Lake and mountainsby: John Kelt Edwards1920
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Lake\%20and\%20mountains.jpg\}
-\textbackslash label\{fig:\{images/Lake\%20and\%20mountains.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ20795141}
-Small Lakeby: Magnus Enckell1919
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Magnus\%20Enckell\%20-\%20Small\%20Lake\%20-\%20A-2002-197\%20-\%20Finnish\%20National\%20Gallery.jpg\}
-\textbackslash label\{fig:\{images/Magnus\%20Enckell\%20-\%20Small\%20Lake\%20-\%20A-2002-197\%20-\%20Finnish\%20National\%20Gallery.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ26940419}
-Brouillard sur le Lac Lémanby: Albert Marquet1918
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Albert\%20Marquet\%20-\%20Brouillard\%20sur\%20le\%20Lac\%20L\%C3\%A9man.jpg\}
-\textbackslash label\{fig:\{images/Albert\%20Marquet\%20-\%20Brouillard\%20sur\%20le\%20Lac\%20L\%C3\%A9man.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ50353962}
-Landscape from Estoniaby: Konrad Mägi1915
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Konrad\%20M\%C3\%A4gi.\%20Maastik\%20Eestist.\%20TKM\%200569M.jpg\}
-\textbackslash label\{fig:\{images/Konrad\%20M\%C3\%A4gi.\%20Maastik\%20Eestist.\%20TKM\%200569M.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ105078801}
-Three old menby: Mikhail Nesterov1915
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Mikhail\%20Nesterov.\%20Three\%20old\%20men.jpg\}
-\textbackslash label\{fig:\{images/Mikhail\%20Nesterov.\%20Three\%20old\%20men.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ20488491}
-Nudes in Landscapeby: Arnold Friedman1914
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Nudes\%20in\%20Landscape\%20SAAM-1984.71\%201.jpg\}
-\textbackslash label\{fig:\{images/Nudes\%20in\%20Landscape\%20SAAM-1984.71\%201.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ76998117}
-Tyrau Mawrby: Christopher Williams1913
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Tyrau\%20Mawr\%20\%28gcf01973\%29.jpg\}
-\textbackslash label\{fig:\{images/Tyrau\%20Mawr\%20\%28gcf01973\%29.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ76997813}
-Reflectionsby: John Kelt Edwards1912
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Reflections\%20\%28gcf10257\%29.jpg\}
-\textbackslash label\{fig:\{images/Reflections\%20\%28gcf10257\%29.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ131100175}
-Sunlightby: Charlotte Wahlström1912
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Sunlight\%20\%28Charlotte\%20Wahlstr\%C3\%B6m\%29\%20-\%20Gothenburg\%20Museum\%20of\%20Art\%20-\%20GKM\%200464.tif\}
-\textbackslash label\{fig:\{images/Sunlight\%20\%28Charlotte\%20Wahlstr\%C3\%B6m\%29\%20-\%20Gothenburg\%20Museum\%20of\%20Art\%20-\%20GKM\%200464.tif\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ8563481}
-Five Bathing Women at a Lakeby: Ernst Ludwig Kirchner1911
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Kirchner\%20-\%20F\%C3\%BCnf\%20badende\%20am\%20See.jpg\}
-\textbackslash label\{fig:\{images/Kirchner\%20-\%20F\%C3\%BCnf\%20badende\%20am\%20See.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ19925715}
-Lake of Ortaby: James Carroll Beckwith1910
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Lake\%20of\%20Orta\%20MET\%20ap67.55.164.jpg\}
-\textbackslash label\{fig:\{images/Lake\%20of\%20Orta\%20MET\%20ap67.55.164.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ65960306}
-Paisaje de Vichy (Río Alier)by: Aureliano de Beruete1910
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Paisaje\%20de\%20Vichy\%20\%28R\%C3\%ADo\%20Alier\%29\%20-\%20Aureliano\%20de\%20Beruete.jpg\}
-\textbackslash label\{fig:\{images/Paisaje\%20de\%20Vichy\%20\%28R\%C3\%ADo\%20Alier\%29\%20-\%20Aureliano\%20de\%20Beruete.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ106510719}
-Q106510719by: Charles Bertier1910
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Entre\%20deux\%20pluies\%2C\%20Lac\%20Robert\%20\%28Chamrousse\%29\%20par\%20Charles\%20Bertier\%20Musee\%20de\%20Grenoble.jpg\}
-\textbackslash label\{fig:\{images/Entre\%20deux\%20pluies\%2C\%20Lac\%20Robert\%20\%28Chamrousse\%29\%20par\%20Charles\%20Bertier\%20Musee\%20de\%20Grenoble.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ65561208}
-Q65561208by: Georges Clairin1909
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Clairin\%20-\%20Jeune\%20femme\%20a\%20reveillon.jpg\}
-\textbackslash label\{fig:\{images/Clairin\%20-\%20Jeune\%20femme\%20a\%20reveillon.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ20491800}
-A Family of Birchesby: Willard Metcalf1907
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Willard\%20L.\%20Metcalf\%20-\%20A\%20Family\%20of\%20Birches\%20-\%20Google\%20Art\%20Project.jpg\}
-\textbackslash label\{fig:\{images/Willard\%20L.\%20Metcalf\%20-\%20A\%20Family\%20of\%20Birches\%20-\%20Google\%20Art\%20Project.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ64787177}
-Lake Geneva with the Savoy Alpsby: Ferdinand Hodler1907
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Lake\%20Geneva\%20with\%20the\%20Savoy\%20Alps\%20\%28SM\%20sg1229\%29.png\}
-\textbackslash label\{fig:\{images/Lake\%20Geneva\%20with\%20the\%20Savoy\%20Alps\%20\%28SM\%20sg1229\%29.png\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ28798149}
-Lakeside Road near Gmundenby: Richard Gerstl1907
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Richard\%20Gerstl\%20-\%20Lakeside\%20Road\%20near\%20Gmunden\%20-\%20Google\%20Art\%20Project.jpg\}
-\textbackslash label\{fig:\{images/Richard\%20Gerstl\%20-\%20Lakeside\%20Road\%20near\%20Gmunden\%20-\%20Google\%20Art\%20Project.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ18705414}
-Munich, English Garden (Lake and Dinghy)by: Wassily Kandinsky1902
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Kandinsky\%20-\%20M\%C3\%BCnchen\%2C\%20Englischer\%20Garten\%20\%28See\%20mit\%20Boot\%29\%2C\%20vers\%201902\%20-\%201903.jpg\}
-\textbackslash label\{fig:\{images/Kandinsky\%20-\%20M\%C3\%BCnchen\%2C\%20Englischer\%20Garten\%20\%28See\%20mit\%20Boot\%29\%2C\%20vers\%201902\%20-\%201903.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ18705456}
-Kochel, Lake and Pier Iby: Wassily Kandinsky1902
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Kandinsky\%20-\%20Kochel\%2C\%20See\%20mit\%20Bootsteg\%20I\%2C\%201902.jpg\}
-\textbackslash label\{fig:\{images/Kandinsky\%20-\%20Kochel\%2C\%20See\%20mit\%20Bootsteg\%20I\%2C\%201902.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ27876304}
-A New Zealand Lake with the Remarkables in the Distanceby: Elizabeth
-Donald1902
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Elizabeth\%20Donald\%20-\%20A\%20New\%20Zealand\%20Lake\%20with\%20the\%20Remarkables\%20in\%20the\%20Distance\%20-\%201980-9\%20-\%20Auckland\%20Art\%20Gallery.jpg\}
-\textbackslash label\{fig:\{images/Elizabeth\%20Donald\%20-\%20A\%20New\%20Zealand\%20Lake\%20with\%20the\%20Remarkables\%20in\%20the\%20Distance\%20-\%201980-9\%20-\%20Auckland\%20Art\%20Gallery.jpg\}\}
-\textbackslash end\{figure\}
-
-\phantomsection\label{http:ux2fux2fwww.wikidata.orgux2fentityux2fQ24325535}
-Three nymphs at the lake - the concertby: Wacław Szymanowski1901
-
-\textbackslash begin\{figure\}{[}H{]}\\
-\textbackslash includegraphics{[}height=10cm{]}\{images/Wac\%C5\%82aw\%20Szymanowski\%20-\%20Three\%20nymphs\%20at\%20the\%20lake\%20\%E2\%80\%93\%20concert\%20-\%20MP\%205016\%20-\%20National\%20Museum\%20in\%20Warsaw.jpg\}
-\textbackslash label\{fig:\{images/Wac\%C5\%82aw\%20Szymanowski\%20-\%20Three\%20nymphs\%20at\%20the\%20lake\%20\%E2\%80\%93\%20concert\%20-\%20MP\%205016\%20-\%20National\%20Museum\%20in\%20Warsaw.jpg\}\}
-\textbackslash end\{figure\}
-
-\bookmarksetup{startatroot}
+\part{Room}
+
+\chapter{Bau-, Ausstattungs- und
+Funktionsgeschichte}\label{bau--ausstattungs--und-funktionsgeschichte}
+
+Die hervorragend erhaltene wandfeste Ausstattung des Großen Saals, der
+1639 als „großer Saahl`` {[}1{]} geführt wurde und seinen heute
+geläufigen Namen Rittersaal erst im Nachhinein erhielt, datiert aus den
+Jahren 1601 bis 1605. Am Beginn stand den Quellen zufolge der
+monumentale Saalkamin. Der Vertrag mit dem Bildhauer Michael Juncker aus
+Miltenberg datiert vom 7. September 1601.{[}2{]} Im November 1601 wurden
+mit Balthasar Katzenberger die Deckengemälde verdingt, der die Arbeiten
+13 Monate später Anno 1602 abschloss.{[}3{]} 1603 signierte und datierte
+der Kalkschneider Gerhard Schmidt das Portal an der inneren
+Ostseite.{[}4{]} Die Jahreszahl 1605 zusammen mit den Initialen CL für
+den Kalkschneider Christoph Limmerich über der Tür zum Altan markieren
+den Abschluss der Arbeiten.{[}5{]}
+
+Seit 1710/11 wurde der Saal unter Graf Carl Ludwig behutsam dem barocken
+Zeitgeschmack angepasst und inhaltlich vom Jagd- zum gräflichen
+Rittersaal umgedeutet. Christian Thalwitzer hatte Balthasar
+Katzenbergers Deckengemälde „im großen Saal {[}zu{]} übermahlen, genau
+durch{[}zu{]}gehen und wo es Schaden genommen, mit allem Fleyß``
+auszubessern.{[}6{]} Bei dieser Gelegenheit versah er die Gemälderahmen
+und die dazwischenliegenden Stuckrippen mit der bis heute gültigen roten
+Marmorierung.{[}7{]} An den Wänden wurden die Roll- und
+Beschlagwerkkartuschen der Schmuckzone ebenfalls rot marmoriert und an
+Kamin und Innenportal die rot marmorierten Schattenrahmen hinzugefügt.
+
+In einem zweiten Schritt wurde der Sockel ringsum mit rot marmorierten
+Lambris versehen, die Christian Thalwitzer im Rechnungsjahr 1715/16 mit
+51 Schloss- und Gartenveduten im Querformat{[}8{]} und 27 Orangenbäumen
+und anderen exotischen Kübelpflanzen im Hochformat bemalte. Die 12
+ganzfigurigen Porträts männlicher Vorfahren zum Teil in Ritterrüstung,
+die dem Rittersaal seinen heutigen Namen gaben, schuf bereits 1710 Peter
+Franz Tassaert aus Rothenburg.{[}9{]}
+
+\section{\texorpdfstring{\textbf{Beschreibung des
+Raumes}}{Beschreibung des Raumes}}\label{beschreibung-des-raumes}
+
+Der 36,4 Meter lange, 11,7 Meter breite und 8,25 Meter hohe Saal{[}10{]}
+wird durch hohe segmentbogenförmige Fensternischen gegliedert, deren
+Achsen von großen Okuli weitergeführt werden. Im Gegenzug zu dieser
+Vertikalen beschränkt sich der reiche Stuckdekor friesartig auf die
+obere Wandzone, die oberhalb eines Gesimses auf der Höhe des oberen
+Drittels der Fenster beginnt. Dadurch, dass sich die Stuckdekoration in
+das obere Drittel der Fensterlaibungen hineinzieht, erwecken sie den
+Eindruck hoheitsvoll gestelzter Bögen.{[}11{]}
+
+An der Westwand, neben der im ersten Joch der Hofseite der Saal über die
+Wendeltreppe betreten wird, erhebt sich ein monumentaler Kamin. Mit
+Kaminöffnung, Attikafeld und rundbogigem Auszug umfasst er drei Zonen,
+von denen Attika und Auszug in der Höhe der stuckierten Wandzone des
+Saals entsprechen. An der Ostwand, wo man den Saal Richtung Tafelstube
+verlässt, befindet sich ein prächtiges, 1603 datiertes stuckiertes
+Innenportal des Kalkschneiders Gerhard Schmidt.{[}12{]} Darüber
+verläuft, teilweise hinter dem Attikarelief, eine Empore beispielsweise
+für Musiker.
+
+Den Kamin flankieren stuckierte Darstellungen des Grafenpaars Wolfgang
+II. von Hohenlohe und Magdalena, geborene Prinzessin von
+Nassau-Katzenelnbogen mit ihrer jeweiligen Ahnenprobe.{[}13{]} Dem Graf
+wurde die zeremoniell höherrangige Seite heraldisch rechts des Kamins,
+der Gräfin die Seite heraldisch links des Kamins zugeteilt. Graf und
+Gräfin liegen jeweils auf der Seite einander abgewandt und blicken mit
+aufgestütztem Kopf in den Saal. Aus ihnen heraus wächst in der Art einer
+Wurzel Jesse die über fünf Generationen geführte Ahnenprobe. Der Graf
+trägt eine Rüstung mit Waffenrock und stützt seinen Ellenbogen auf einen
+Helm. Die Gräfin hat zwei Kinder im Arm, von denen das vordere ein Junge
+ist.
+
+An den beiden Längsseiten nimmt die stuckierte Schmuckzone weit
+vorkragende, gleichfalls stuckierte Wandskulpturen wilder Tiere auf. Sie
+beziehen sich einerseits auf das Programm der Decke, das der höfischen
+Jagd in all ihren Ausformungen gewidmet ist. Andererseits sind sie auf
+die Kaminwand ausgerichtet, die mit ihren nachstehend zu erläuternden
+Bildthemen als Stellvertreter des Grafen, seiner konfessionellen
+Einstellung und seiner dynastischen Herkunft konzipiert ist. Zusammen
+mit einer gemalten Darstellung des lyraspielenden Orpheus an der Decke
+erlauben die Tiere in ihrer Ausrichtung auf den Kamin die Identifikation
+des Grafen mit Orpheus als Sinnbild des guten Herrschers. Diese hier
+erstmals entwickelte Deutung wird unten im Abschnitt „Programm und
+Synthese der Saalausstattung der Renaissance`` vorgetagen.
+
+\section{Kamin und Innenportal}\label{kamin-und-innenportal}
+
+Der Kamin aus Andernacher Tuffstein von Michael Juncker und seinen
+Söhnen Hans und Zacharias aus Miltenberg präsentiert im Hauptrelief als
+zentrales Motiv die persönliche Devise des Grafen Wolfgang. Die
+Entschlüsselung der im Vertrag vom September 1601 vereinbarten „ihrer
+gnaden Diviso``{[}14{]} gelang erst vor wenigen Jahren Jürgen
+Kniep.{[}15{]} Dargestellt ist ein antikisch gekleideter Krieger,
+umgeben von den Symbolen der Kardinal- und theologischen Tugenden. Die
+Devise „Gott gibt Glück`` lässt den reformatorischen Glauben des Grafen
+Wolfgang ebenso erkennen wie die Betonung der Liebe (Herz in der linken
+Hand des Kriegers) und des Buches, aus dem die Schlange ihre Weisheit
+bezieht. Im Sinne der protestantischen Rechtfertigungslehre oblag es
+nicht dem Klerus, sondern allein Gott, dem Menschen Gnade angedeihen zu
+lassen.
+
+Als räumliches Gegenstück zum skulptierten Kamin entstand 1603 in einem
+Paragone der Techniken und Materialien das monumentale, aus Stuck
+gefertigte Innenportal an der Ostseite. Sein Aufbau ist wie der Kamin
+dreizonig mit rundbogiger Öffnung, Attikarelief und Auszug. Der
+Kalkschneider Gerhard Schmidt, der das Portal selbstbewusst mit seinen
+Initialen signiert hat, hat in der Türkenschlacht des Hauptreliefs mit
+extrem hinterschnittenen Pferde- und Soldatenleibern den moderater
+skulptierten Steinkamin an Kunstfertigkeit übertroffen. Einen Höhepunkt
+der Stuckateurskunst der Zeit bildet der vollplastisch gearbeitete
+heilige Georg auf seinem zum Sprung über den Drachen ansetzenden Pferd.
+
+Das Portal ist inhaltlich auf den ältesten Sohn des Grafen Wolfgang,
+Georg Friedrich, zu beziehen, der im Rang eines Obristen des Fränkischen
+Reichskreises und auch der kaiserlichen Armee im Langen Türkenkrieg
+(1593--1606) kämpfte.{[}16{]} Als einer seiner größten Erfolge gilt die
+versuchte Einnahme der Festung Gran (Eszergom) im Jahr 1594, an der er
+als kaiserlicher Obrist beteiligt war.{[}17{]} Die Festung, vor der sich
+auf dem Relief das Schlachtengetümmel abspielt, stellt in der Tat
+Eszergom da, was an der Höhenlage und der Zweiturmfassade der Kathedrale
+zu erkennen ist.{[}18{]} Der das Portal bekrönende heilige Georg als
+Drachentöter mit Lanze und zugleich Namenspatron des Erbprinzen sowie
+Patron der Stadtkirche wäre im Sinne des Protestantismus als
+tugendhafter Bezwinger des Bösen zu deuten.{[}19{]} Mit der Thematik des
+Langen Türkenkriegs bereitete das Portal auf die dahinterliegende
+Tafelstube vor, für deren Decke Balthasar Katzenberger 12 große
+Belagerungsszenen auf Leinwand malte.
+
+Das Portal von 1603 war aber nicht nur heroisch gestimmt. In den
+Zwickeln lagern Putti, die als Mahnung an die Endlichkeit des Lebens dem
+Betrachter ein Stundenglas, eine Sense und einen Schlüssel -- vielleicht
+ins Himmelreich -- vor Augen halten.
+
+\section{Das Mobiliar}\label{das-mobiliar}
+
+Die renaissancezeitliche Ausstattung des Saals mit Mobilien geht aus
+einem 1625--1627 aufgenommenen Inventar hervor.{[}20{]} Die als erstes
+genannten „Ein und zwanzig Stuck goldt uf Leder tappezerey`` dürften als
+goldgeprägte Ledertapeten die Trumeaus zwischen den Fenstern geziert
+haben. Ledertapeten waren kostbar, was sich in ihrer erstplatzierten
+Nennung niederschlug.{[}21{]} An Stellmöbeln beinhaltete der Saal „Zwo
+lange Tafel`` und „Ein und dreissig von goldt uff Lederne Sessel``. Die
+Wände schmückten zusätzlich zu den Ledertapeten „Sechzehn gemahlte
+Tafeln``, also im Sujet nicht näher charakterisierte Gemälde. Die
+Beleuchtung erfolgte über „Acht große hülzerne Lichter, gemahlt``.
+
+Vier Gemälde wurden zusätzlich zu den sechzehn aufgeführt, da sie
+vermutlich im Vorgängerinventar des Grafen Wolfgang, das dem Inventar
+als Vorlage diente, noch nicht enthalten waren. Sie stellten „Kaiser
+Matthie und der Kayserin / Item Meines Gnd. Herrn und gnl. Frawen
+Abcontrafehung`` dar. Kaiser Matthias regierte in den Jahren 1612--1619,
+seine Gemahlin Anna von Österreich-Tirol starb 1618. Die Gemälde
+stammten demnach aus der Zeit des Grafen Georg Friedrich von
+Hohenlohe-Weikersheim, der mit Eva von Waldstein verheiratet war.
+
+{[}1{]} HZAN La 130 Bü 152, Schadensinventar von 1639. Die Kenntnis und
+die Transkription dieser Archivalie verdankt die Autorin Frieder
+Leipold.
+
+{[}2{]} Der erhaltene Vertrag (HZAN We 50 D6) in Transkription bei
+Freeden, Kamin, 1950, S. 144--145. Bezahlt wurde Juncker im Oktober
+1602.
+
+{[}3{]} Poser, Deckenbilder, 1980, S. 160--161.
+
+{[}4{]} Merten, Weikersheim, o. J., S. 44. Drös, Inschriften
+Mergentheim, 2002, S. 244. Zum Oeuvre und Lebensweg des Kalkschneiders
+Gerhard Schmidt: Kreder, Hellenstein, 2005/2006; Rinn-Kupka, Stuck,
+2018, S. 126--129; Lange, ‚welsche Kamin`, 2019.
+
+{[}5{]} Merten, Weikersheim, o. J., S. 44. Drös, Inschriften
+Mergentheim, 2002, S. 254.
+
+{[}6{]} Fandrey, Weikersheim, 2010, S. 55.
+
+{[}7{]} Dieser Befund kam bei der Restaurierung der Jahre 1995--1997
+zutage. Für zahlreiche Informationen und die Übermittlung des
+Abschlussberichts vom 05.03.1998 dankt die Autorin Herrn Dipl.-Ing. Erik
+Reinhold, Staatliches Hochbauamt Heilbronn.
+
+{[}8{]} Die Vedute des Carlsberg bei Weikersheim kam erst 1747 im
+Zusammenhang mit der damals aufgestellten Kunstuhr hinzu, doch dürfte
+sie eine ältere Vedute am Fensterpfeiler hinter der Uhr ersetzt haben.
+
+{[}9{]} Valentin, Malerische Lebensläufe, 2019, Anm. 11. Zu Tassaert
+liegt ein Lebenslauf mit Werkverzeichnis vor: Schnurrer, Tassaert, 2014.
+
+{[}10{]} Die genauen Maße gibt Walther-Gerd Fleck (Weyer, Georg Stegle,
+2017, S. 52).
+
+{[}11{]} Vgl. dagegen Gebeßler, Saal Süddeutschland, 1957, S. 49, der
+die Fensternischen aufgrund ihrer Dekoration als Anräume empfindet.
+
+{[}12{]} Das Portal wird in der Literatur zu Unrecht als Eingangsportal
+in den Saal beschrieben (Poser, Deckenbilder, 1980, S. 160; Kniep,
+Glück, 2005, S. 52 und 59; Käpplinger, Jagd, 2011, S. 73). Es ist jedoch
+nach innen gerichtet, führt also von innen nach außen. Außerdem folgt in
+der Wegeführung eines Renaissanceschlosses die Tafelstube auf den
+Rittersaal. Auch der Betrachterstandpunkt der Deckengemälde ist mit dem
+Rücken zum Kamin so ausgerichtet, dass man die Bilder vom Kamin kommend,
+Richtung Tafelstube gehend bewundert.
+
+{[}13{]} Zu den Ahnenproben: Drös, Inschriften Mergentheim, 2002, S.
+255--261. Außerdem Kniep, Glück, 2005, S. 48--52.
+
+{[}14{]} Freeden, Kamin, 1950, S. 144.
+
+{[}15{]} Kniep, Glück, 2005, S. 57--74. Weiterführende Gedanken und
+Literatur zur Bildhauerfamilie Juncker liefert: Lange, ‚welsche Kamin`,
+2019.
+
+{[}16{]} Kniep, Glück, 2005, S. 52--57. Außerdem Findbuch HZAN La 130 Bü
+102 (Bestallung zum Obristen des Fränkischen Reichskreises, 1598) und La
+130 Bü 108 (Teilnahme als kaiserlicher Obrist am Feldzug gegen die
+Türken 1603).
+
+{[}17{]} Trentin-Meyer, Georg Friedrich von Hohenlohe, 2019, S. 90. Vgl.
+Niederkorn, Langer Türkenkrieg, 1993, S. 11.
+
+{[}18{]} Außerdem als Beleg die Darstellung in: Ortelius, Chronologia,
+1602, Tf. „Wahre Contrafactur der Belagerung Gran, sampt der Schlacht so
+dabei geschehen, den 3. Augusti. Anno 1595``. Ortelius wählte für seine
+Illustration die erfolgreiche Belagerung und Schlacht von 1595. Die
+Belagerung von 1594 war für die Kaiserlichen noch nicht erfolgreich.
+
+{[}19{]} Kniep, Glück, 2005, S. 56.
+
+{[}20{]} Auszüge des Inventars stellte freundlicherweise Dinah
+Rottschäfer der Autorin zur Verfügung.
+
+{[}21{]} Bei dem von Käpplinger, Auf's Schönste, 2019, S. 189 mit Anm. 3
+genannten Inventar von 1634 handelt es sich um einen Schadensbericht, in
+dem die Ledertapeten verkürzt als „tappezereien von gold`` bezeichnet
+wurden, was Käpplinger in Unkenntnis des Vorgängerinventars als textile
+Wandbespannungen deutete.
 
 \chapter{Gallery Grid}\label{gallery-grid}
 
-\begin{figure*}
+\begin{figure}[H]
 
-\centering
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{./images/fmd10005862a.jpg}}
 
-\includegraphics[height=10cm]{images/fmd10005862a.jpg}
+}
 
-\caption{Knight's Hall and Room 72 - to the west}
-\label{fig:{images/fmd10005862a.jpg}}
+\caption{Knight's Hall \& Room 72 - to the west (2018)}
 
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005864a.jpg}
-
-\caption{Lion couple – general view}
-\label{fig:{images/fmd10005864a.jpg}}
+\end{figure}%
 
 \clearpage
 
-\centering
+\begin{figure}[H]
 
-\includegraphics[height=10cm]{images/fmd10005865a.jpg}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{./images/fmd10005864a.jpg}}
 
-\caption{Bear – general view}
-\label{fig:{images/fmd10005865a.jpg}}
+}
 
-\clearpage
+\caption{Lion couple -- general view (2018)}
 
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005867a.jpg}
-
-\caption{Monkey – general view}
-\label{fig:{images/fmd10005867a.jpg}}
+\end{figure}%
 
 \clearpage
 
-\centering
+\begin{figure}[H]
 
-\includegraphics[height=10cm]{images/fmd10005866a.jpg}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{./images/fmd10005865a.jpg}}
 
-\caption{Deer pairs – general view}
-\label{fig:{images/fmd10005866a.jpg}}
+}
 
-\clearpage
+\caption{Bear -- general view (2018)}
 
-\centering
-
-\includegraphics[height=10cm]{images/fmd10024321a.jpg}
-
-\caption{Hall building - garden side of the palace from the south}
-\label{fig:{images/fmd10024321a.jpg}}
+\end{figure}%
 
 \clearpage
 
-\centering
+\begin{figure}[H]
 
-\includegraphics[height=10cm]{images/fmd10024322a.jpg}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{./images/fmd10005867a.jpg}}
 
-\caption{Saalbau - from the south-east}
-\label{fig:{images/fmd10024322a.jpg}}
+}
 
-\clearpage
+\caption{Monkey -- general view (2018)}
 
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005853a.jpg}
-
-\caption{Development space sequences}
-\label{fig:{images/fmd10005853a.jpg}}
+\end{figure}%
 
 \clearpage
 
-\centering
+\begin{figure}[H]
 
-\includegraphics[height=10cm]{images/fmd10005854a.jpg}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{./images/fmd10005866a.jpg}}
 
-\caption{Ceiling decoration on stairwell}
-\label{fig:{images/fmd10005854a.jpg}}
+}
 
-\clearpage
+\caption{Deer pairs -- general view (2018)}
 
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005870a.jpg}
-
-\caption{Ceiling Decoration of the Knights' Hall – Eastern Part of the Ceiling}
-\label{fig:{images/fmd10005870a.jpg}}
+\end{figure}%
 
 \clearpage
 
-\centering
+\begin{figure}[H]
 
-\includegraphics[height=10cm]{images/fmd10005852a.jpg}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{./images/fmd10005859a.jpg}}
 
-\caption{Einstige Tafelstube and Raum 69a – nach Südosten}
-\label{fig:{images/fmd10005852a.jpg}}
+}
 
-\clearpage
+\caption{Knight's Hall \& Room 72 - to the east (2018)}
 
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005855a.jpg}
-
-\caption{Der Saalbau Bild}
-\label{fig:{images/fmd10005855a.jpg}}
+\end{figure}%
 
 \clearpage
 
-\centering
+\begin{figure}[H]
 
-\includegraphics[height=10cm]{images/fmd10005851a.jpg}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{./images/fmd10005860a.jpg}}
 
-\caption{Eroberung der Festung Tottis – Gesamtansicht}
-\label{fig:{images/fmd10005851a.jpg}}
+}
 
-\clearpage
+\caption{Knight's Hall \& Room 72 - to the east (2018)}
 
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005843a.jpg}
-
-\caption{Belagerung der Festung Raab – Gesamtansicht}
-\label{fig:{images/fmd10005843a.jpg}}
+\end{figure}%
 
 \clearpage
 
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005850a.jpg}
-
-\caption{Belagerung der Festung Comorna – Gesamtansicht}
-\label{fig:{images/fmd10005850a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005848a.jpg}
-
-\caption{Eroberung der Festung Gran – Gesamtansicht}
-\label{fig:{images/fmd10005848a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005840a.jpg}
-
-\caption{Belagerung der Festung von Visegrád – Gesamtansicht}
-\label{fig:{images/fmd10005840a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005842a.jpg}
-
-\caption{Belagerung der Stadt Waitzen – Gesamtansicht}
-\label{fig:{images/fmd10005842a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005846a.jpg}
-
-\caption{Wiedereroberung der Festung Raab – Gesamtansicht}
-\label{fig:{images/fmd10005846a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005847a.jpg}
-
-\caption{Belagerung der Stadt Ofen im Jahr 1598 – Gesamtansicht}
-\label{fig:{images/fmd10005847a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005844a.jpg}
-
-\caption{Belagerung der Stadt Ofen im Jahr 1603 – Gesamtansicht}
-\label{fig:{images/fmd10005844a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005845a.jpg}
-
-\caption{Belagerung der Festung Gran – Gesamtansicht (Anno 1604)}
-\label{fig:{images/fmd10005845a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005849a.jpg}
-
-\caption{Scharmützel bei der Belagerung der Stadt Ofen im Jahr 1603 – Gesamtansicht}
-\label{fig:{images/fmd10005849a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005841a.jpg}
-
-\caption{Belagerung der Festung Gran – Gesamtansicht (1594)}
-\label{fig:{images/fmd10005841a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005861a.jpg}
-
-\caption{Die barocken Schloss- und Gartenveduten bild}
-\label{fig:{images/fmd10005861a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005863a.jpg}
-
-\caption{Die barocken Schloss- und Gartenveduten bild 2}
-\label{fig:{images/fmd10005863a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10024323a.jpg}
-
-\caption{Orpheus with the lyre and the animals under a tree}
-\label{fig:{images/fmd10024323a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10024324a.jpg}
-
-\caption{Otter catching, with Weikersheim Castle in the background – on the left, duck hunting, on the right, otter catching}
-\label{fig:{images/fmd10024324a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10024322a.jpg}
-
-\caption{Schloss}
-\label{fig:{images/fmd10024322a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005902a.jpg}
-
-\caption{Schloss Weikersheim}
-\label{fig:{images/fmd10005902a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10024325a.jpg}
-
-\caption{Wildkatzenjagd - General view}
-\label{fig:{images/fmd10024325a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10024325a.jpg}
-
-\caption{Orpheus with the Lyre and the Animals under a Tree - General View}
-\label{fig:{images/fmd10024325a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005859a.jpg}
-
-\caption{Knight's Hall and Room 72 - to the east}
-\label{fig:{images/fmd10005859a.jpg}}
-
-\clearpage
-
-\centering
-
-\includegraphics[height=10cm]{images/fmd10005860a.jpg}
-
-\caption{Knight's Hall and Room 72 - to the east}
-\label{fig:{images/fmd10005860a.jpg}}
-
-\clearpage
-
-\end{figure*}%
+\chapter{List of Items}\label{list-of-items}
+
+\begin{itemize}
+\tightlist
+\item
+  a
+\item
+  b
+\item
+  c
+\item
+  d
+\item
+  e
+\end{itemize}
+
+\chapter{Sources \& Data Models}\label{sources-data-models}
+
+\begin{itemize}
+\tightlist
+\item
+  f
+\item
+  g
+\item
+  h
+\item
+  i
+\item
+  j
+\item
+  k
+\end{itemize}
+
+\chapter{Data Visualisation}\label{data-visualisation}
+
+text
+
+text
+
+text
 
 
 \backmatter
+
+\printindex
+
+%  SOURCE: https://github.com/nmfs-opensci/quarto_titlepages_v1/tree/main
+
+% This is a combination of Pandoc templating and LaTeX
+% Pandoc templating https://pandoc.org/MANUAL.html#templates
+
+\tcbset{ % parameters for text background 
+    frame code={},
+    left=0pt, % margins
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!10!black, % box color
+    width=\dimexpr\textwidth\relax, 
+    boxsep=15pt, % spacing between boxes
+    arc=0pt, % no rounded edges
+    opacityback=0.35, % translucent-ish background
+    fontupper=\color{white}, % fontcolor
+    fontlower=\color{white}
+    }
+
+
+
+% background image
+  \ThisLRCornerWallPaper{1.1}{images/fmd10024322a.jpg}  
+
+\bigbreak
+
+
+
+
+%use \vfill instead to get the space to fill flexibly	
+%\vspace{0.25\textheight} % Whitespace between the title block and the publisher
+
+\vfill
+
+% Whitespace between the title block and the tagline
+\vspace{1\baselineskip} 
+
+\begin{tcolorbox}
+\centering
+
+%%%%%% Tagline at bottom
+{
+  TIB\\
+  Open Science Lab
+}
+\end{tcolorbox}
 
 
 \end{document}
