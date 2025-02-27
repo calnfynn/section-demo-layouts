@@ -8,6 +8,7 @@ book:
   title: "Demo V2 Layouts"
   author: "ASKCR"
   date: today
+  favicon: ./images/cps-logo.svg
   # this section determines which files will be added to the book as chapters
   chapters:
     - index.qmd
@@ -25,11 +26,10 @@ book:
         - conceptforPDF.ipynb
         - cataloguesection.ipynb
         - datavis.ipynb
-    - GLAMmap.ipynb
     
 
 
-  cover-image: ./images/25.jpg
+  cover-image: images/fmd10024322a.jpg
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: [issue]
   # downloads: [pdf,docx,epub]
@@ -72,7 +72,8 @@ format:
       body-width: 2000px
     #image-lazy-loading: true
     #extract-media: ./images
-  
+    code-overflow: wrap
+
   # options for PDF output 
   # https://quarto.org/docs/reference/formats/pdf.html
   pdf:

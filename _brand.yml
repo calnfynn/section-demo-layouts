@@ -1,0 +1,24 @@
+color:
+  palette:
+    palatinate: "#571F4E"
+    alabaster: "#E8E5DA"
+    uc-blue: "#4F759B"
+  background: alabaster
+  foreground: palatinate
+  primary: uc-blue
+
+logo:
+  medium: "./images/cps-logo-2.png"
+
+typography:
+  fonts:
+    - family: Asgard
+      source: file
+      files: 
+      - path: "./fonts/Asgard/*"
+    - family: Boring
+      source: file
+      files: 
+      - path: "./fonts/Boring/*"
+  base: Boring
+  headings: Asgard

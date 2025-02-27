@@ -16,3 +16,4 @@ geopandas
 mapclassify 
 matplotlib
 folium
+selenium
