@@ -33,7 +33,7 @@ book:
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: [issue]
   # downloads: [pdf,docx,epub]
-  # downloads: [pdf]
+  downloads: [pdf]
   navbar:
     background: primary
     search: true

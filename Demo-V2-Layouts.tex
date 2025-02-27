@@ -66,46 +66,6 @@
 \makeatother
 \pagestyle{plain}
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{241,243,245}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -341,53 +301,7 @@ Name 3, \emph{University Z}, \href{https://orcid.org/}{Orchid}
 
 \pandocbounded{\includegraphics[keepaspectratio]{images/museumsmap.png}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{\#defaultView}\CharTok{:Map}
-
-\KeywordTok{SELECT} \KeywordTok{DISTINCT}\NormalTok{ ?item ?itemLabel ?location ?locationLabel ?latitude ?longitude ?geo }\KeywordTok{WHERE}\NormalTok{ \{}
-  \KeywordTok{VALUES}\NormalTok{ ?}\KeywordTok{type}\NormalTok{ \{ wd}\CharTok{:Q1007870}\NormalTok{ wd}\CharTok{:Q33506}\NormalTok{ wd}\CharTok{:Q166118}\NormalTok{ wd}\CharTok{:Q2668072}\NormalTok{ wd}\CharTok{:Q667276} 
-\NormalTok{                 wd}\CharTok{:Q464980}\NormalTok{ wd}\CharTok{:Q56190453}\NormalTok{ \}}
-\NormalTok{  \#art gallery, museum, }\KeywordTok{archive}\NormalTok{, collection, art exhibition, }
-\NormalTok{  \# exhibition, memorial}
-  
-  \KeywordTok{VALUES}\NormalTok{ ?places \{ wd}\CharTok{:Q1715}\NormalTok{ \} }
-
-\NormalTok{  \# Find locations that match ?places directly }\KeywordTok{OR}\NormalTok{ one }\KeywordTok{level}\NormalTok{ above}\OperatorTok{/}\NormalTok{below}
-\NormalTok{  ?place (wdt}\CharTok{:P131}\NormalTok{|\^{}wdt}\CharTok{:P131}\NormalTok{) ?places. }
-
-\NormalTok{  \# Find items that are }\KeywordTok{in}\NormalTok{ those locations}
-\NormalTok{  ?item wdt}\CharTok{:P31}\NormalTok{ ?}\KeywordTok{type}\NormalTok{;  \# Must be an }\KeywordTok{instance} \KeywordTok{of}\NormalTok{ a relevant cultural }\KeywordTok{type}
-\NormalTok{        wdt}\CharTok{:P276}\NormalTok{|wdt}\CharTok{:P131}\NormalTok{ ?place.  \# Located }\KeywordTok{in}\NormalTok{ one }\KeywordTok{of} \KeywordTok{the}\NormalTok{ places}
-  
-\NormalTok{  ?item wdt}\CharTok{:P625}\NormalTok{ ?geo.  \# Get coordinates}
-
-\NormalTok{  SERVICE wikibase}\CharTok{:label}\NormalTok{ \{ bd}\CharTok{:serviceParam}\NormalTok{ wikibase}\CharTok{:language} \OtherTok{"en,[AUTO\_LANGUAGE]"}\NormalTok{. \}}
-
-\NormalTok{  BIND(geof}\CharTok{:latitude}\NormalTok{(?geo) }\KeywordTok{AS}\NormalTok{ ?latitude).}
-\NormalTok{  BIND(geof}\CharTok{:longitude}\NormalTok{(?geo) }\KeywordTok{AS}\NormalTok{ ?longitude).}
-\NormalTok{\}\textasciigrave{}\textasciigrave{}\textasciigrave{}}
-
-
-
-
-
-
-
-
-\NormalTok{::: \{.quarto}\OperatorTok{{-}}\NormalTok{book}\OperatorTok{{-}}\NormalTok{part\}}
-
-
-\NormalTok{\textasciigrave{}}\OperatorTok{\textless{}}\NormalTok{!}\CommentTok{{-}{-} quarto{-}file{-}metadata: eyJyZXNvdXJjZURpciI6Ii4ifQ== {-}{-}\textgreater{}\textasciigrave{}\{=html\}}
-
-\NormalTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{}\OperatorTok{=}\NormalTok{html\}}
-\OperatorTok{\textless{}}\NormalTok{!}\CommentTok{{-}{-} quarto{-}file{-}metadata: eyJyZXNvdXJjZURpciI6Ii4iLCJib29rSXRlbVR5cGUiOiJwYXJ0IiwiYm9va0l0ZW1OdW1iZXIiOm51bGwsImJvb2tJdGVtRGVwdGgiOjB9 {-}{-}\textgreater{}}
-\end{Highlighting}
-\end{Shaded}
-
-\chapter{Room}\label{room}
-
-:::
+\part{Room}
 
 \chapter{Bau-, Ausstattungs- und
 Funktionsgeschichte}\label{bau--ausstattungs--und-funktionsgeschichte}
