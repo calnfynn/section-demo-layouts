@@ -71,6 +71,7 @@ format:
     theme: 
       - lux
       - brand
+      - font.scss
     css: griddesign.css
     grid:
       sidebar-width: 0px

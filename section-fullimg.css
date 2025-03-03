@@ -28,6 +28,7 @@
   height: 3em;
   cursor:pointer !important;
   flex-grow: 0.5;
+  text-decoration: none !important;
 }
 
 .stop-scrolling {

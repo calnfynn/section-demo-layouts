@@ -11,30 +11,30 @@ logo:
   medium: "./images/cps-logo-2.png"
 
 typography:
-  fonts:
-    - family: Asgard
-      source: file
-      files: 
-      - path: ./fonts/Asgard/Asgard-Regular-trial.ttf
-        style: normal
-      - path: ./fonts/Asgard/Asgard-Regular-Italic-trial.ttf
-        style: italic
-      - path: ./fonts/Asgard/Asgard-Regular-Bold-Italic-trial.ttf
-        style: italic
-        weight: bold
-      - path: ./fonts/Asgard/Asgard-Regular-Bold-trial.ttf
-        weight: bold
-    - family: Boring
-      source: file
-      files: 
-      - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-trial.ttf
-        style: normal
-      - path: ./fonts/Boring-Sans/Boring-Sans-A-Italic-trial.ttf
-        style: italic
-      - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-Bold-Italic-trial.ttf
-        style: italic
-        weight: bold
-      - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-Bold-trial.ttf
-        weight: bold
+  # fonts:
+  #   - family: Asgard
+  #     source: file
+  #     files: 
+  #       - path: fonts/Asgard/Asgard-Regular-trial.woff2
+  #       - path: fonts/Asgard/Asgard-Regular-Italic-trial.woff2
+  #         style: italic
+  #       - path: fonts/Asgard/Asgard-Regular-Bold-Italic-trial.woff2
+  #         style: italic
+  #         weight: bold
+  #       - path: fonts/Asgard/Asgard-Regular-Bold-trial.woff2
+  #         weight: bold
+  #   - family: Boring
+  #     source: file
+  #     files: 
+  #       - path: https://www.dafont.com/boring-sans-a.charmap
+  #       - path: ./fonts/Boring-Sans/Boring-Sans-A-Italic-trial.ttf
+  #         style: italic
+  #       - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-Bold-Italic-trial.ttf
+  #         style: italic
+  #         weight: bold
+  #       - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-Bold-trial.ttf
+  #         weight: bold
+  #   - family: Original Surfer
+  #     source: google
   base: Boring
   headings: Asgard

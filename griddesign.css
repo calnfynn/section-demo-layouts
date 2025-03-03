@@ -88,6 +88,10 @@
 .navbar,
 .navbar-expand-lg {
   height: 1px;
+  font-size: smaller;
+}
+.nav-item {
+  align-content: center;
 }
 .info-wd {
   height:6vh;
