@@ -27,7 +27,6 @@ book:
         #- conceptforPDF.ipynb
         - cataloguesection.ipynb
         - datavis.ipynb
-    
 
 
   cover-image: images/fmd10024322a.jpg
@@ -65,6 +64,7 @@ format:
   # https://quarto.org/docs/reference/formats/html.html
   html:
     number-sections: false
+    toc: false
     # Quarto allows a number of pre-packaged themes for the HTML version
     # You can choose between them using the documentation at 
     # https://quarto.org/docs/output-formats/html-themes.html
