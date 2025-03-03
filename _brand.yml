@@ -15,10 +15,26 @@ typography:
     - family: Asgard
       source: file
       files: 
-      - path: "./fonts/Asgard/*"
+      - path: ./fonts/Asgard/Asgard-Regular-trial.ttf
+        style: normal
+      - path: ./fonts/Asgard/Asgard-Regular-Italic-trial.ttf
+        style: italic
+      - path: ./fonts/Asgard/Asgard-Regular-Bold-Italic-trial.ttf
+        style: italic
+        weight: bold
+      - path: ./fonts/Asgard/Asgard-Regular-Bold-trial.ttf
+        weight: bold
     - family: Boring
       source: file
       files: 
-      - path: "./fonts/Boring/*"
+      - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-trial.ttf
+        style: normal
+      - path: ./fonts/Boring-Sans/Boring-Sans-A-Italic-trial.ttf
+        style: italic
+      - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-Bold-Italic-trial.ttf
+        style: italic
+        weight: bold
+      - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-Bold-trial.ttf
+        weight: bold
   base: Boring
   headings: Asgard

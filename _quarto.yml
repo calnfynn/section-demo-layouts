@@ -23,7 +23,8 @@ book:
       chapters: 
         - roomtext.ipynb
         #- section-masonry.ipynb
-        - conceptforPDF.ipynb
+        - section-fullimg.ipynb
+        #- conceptforPDF.ipynb
         - cataloguesection.ipynb
         - datavis.ipynb
     
@@ -32,20 +33,23 @@ book:
   cover-image: images/fmd10024322a.jpg
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: [issue]
-  # downloads: [pdf,docx,epub]
-  downloads: [pdf]
+  downloads: [pdf,docx]
+  #downloads: [pdf]
   navbar:
     background: primary
     search: true
     left:
+      - text: "Contributers"
+        href: contributers.html
       - text: "Map"
         href: section-map.ipynb
       - text: "Full Image"
         href: section-fullimg.html
-      - text: "Masonry"
-        href: section-masonry.html
-      - text: "Grid"
-        href: section-grid.html
+      - text: "About the Room"
+        href: roomtext.html
+      - text: "Data Vis"
+        href: datavis.html
+
   sidebar: false
 
 
@@ -64,7 +68,9 @@ format:
     # Quarto allows a number of pre-packaged themes for the HTML version
     # You can choose between them using the documentation at 
     # https://quarto.org/docs/output-formats/html-themes.html
-    theme: lux
+    theme: 
+      - lux
+      - brand
     css: griddesign.css
     grid:
       sidebar-width: 0px
@@ -73,6 +79,7 @@ format:
     #image-lazy-loading: true
     #extract-media: ./images
     code-overflow: wrap
+#    embed-resources: true
 
   # options for PDF output 
   # https://quarto.org/docs/reference/formats/pdf.html
@@ -115,4 +122,3 @@ format:
   #  toc: true
   #epub: 
   #  toc: true    
-
