@@ -1,44 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Demo V2 Layouts",
-    "section": "",
-    "text": "Katalog zur Ausstellung: Der Große Saal (Rittersaal)\nEin Katalog mit Kunstwerken aus der CbDD-Sammlung. Textteil: 6e73f774-4b7f-4e37-937b-e11cc35c5bc8\nGroßer Saal (Rittersaal) [Raum]\n This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License.",
-    "crumbs": [
-      "Contributers",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Katalog zur Ausstellung: Der Große Saal (Rittersaal)</span>"
-    ]
-  },
-  {
-    "objectID": "contributers.html",
-    "href": "contributers.html",
-    "title": "Contributers",
-    "section": "",
-    "text": "Name 1, University X, Orchid\nName 2, University Y, Orchid\nName 3, University Z, Orchid",
-    "crumbs": [
-      "Contributers",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Contributers</span>"
-    ]
-  },
-  {
-    "objectID": "section-map.html",
-    "href": "section-map.html",
-    "title": "Museum Map",
-    "section": "",
-    "text": "Hannover\nWikidata Link",
-    "crumbs": [
-      "Contributers",
-      "Building",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Museum Map</span>"
-    ]
-  },
-  {
     "objectID": "section-map.html#hannover",
     "href": "section-map.html#hannover",
     "title": "Museum Map",
-    "section": "",
-    "text": "Make this Notebook Trusted to load map: File -&gt; Trust Notebook",
+    "section": "Hannover",
+    "text": "Hannover\nWikidata Link\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook",
     "crumbs": [
       "Contributers",
       "Building",
@@ -46,11 +12,11 @@
     ]
   },
   {
-    "objectID": "roomtext.html",
-    "href": "roomtext.html",
+    "objectID": "roomtext.html#beschreibung-des-raumes",
+    "href": "roomtext.html#beschreibung-des-raumes",
     "title": "Bau-, Ausstattungs- und Funktionsgeschichte",
-    "section": "",
-    "text": "Beschreibung des Raumes\nDie hervorragend erhaltene wandfeste Ausstattung des Großen Saals, der 1639 als „großer Saahl“ [1] geführt wurde und seinen heute geläufigen Namen Rittersaal erst im Nachhinein erhielt, datiert aus den Jahren 1601 bis 1605. Am Beginn stand den Quellen zufolge der monumentale Saalkamin. Der Vertrag mit dem Bildhauer Michael Juncker aus Miltenberg datiert vom 7. September 1601.[2] Im November 1601 wurden mit Balthasar Katzenberger die Deckengemälde verdingt, der die Arbeiten 13 Monate später Anno 1602 abschloss.[3] 1603 signierte und datierte der Kalkschneider Gerhard Schmidt das Portal an der inneren Ostseite.[4] Die Jahreszahl 1605 zusammen mit den Initialen CL für den Kalkschneider Christoph Limmerich über der Tür zum Altan markieren den Abschluss der Arbeiten.[5]\nSeit 1710/11 wurde der Saal unter Graf Carl Ludwig behutsam dem barocken Zeitgeschmack angepasst und inhaltlich vom Jagd- zum gräflichen Rittersaal umgedeutet. Christian Thalwitzer hatte Balthasar Katzenbergers Deckengemälde „im großen Saal [zu] übermahlen, genau durch[zu]gehen und wo es Schaden genommen, mit allem Fleyß“ auszubessern.[6] Bei dieser Gelegenheit versah er die Gemälderahmen und die dazwischenliegenden Stuckrippen mit der bis heute gültigen roten Marmorierung.[7] An den Wänden wurden die Roll- und Beschlagwerkkartuschen der Schmuckzone ebenfalls rot marmoriert und an Kamin und Innenportal die rot marmorierten Schattenrahmen hinzugefügt.\nIn einem zweiten Schritt wurde der Sockel ringsum mit rot marmorierten Lambris versehen, die Christian Thalwitzer im Rechnungsjahr 1715/16 mit 51 Schloss- und Gartenveduten im Querformat[8] und 27 Orangenbäumen und anderen exotischen Kübelpflanzen im Hochformat bemalte. Die 12 ganzfigurigen Porträts männlicher Vorfahren zum Teil in Ritterrüstung, die dem Rittersaal seinen heutigen Namen gaben, schuf bereits 1710 Peter Franz Tassaert aus Rothenburg.[9]\nDer 36,4 Meter lange, 11,7 Meter breite und 8,25 Meter hohe Saal[10] wird durch hohe segmentbogenförmige Fensternischen gegliedert, deren Achsen von großen Okuli weitergeführt werden. Im Gegenzug zu dieser Vertikalen beschränkt sich der reiche Stuckdekor friesartig auf die obere Wandzone, die oberhalb eines Gesimses auf der Höhe des oberen Drittels der Fenster beginnt. Dadurch, dass sich die Stuckdekoration in das obere Drittel der Fensterlaibungen hineinzieht, erwecken sie den Eindruck hoheitsvoll gestelzter Bögen.[11]\nAn der Westwand, neben der im ersten Joch der Hofseite der Saal über die Wendeltreppe betreten wird, erhebt sich ein monumentaler Kamin. Mit Kaminöffnung, Attikafeld und rundbogigem Auszug umfasst er drei Zonen, von denen Attika und Auszug in der Höhe der stuckierten Wandzone des Saals entsprechen. An der Ostwand, wo man den Saal Richtung Tafelstube verlässt, befindet sich ein prächtiges, 1603 datiertes stuckiertes Innenportal des Kalkschneiders Gerhard Schmidt.[12] Darüber verläuft, teilweise hinter dem Attikarelief, eine Empore beispielsweise für Musiker.\nDen Kamin flankieren stuckierte Darstellungen des Grafenpaars Wolfgang II. von Hohenlohe und Magdalena, geborene Prinzessin von Nassau-Katzenelnbogen mit ihrer jeweiligen Ahnenprobe.[13] Dem Graf wurde die zeremoniell höherrangige Seite heraldisch rechts des Kamins, der Gräfin die Seite heraldisch links des Kamins zugeteilt. Graf und Gräfin liegen jeweils auf der Seite einander abgewandt und blicken mit aufgestütztem Kopf in den Saal. Aus ihnen heraus wächst in der Art einer Wurzel Jesse die über fünf Generationen geführte Ahnenprobe. Der Graf trägt eine Rüstung mit Waffenrock und stützt seinen Ellenbogen auf einen Helm. Die Gräfin hat zwei Kinder im Arm, von denen das vordere ein Junge ist.\nAn den beiden Längsseiten nimmt die stuckierte Schmuckzone weit vorkragende, gleichfalls stuckierte Wandskulpturen wilder Tiere auf. Sie beziehen sich einerseits auf das Programm der Decke, das der höfischen Jagd in all ihren Ausformungen gewidmet ist. Andererseits sind sie auf die Kaminwand ausgerichtet, die mit ihren nachstehend zu erläuternden Bildthemen als Stellvertreter des Grafen, seiner konfessionellen Einstellung und seiner dynastischen Herkunft konzipiert ist. Zusammen mit einer gemalten Darstellung des lyraspielenden Orpheus an der Decke erlauben die Tiere in ihrer Ausrichtung auf den Kamin die Identifikation des Grafen mit Orpheus als Sinnbild des guten Herrschers. Diese hier erstmals entwickelte Deutung wird unten im Abschnitt „Programm und Synthese der Saalausstattung der Renaissance“ vorgetagen.",
+    "section": "Beschreibung des Raumes",
+    "text": "Beschreibung des Raumes\nDer 36,4 Meter lange, 11,7 Meter breite und 8,25 Meter hohe Saal[10] wird durch hohe segmentbogenförmige Fensternischen gegliedert, deren Achsen von großen Okuli weitergeführt werden. Im Gegenzug zu dieser Vertikalen beschränkt sich der reiche Stuckdekor friesartig auf die obere Wandzone, die oberhalb eines Gesimses auf der Höhe des oberen Drittels der Fenster beginnt. Dadurch, dass sich die Stuckdekoration in das obere Drittel der Fensterlaibungen hineinzieht, erwecken sie den Eindruck hoheitsvoll gestelzter Bögen.[11]\nAn der Westwand, neben der im ersten Joch der Hofseite der Saal über die Wendeltreppe betreten wird, erhebt sich ein monumentaler Kamin. Mit Kaminöffnung, Attikafeld und rundbogigem Auszug umfasst er drei Zonen, von denen Attika und Auszug in der Höhe der stuckierten Wandzone des Saals entsprechen. An der Ostwand, wo man den Saal Richtung Tafelstube verlässt, befindet sich ein prächtiges, 1603 datiertes stuckiertes Innenportal des Kalkschneiders Gerhard Schmidt.[12] Darüber verläuft, teilweise hinter dem Attikarelief, eine Empore beispielsweise für Musiker.\nDen Kamin flankieren stuckierte Darstellungen des Grafenpaars Wolfgang II. von Hohenlohe und Magdalena, geborene Prinzessin von Nassau-Katzenelnbogen mit ihrer jeweiligen Ahnenprobe.[13] Dem Graf wurde die zeremoniell höherrangige Seite heraldisch rechts des Kamins, der Gräfin die Seite heraldisch links des Kamins zugeteilt. Graf und Gräfin liegen jeweils auf der Seite einander abgewandt und blicken mit aufgestütztem Kopf in den Saal. Aus ihnen heraus wächst in der Art einer Wurzel Jesse die über fünf Generationen geführte Ahnenprobe. Der Graf trägt eine Rüstung mit Waffenrock und stützt seinen Ellenbogen auf einen Helm. Die Gräfin hat zwei Kinder im Arm, von denen das vordere ein Junge ist.\nAn den beiden Längsseiten nimmt die stuckierte Schmuckzone weit vorkragende, gleichfalls stuckierte Wandskulpturen wilder Tiere auf. Sie beziehen sich einerseits auf das Programm der Decke, das der höfischen Jagd in all ihren Ausformungen gewidmet ist. Andererseits sind sie auf die Kaminwand ausgerichtet, die mit ihren nachstehend zu erläuternden Bildthemen als Stellvertreter des Grafen, seiner konfessionellen Einstellung und seiner dynastischen Herkunft konzipiert ist. Zusammen mit einer gemalten Darstellung des lyraspielenden Orpheus an der Decke erlauben die Tiere in ihrer Ausrichtung auf den Kamin die Identifikation des Grafen mit Orpheus als Sinnbild des guten Herrschers. Diese hier erstmals entwickelte Deutung wird unten im Abschnitt „Programm und Synthese der Saalausstattung der Renaissance“ vorgetagen.",
     "crumbs": [
       "Contributers",
       "Room",
@@ -79,42 +45,6 @@
       "Contributers",
       "Room",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>roomtext.html</span>"
-    ]
-  },
-  {
-    "objectID": "section-fullimg.html",
-    "href": "section-fullimg.html",
-    "title": "Gallery Full Image",
-    "section": "",
-    "text": "Wikidata",
-    "crumbs": [
-      "Contributers",
-      "Room",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Gallery Full Image</span>"
-    ]
-  },
-  {
-    "objectID": "cataloguesection.html",
-    "href": "cataloguesection.html",
-    "title": "List of Items",
-    "section": "",
-    "text": "a\nb\nc\nd\ne\n\n\nSources & Data Models\n\nf\ng\nh\ni\nj\nk",
-    "crumbs": [
-      "Contributers",
-      "Room",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>List of Items</span>"
-    ]
-  },
-  {
-    "objectID": "datavis.html",
-    "href": "datavis.html",
-    "title": "Data Visualisation",
-    "section": "",
-    "text": "text\ntext\ntext",
-    "crumbs": [
-      "Contributers",
-      "Room",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Visualisation</span>"
     ]
   }
 ]

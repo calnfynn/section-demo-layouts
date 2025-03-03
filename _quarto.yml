@@ -71,17 +71,17 @@ format:
     theme: 
       - lux
       - brand
-      - font.scss
+    #  - font.scss
     css: griddesign.css
-    grid:
-      sidebar-width: 0px
-      margin-width: 0px
-      body-width: 2000px
+    # grid:
+    #   sidebar-width: 0px
+    #   margin-width: 0px
+    #   body-width: 2000px
     #image-lazy-loading: true
     #extract-media: ./images
     code-overflow: wrap
 #    embed-resources: true
-
+    page-layout: custom
   # options for PDF output 
   # https://quarto.org/docs/reference/formats/pdf.html
   pdf:
@@ -119,7 +119,7 @@ format:
 
 
 
-  #docx: 
-  #  toc: true
+  docx: 
+    toc: true
   #epub: 
   #  toc: true    
