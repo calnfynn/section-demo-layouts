@@ -5,21 +5,21 @@ project:
 # Quarto options for books
 # https://quarto.org/docs/reference/projects/books.html
 book:
-  title: "Demo V2 Layouts"
-  author: "ASKCR"
+  title: "Der Große Saal" 
+  author: "CPS"
   date: today
   favicon: ./images/cps-logo.svg
   # this section determines which files will be added to the book as chapters
   chapters:
     - index.qmd
-    - contributers.ipynb
+    - contributors.ipynb
     #- section-map.ipynb
     #- section-fullimg.ipynb
     #- section-grid.ipynb
-    - part: "Building"
+    - part: "Schloss Weikersheim"
       chapters: 
         - section-map.ipynb
-    - part: "Room"
+    - part: "Der Große Saal"
       chapters: 
         - roomtext.ipynb
         #- section-masonry.ipynb
@@ -38,15 +38,15 @@ book:
     background: primary
     search: true
     left:
-      - text: "Contributers"
-        href: contributers.html
+      - text: "Contributors"
+        href: contributors.html
       - text: "Map"
         href: section-map.ipynb
       - text: "Full Image"
         href: section-fullimg.html
       - text: "About the Room"
         href: roomtext.html
-      - text: "Data Vis"
+      - text: "Data Visualisation"
         href: datavis.html
 
   sidebar: false
@@ -97,6 +97,8 @@ format:
       - left=25mm
       - heightrounded
     classoption: openany 
+    toc-depth: 2
+    toc-title: Inhaltsverzeichnis
     #fontsize: 12pt
     papersize: a4
     include-in-header: in-header.tex

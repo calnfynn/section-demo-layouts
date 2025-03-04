@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Museum Map – Demo V2 Layouts</title>
+<title>Karte – Der Große Saal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="././images/cps-logo-2.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Demo V2 Layouts</span>
+    <span class="navbar-title">Der Große Saal</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -96,8 +96,8 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./contributers.html"> 
-<span class="menu-text">Contributers</span></a>
+    <a class="nav-link" href="./contributors.html"> 
+<span class="menu-text">Contributors</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./section-map.html" aria-current="page"> 
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./datavis.html"> 
-<span class="menu-text">Data Vis</span></a>
+<span class="menu-text">Data Visualisation</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -123,13 +123,13 @@ ul.task-list li input[type="checkbox"] {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item quarto-navbar-tools-item" href="./Demo-V2-Layouts.pdf">
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Der-Große-Saal.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item quarto-navbar-tools-item" href="./Demo-V2-Layouts.docx">
+            <a class="dropdown-item quarto-navbar-tools-item" href="./Der-Große-Saal.docx">
               <i class="bi bi-file-word pe-1"></i>
             Download Docx
             </a>
@@ -146,9 +146,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
 <!-- main -->
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./section-map.html">Building</a></li><li class="breadcrumb-item"><a href="./section-map.html"><span class="chapter-title">Museum Map</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./section-map.html">Schloss Weikersheim</a></li><li class="breadcrumb-item"><a href="./section-map.html"><span class="chapter-title">Karte</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Museum Map</span></h1>
+<h1 class="title"><span class="chapter-title">Karte</span></h1>
 </div>
 
 
@@ -165,9 +165,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="hannover" class="level2">
-<h2 data-anchor-id="hannover">Hannover</h2>
-<p><a href="https://query.wikidata.org/#%23defaultView%3AMap%0A%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Flocation%20%3FlocationLabel%20%3Flatitude%20%3Flongitude%20%3Fgeo%20WHERE%20%7B%0A%20%20VALUES%20%3Ftype%20%7B%20wd%3AQ1007870%20wd%3AQ33506%20wd%3AQ166118%20wd%3AQ2668072%20wd%3AQ667276%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20wd%3AQ464980%20wd%3AQ56190453%20%7D%0A%20%20%23art%20gallery%2C%20museum%2C%20archive%2C%20collection%2C%20art%20exhibition%2C%20%0A%20%20%23%20exhibition%2C%20memorial%0A%20%20%0A%20%20VALUES%20%3Fplaces%20%7B%20wd%3AQ1715%20%7D%20%0A%0A%20%20%23%20Find%20locations%20that%20match%20%3Fplaces%20directly%20OR%20one%20level%20above%2Fbelow%0A%20%20%3Fplace%20%28wdt%3AP131%7C%5Ewdt%3AP131%29%20%3Fplaces.%20%0A%0A%20%20%23%20Find%20items%20that%20are%20in%20those%20locations%0A%20%20%3Fitem%20wdt%3AP31%20%3Ftype%3B%20%20%23%20Must%20be%20an%20instance%20of%20a%20relevant%20cultural%20type%0A%20%20%20%20%20%20%20%20wdt%3AP276%7Cwdt%3AP131%20%3Fplace.%20%20%23%20Located%20in%20one%20of%20the%20places%0A%20%20%0A%20%20%3Fitem%20wdt%3AP625%20%3Fgeo.%20%20%23%20Get%20coordinates%0A%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2C%5BAUTO_LANGUAGE%5D%22.%20%7D%0A%0A%20%20BIND%28geof%3Alatitude%28%3Fgeo%29%20AS%20%3Flatitude%29.%0A%20%20BIND%28geof%3Alongitude%28%3Fgeo%29%20AS%20%3Flongitude%29.%0A%7D">Wikidata Link</a></p>
 <div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
 <html>
 <head>
@@ -195,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
             <meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
             <style>
-                #map_e8e9d20f1b6a5c4455768c6983ff1ad9 {
+                #map_518a7d1492871f5109c2e4519d43db5b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -209,18 +206,18 @@ ul.task-list li input[type="checkbox"] {
 <body>
     
     
-            <div class=&quot;folium-map&quot; id=&quot;map_e8e9d20f1b6a5c4455768c6983ff1ad9&quot; ></div>
+            <div class=&quot;folium-map&quot; id=&quot;map_518a7d1492871f5109c2e4519d43db5b&quot; ></div>
         
 </body>
 <script>
     
     
-            var map_e8e9d20f1b6a5c4455768c6983ff1ad9 = L.map(
-                &quot;map_e8e9d20f1b6a5c4455768c6983ff1ad9&quot;,
+            var map_518a7d1492871f5109c2e4519d43db5b = L.map(
+                &quot;map_518a7d1492871f5109c2e4519d43db5b&quot;,
                 {
-                    center: [52.38, 9.74],
+                    center: [49.480507, 9.895949],
                     crs: L.CRS.EPSG3857,
-                    zoom: 12,
+                    zoom: 20,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -230,561 +227,39 @@ ul.task-list li input[type="checkbox"] {
 
         
     
-            var tile_layer_91ed271d51fe7536e064a43dcb051eb7 = L.tileLayer(
+            var tile_layer_e9c2808390ab4dce929d13d6da01d230 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
         
     
-            tile_layer_91ed271d51fe7536e064a43dcb051eb7.addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
+            tile_layer_e9c2808390ab4dce929d13d6da01d230.addTo(map_518a7d1492871f5109c2e4519d43db5b);
         
     
-            var marker_5f76b0189998a5de8d5d015fe8c68400 = L.marker(
-                [52.36653832, 9.716278733],
+            var marker_c849bd6985595c9a78d3a5c065af71be = L.marker(
+                [49.480507, 9.895949],
                 {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
+            ).addTo(map_518a7d1492871f5109c2e4519d43db5b);
         
     
-        var popup_3d9b1238b6cc83a7d5ceabd88c6107c0 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_f689ec47ad9fed66d579c608d4b9fe6a = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_0d90dafa112e3963a2e7e95282620eff = $(`<div id=&quot;html_0d90dafa112e3963a2e7e95282620eff&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q131731708' target='_blank'>Q131731708</a></h3>         </div>`)[0];
-                popup_3d9b1238b6cc83a7d5ceabd88c6107c0.setContent(html_0d90dafa112e3963a2e7e95282620eff);
+                var html_50009438bfe536107ccf031c97bc3359 = $(`<div id=&quot;html_50009438bfe536107ccf031c97bc3359&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='https://www.wikidata.org/wiki/Q504517' target='_blank'>Schloss Weikersheim</a></h3>     </div>`)[0];
+                popup_f689ec47ad9fed66d579c608d4b9fe6a.setContent(html_50009438bfe536107ccf031c97bc3359);
             
         
 
-        marker_5f76b0189998a5de8d5d015fe8c68400.bindPopup(popup_3d9b1238b6cc83a7d5ceabd88c6107c0)
+        marker_c849bd6985595c9a78d3a5c065af71be.bindPopup(popup_f689ec47ad9fed66d579c608d4b9fe6a)
         ;
 
         
     
     
-            marker_5f76b0189998a5de8d5d015fe8c68400.bindTooltip(
+            marker_c849bd6985595c9a78d3a5c065af71be.bindTooltip(
                 `<div>
-                     Q131731708
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_4371e24c78af047f1ec08b9d58659692 = L.marker(
-                [52.383027777, 9.745444444],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_c557a44e581db4d9d9d0eda17e21deb1 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_4a6f5bdc75c83e7704809455c81ba3a6 = $(`<div id=&quot;html_4a6f5bdc75c83e7704809455c81ba3a6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q376573' target='_blank'>Schwullesbisches Archiv Hannover</a></h3>         </div>`)[0];
-                popup_c557a44e581db4d9d9d0eda17e21deb1.setContent(html_4a6f5bdc75c83e7704809455c81ba3a6);
-            
-        
-
-        marker_4371e24c78af047f1ec08b9d58659692.bindPopup(popup_c557a44e581db4d9d9d0eda17e21deb1)
-        ;
-
-        
-    
-    
-            marker_4371e24c78af047f1ec08b9d58659692.bindTooltip(
-                `<div>
-                     Schwullesbisches Archiv Hannover
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_05be14e08a1bd2daa956811bf3591a69 = L.marker(
-                [52.337562, 9.790149],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_f8c1057f8170bd184efb90041cd04403 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_94340bbdeaef6044b074377e038852b3 = $(`<div id=&quot;html_94340bbdeaef6044b074377e038852b3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q17353569' target='_blank'>Friedhofsmuseum Hannover</a></h3>         </div>`)[0];
-                popup_f8c1057f8170bd184efb90041cd04403.setContent(html_94340bbdeaef6044b074377e038852b3);
-            
-        
-
-        marker_05be14e08a1bd2daa956811bf3591a69.bindPopup(popup_f8c1057f8170bd184efb90041cd04403)
-        ;
-
-        
-    
-    
-            marker_05be14e08a1bd2daa956811bf3591a69.bindTooltip(
-                `<div>
-                     Friedhofsmuseum Hannover
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_cbdf52aee6cf585f7998e8966173c536 = L.marker(
-                [52.36549544, 9.740111115],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_f049e2131a7bbc2db90a328a4e5f6309 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_121f2ddb5bbf57dd4a93347ceb4a65f4 = $(`<div id=&quot;html_121f2ddb5bbf57dd4a93347ceb4a65f4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q314082' target='_blank'>Landesmuseum Hannover</a></h3>         </div>`)[0];
-                popup_f049e2131a7bbc2db90a328a4e5f6309.setContent(html_121f2ddb5bbf57dd4a93347ceb4a65f4);
-            
-        
-
-        marker_cbdf52aee6cf585f7998e8966173c536.bindPopup(popup_f049e2131a7bbc2db90a328a4e5f6309)
-        ;
-
-        
-    
-    
-            marker_cbdf52aee6cf585f7998e8966173c536.bindTooltip(
-                `<div>
-                     Landesmuseum Hannover
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_275432e02a9f28ec2ed04d081327eda0 = L.marker(
-                [52.37769, 9.67258],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_2a689339c70c6d3332b9f3dcec364789 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_c60c7ff1eb1d674a12537e418be7b38b = $(`<div id=&quot;html_c60c7ff1eb1d674a12537e418be7b38b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q76636143' target='_blank'>Gedenkstätte Ahlem</a></h3>         </div>`)[0];
-                popup_2a689339c70c6d3332b9f3dcec364789.setContent(html_c60c7ff1eb1d674a12537e418be7b38b);
-            
-        
-
-        marker_275432e02a9f28ec2ed04d081327eda0.bindPopup(popup_2a689339c70c6d3332b9f3dcec364789)
-        ;
-
-        
-    
-    
-            marker_275432e02a9f28ec2ed04d081327eda0.bindTooltip(
-                `<div>
-                     Gedenkstätte Ahlem
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_2f707b8c261fac7b4cca80f5391684a1 = L.marker(
-                [52.373014, 9.707684],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_96c0d03be0b4a1c138250873539ef0fa = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_ed5165a6a5bc6264ebf0b56fdb7fd3f0 = $(`<div id=&quot;html_ed5165a6a5bc6264ebf0b56fdb7fd3f0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q15108126' target='_blank'>Buchdruck-Museum</a></h3>         </div>`)[0];
-                popup_96c0d03be0b4a1c138250873539ef0fa.setContent(html_ed5165a6a5bc6264ebf0b56fdb7fd3f0);
-            
-        
-
-        marker_2f707b8c261fac7b4cca80f5391684a1.bindPopup(popup_96c0d03be0b4a1c138250873539ef0fa)
-        ;
-
-        
-    
-    
-            marker_2f707b8c261fac7b4cca80f5391684a1.bindTooltip(
-                `<div>
-                     Buchdruck-Museum
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_777329252dc6537f8691f46c1c4f3219 = L.marker(
-                [52.37601, 9.72684],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_3d21682efe331b63d5f4f8dfb0bbf9cf = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_efe467d9f2fabc60658111a5a1dc3443 = $(`<div id=&quot;html_efe467d9f2fabc60658111a5a1dc3443&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q22692203' target='_blank'>Hannover Trade and Industry Museum</a></h3>         </div>`)[0];
-                popup_3d21682efe331b63d5f4f8dfb0bbf9cf.setContent(html_efe467d9f2fabc60658111a5a1dc3443);
-            
-        
-
-        marker_777329252dc6537f8691f46c1c4f3219.bindPopup(popup_3d21682efe331b63d5f4f8dfb0bbf9cf)
-        ;
-
-        
-    
-    
-            marker_777329252dc6537f8691f46c1c4f3219.bindTooltip(
-                `<div>
-                     Hannover Trade and Industry Museum
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_d7ea5435b586aaaf6ff1b65e9cee9e53 = L.marker(
-                [52.3625, 9.80483],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_53737c45f778481aeddde8714c3d6078 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_5484d363845efe9394cca9c22bd7c848 = $(`<div id=&quot;html_5484d363845efe9394cca9c22bd7c848&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q884264' target='_blank'>Blindenmuseum</a></h3>         </div>`)[0];
-                popup_53737c45f778481aeddde8714c3d6078.setContent(html_5484d363845efe9394cca9c22bd7c848);
-            
-        
-
-        marker_d7ea5435b586aaaf6ff1b65e9cee9e53.bindPopup(popup_53737c45f778481aeddde8714c3d6078)
-        ;
-
-        
-    
-    
-            marker_d7ea5435b586aaaf6ff1b65e9cee9e53.bindTooltip(
-                `<div>
-                     Blindenmuseum
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_51f79dc36cba89cc880ea0301571ba35 = L.marker(
-                [52.369166666, 9.722777777],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_405aba935b4b7937d2da24e5e0d6a94f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_fd955f31eae9b5b8791717e1468e8687 = $(`<div id=&quot;html_fd955f31eae9b5b8791717e1468e8687&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q40387600' target='_blank'>Museum für Energiegeschichte(n)</a></h3>         </div>`)[0];
-                popup_405aba935b4b7937d2da24e5e0d6a94f.setContent(html_fd955f31eae9b5b8791717e1468e8687);
-            
-        
-
-        marker_51f79dc36cba89cc880ea0301571ba35.bindPopup(popup_405aba935b4b7937d2da24e5e0d6a94f)
-        ;
-
-        
-    
-    
-            marker_51f79dc36cba89cc880ea0301571ba35.bindTooltip(
-                `<div>
-                     Museum für Energiegeschichte(n)
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_1a73dcad581b6ac7ace0568523478d89 = L.marker(
-                [52.36885, 9.76508],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_5be385238cbaa43e2eb1720d600c8858 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_cafcc6cc6a7d131b79bb115142f8f87d = $(`<div id=&quot;html_cafcc6cc6a7d131b79bb115142f8f87d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q28939753' target='_blank'>Veterinärmedizinhistorisches Museum der Tierärztlichen Hochschule Hannover</a></h3>         </div>`)[0];
-                popup_5be385238cbaa43e2eb1720d600c8858.setContent(html_cafcc6cc6a7d131b79bb115142f8f87d);
-            
-        
-
-        marker_1a73dcad581b6ac7ace0568523478d89.bindPopup(popup_5be385238cbaa43e2eb1720d600c8858)
-        ;
-
-        
-    
-    
-            marker_1a73dcad581b6ac7ace0568523478d89.bindTooltip(
-                `<div>
-                     Veterinärmedizinhistorisches Museum der Tierärztlichen Hochschule Hannover
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_0018866c3ca67e2cba01a130dbd0207a = L.marker(
-                [52.326549, 9.850824],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_0f75612af72dd63f60513d4726818f61 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_4a50faae74645483ab8f18551c9f92b0 = $(`<div id=&quot;html_4a50faae74645483ab8f18551c9f92b0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q76636148' target='_blank'>Heimatmuseum der Bürgergemeinschaft Wülferode</a></h3>         </div>`)[0];
-                popup_0f75612af72dd63f60513d4726818f61.setContent(html_4a50faae74645483ab8f18551c9f92b0);
-            
-        
-
-        marker_0018866c3ca67e2cba01a130dbd0207a.bindPopup(popup_0f75612af72dd63f60513d4726818f61)
-        ;
-
-        
-    
-    
-            marker_0018866c3ca67e2cba01a130dbd0207a.bindTooltip(
-                `<div>
-                     Heimatmuseum der Bürgergemeinschaft Wülferode
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_3e7a7d0abb244614c9fde8e2713dcaea = L.marker(
-                [52.39088, 9.69983],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_e168631a4549369e5380aaa58d9eb08b = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_21c878ff88558ac9481b8d5b559c0968 = $(`<div id=&quot;html_21c878ff88558ac9481b8d5b559c0968&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q98809154' target='_blank'>Galeriegebäude Herrenhausen</a></h3>         </div>`)[0];
-                popup_e168631a4549369e5380aaa58d9eb08b.setContent(html_21c878ff88558ac9481b8d5b559c0968);
-            
-        
-
-        marker_3e7a7d0abb244614c9fde8e2713dcaea.bindPopup(popup_e168631a4549369e5380aaa58d9eb08b)
-        ;
-
-        
-    
-    
-            marker_3e7a7d0abb244614c9fde8e2713dcaea.bindTooltip(
-                `<div>
-                     Galeriegebäude Herrenhausen
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_2f20861ad95e705d83db4d6844c037e9 = L.marker(
-                [52.386746658, 9.719721581],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_e80a4e484c49ba380f7751fcdc32db7b = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_e79d05ff05a0867e5a3946a806ff4870 = $(`<div id=&quot;html_e79d05ff05a0867e5a3946a806ff4870&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q131862526' target='_blank'>Q131862526</a></h3>         </div>`)[0];
-                popup_e80a4e484c49ba380f7751fcdc32db7b.setContent(html_e79d05ff05a0867e5a3946a806ff4870);
-            
-        
-
-        marker_2f20861ad95e705d83db4d6844c037e9.bindPopup(popup_e80a4e484c49ba380f7751fcdc32db7b)
-        ;
-
-        
-    
-    
-            marker_2f20861ad95e705d83db4d6844c037e9.bindTooltip(
-                `<div>
-                     Q131862526
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_a71387e906fe7a90188e6f0762021815 = L.marker(
-                [52.422954, 9.732118],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_05f3ab9da1ef347e43ca8bf9087f0f46 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_d2de7449b37faa7327ae8ef2d38ba67c = $(`<div id=&quot;html_d2de7449b37faa7327ae8ef2d38ba67c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q125123870' target='_blank'>Sammlungszentrum Hannover</a></h3>         </div>`)[0];
-                popup_05f3ab9da1ef347e43ca8bf9087f0f46.setContent(html_d2de7449b37faa7327ae8ef2d38ba67c);
-            
-        
-
-        marker_a71387e906fe7a90188e6f0762021815.bindPopup(popup_05f3ab9da1ef347e43ca8bf9087f0f46)
-        ;
-
-        
-    
-    
-            marker_a71387e906fe7a90188e6f0762021815.bindTooltip(
-                `<div>
-                     Sammlungszentrum Hannover
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_87b57e29980f474e3cada48125be26db = L.marker(
-                [52.32099, 9.81883],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_6bb31b3d7cea13dd9534ff044fdd26be = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_a44232d04755c5b17a2f221f8da0f90d = $(`<div id=&quot;html_a44232d04755c5b17a2f221f8da0f90d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q22080297' target='_blank'>EXPOSEEUM</a></h3>         </div>`)[0];
-                popup_6bb31b3d7cea13dd9534ff044fdd26be.setContent(html_a44232d04755c5b17a2f221f8da0f90d);
-            
-        
-
-        marker_87b57e29980f474e3cada48125be26db.bindPopup(popup_6bb31b3d7cea13dd9534ff044fdd26be)
-        ;
-
-        
-    
-    
-            marker_87b57e29980f474e3cada48125be26db.bindTooltip(
-                `<div>
-                     EXPOSEEUM
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_f0bbdd4fcf00b9e851fdbe91dcb6c12d = L.marker(
-                [52.36889, 9.73827],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_3c6a3a1895fdd894b360f0a01b5773a2 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_664cc882fb142d5957b86c11988fa3aa = $(`<div id=&quot;html_664cc882fb142d5957b86c11988fa3aa&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q108430713' target='_blank'>ZeitZentrum Zivilcourage</a></h3>         </div>`)[0];
-                popup_3c6a3a1895fdd894b360f0a01b5773a2.setContent(html_664cc882fb142d5957b86c11988fa3aa);
-            
-        
-
-        marker_f0bbdd4fcf00b9e851fdbe91dcb6c12d.bindPopup(popup_3c6a3a1895fdd894b360f0a01b5773a2)
-        ;
-
-        
-    
-    
-            marker_f0bbdd4fcf00b9e851fdbe91dcb6c12d.bindTooltip(
-                `<div>
-                     ZeitZentrum Zivilcourage
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_53914f0a764782e22453b18d2fdce557 = L.marker(
-                [52.3736, 9.72735],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_158c9e581df912dcdb4b82713b933b20 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_c61d05525a1e896f41094c2c24fdb634 = $(`<div id=&quot;html_c61d05525a1e896f41094c2c24fdb634&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q1802291' target='_blank'>Landeskirchliches Archiv Hannover</a></h3>         </div>`)[0];
-                popup_158c9e581df912dcdb4b82713b933b20.setContent(html_c61d05525a1e896f41094c2c24fdb634);
-            
-        
-
-        marker_53914f0a764782e22453b18d2fdce557.bindPopup(popup_158c9e581df912dcdb4b82713b933b20)
-        ;
-
-        
-    
-    
-            marker_53914f0a764782e22453b18d2fdce557.bindTooltip(
-                `<div>
-                     Landeskirchliches Archiv Hannover
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_e3e1da34bf3a7a32fc7b55ec20f75c20 = L.marker(
-                [52.3692, 9.73838],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_0061e1d233b884a9dc8fcc70e5813c21 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_076e08aae7558f203d5a4b879d625dd4 = $(`<div id=&quot;html_076e08aae7558f203d5a4b879d625dd4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q2359938' target='_blank'>Städtische Galerie Kubus</a></h3>         </div>`)[0];
-                popup_0061e1d233b884a9dc8fcc70e5813c21.setContent(html_076e08aae7558f203d5a4b879d625dd4);
-            
-        
-
-        marker_e3e1da34bf3a7a32fc7b55ec20f75c20.bindPopup(popup_0061e1d233b884a9dc8fcc70e5813c21)
-        ;
-
-        
-    
-    
-            marker_e3e1da34bf3a7a32fc7b55ec20f75c20.bindTooltip(
-                `<div>
-                     Städtische Galerie Kubus
-                 </div>`,
-                {&quot;sticky&quot;: true}
-            );
-        
-    
-            var marker_5cc075d847008643e1ab03c6760b2104 = L.marker(
-                [52.32057, 9.81534],
-                {}
-            ).addTo(map_e8e9d20f1b6a5c4455768c6983ff1ad9);
-        
-    
-        var popup_2043b9b1bc831d5b99cbcaf484a9c610 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-        
-            
-                var html_4415e002a6812781f4ef54937a699a94 = $(`<div id=&quot;html_4415e002a6812781f4ef54937a699a94&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><h3><a href='http://www.wikidata.org/entity/Q28737509' target='_blank'>Kulturarchiv an der Hochschule Hannover, Dokumentations- und Forschungsstelle Medien</a></h3>         </div>`)[0];
-                popup_2043b9b1bc831d5b99cbcaf484a9c610.setContent(html_4415e002a6812781f4ef54937a699a94);
-            
-        
-
-        marker_5cc075d847008643e1ab03c6760b2104.bindPopup(popup_2043b9b1bc831d5b99cbcaf484a9c610)
-        ;
-
-        
-    
-    
-            marker_5cc075d847008643e1ab03c6760b2104.bindTooltip(
-                `<div>
-                     Kulturarchiv an der Hochschule Hannover, Dokumentations- und Forschungsstelle Medien
+                     Schloss Weikersheim
                  </div>`,
                 {&quot;sticky&quot;: true}
             );
@@ -793,7 +268,6 @@ ul.task-list li input[type="checkbox"] {
 </html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
 
 
-</section>
 
 
 <script id="quarto-html-after-body" type="application/javascript">
