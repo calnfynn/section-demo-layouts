@@ -105,9 +105,11 @@
 \usepackage{contour}
 \usepackage{imakeidx}
 \usepackage{ragged2e} % text alignment
+\usepackage{titlesec}
+\usepackage{titling}   % Für den Dokumenttitel
 
 
-
+\setcounter{tocdepth}{0}
 \makeindex[intoc=true]
 \onehalfspacing % line spacing
 \setlength{\parskip}{1.5em}
@@ -122,6 +124,41 @@
     ItalicFont=*-Italic,
     BoldItalicFont=*-BoldItalic
 ]
+
+% Überschriften-Schrift aus Datei laden (Pfad anpassen falls nötig)
+\newfontfamily\headingfont{Kanit}[
+    Path=./fonts/Kanit/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-SemiBold, 
+    ItalicFont = *-Italic, 
+    BoldItalicFont = *-SemiBoldItalic
+]  
+
+% Titel-Stil ändern
+\pretitle{\begin{center}\headingfont\Huge\bfseries}
+    \posttitle{\end{center}}
+    \preauthor{\begin{center}\headingfont\Large}
+    \postauthor{\end{center}}
+    \predate{\begin{center}\headingfont\large}
+    \postdate{\end{center}}
+    
+    % Kapitel-Formatierung ändern
+    \titleformat{\chapter}[display]
+      {\headingfont\Huge\bfseries}  % Stil der Kapitelüberschrift
+      {\chaptername\ \thechapter}{10pt}{\headingfont}
+    
+    % Part-Formatierung ändern
+    \titleformat{\part}
+      {\headingfont\Huge\bfseries}  % Stil für Parts
+      {\thepart}{20pt}{}
+    
+
+% Überschriften-Formatierung
+\titleformat{\section}{\headingfont\LARGE\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\headingfont\Large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\headingfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -193,7 +230,7 @@
 
 \title{Der Große Saal}
 \author{CPS}
-\date{2025-03-04}
+\date{2025-03-05}
 
 \begin{document}
   \begin{frontmatter}
@@ -229,7 +266,8 @@
   \centering
 
   % Title and subtitle
-  {\Huge\bfseries\nohyphens{Der Große Saal}}\\[1\baselineskip]
+  {\headingfont\Huge\bfseries\nohyphens{Der Große
+  Saal}}\\[1\baselineskip]
 
   \end{tcolorbox}
 
@@ -276,6 +314,10 @@
   }
   \end{tcolorbox}
   \end{titlepage}
+  \pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/88x31.png}}\\
+  This work is licensed under a
+  \href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{Creative
+  Commons Attribution-NonCommercial-NoDerivs 4.0 International License}.
   \end{frontmatter}
 
 
@@ -341,7 +383,7 @@ Balthasar Katzenberger. Nach 1708 kamen von Christian Thalwitzer im Saal
 und in mehreren Appartements bemalte Lambris mit jeweils eigenständigen
 Zyklen hinzu.
 
-\subsection{Zitierempfehlung:}\label{zitierempfehlung}
+\section{Zitierempfehlung:}\label{zitierempfehlung}
 
 Seeger, Ulrike: Weikersheim, Residenzschloss, in: Corpus der barocken
 Deckenmalerei in Deutschland, hg. von Stephan Hoppe, Hubert Locher und
@@ -349,8 +391,12 @@ Matteo Burioni, München 2020, URL:
 \href{https://www.deckenmalerei.eu/42d06165-58e7-4653-bfe4-3d5f7091fc33}{www.deckenmalerei.eu/42d06165-58e7-4653-bfe4-3d5f7091fc33},
 letzter Zugriff: 2025-03-03
 
-This work is licensed under a Creative Commons
-Attribution-NonCommercial-NoDerivs 4.0 International License.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/88x31.png}}
+This work is licensed under a
+\href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{Creative
+Commons Attribution-NonCommercial-NoDerivs 4.0 International License}.
 
 \bookmarksetup{startatroot}
 
@@ -373,21 +419,22 @@ Name 3, \emph{University Z}, \href{https://orcid.org/}{Orchid}
 \chapter{Raum: Der Große Saal
 (Rittersaal)}\label{raum-der-grouxdfe-saal-rittersaal}
 
-\chapter{Bau-, Ausstattungs- und
+\section{Bau-, Ausstattungs- und
 Funktionsgeschichte}\label{bau--ausstattungs--und-funktionsgeschichte}
 
 Die hervorragend erhaltene wandfeste Ausstattung des Großen Saals, der
-1639 als „großer Saahl`` {[}1{]} geführt wurde und seinen heute
-geläufigen Namen Rittersaal erst im Nachhinein erhielt, datiert aus den
-Jahren 1601 bis 1605. Am Beginn stand den Quellen zufolge der
-monumentale Saalkamin. Der Vertrag mit dem Bildhauer Michael Juncker aus
-Miltenberg datiert vom 7. September 1601.{[}2{]} Im November 1601 wurden
-mit Balthasar Katzenberger die Deckengemälde verdingt, der die Arbeiten
-13 Monate später Anno 1602 abschloss.{[}3{]} 1603 signierte und datierte
-der Kalkschneider Gerhard Schmidt das Portal an der inneren
-Ostseite.{[}4{]} Die Jahreszahl 1605 zusammen mit den Initialen CL für
-den Kalkschneider Christoph Limmerich über der Tür zum Altan markieren
-den Abschluss der Arbeiten.{[}5{]}
+1639 als „großer Saahl``
+\href{https://www.deckenmalerei.eu/edit/451519cf-21f1-45da-b455-d7e7268ed471\#_ftn1}{{[}1{]}}
+geführt wurde und seinen heute geläufigen Namen Rittersaal erst im
+Nachhinein erhielt, datiert aus den Jahren 1601 bis 1605. Am Beginn
+stand den Quellen zufolge der monumentale Saalkamin. Der Vertrag mit dem
+Bildhauer Michael Juncker aus Miltenberg datiert vom 7. September
+1601.{[}2{]} Im November 1601 wurden mit Balthasar Katzenberger die
+Deckengemälde verdingt, der die Arbeiten 13 Monate später Anno 1602
+abschloss.{[}3{]} 1603 signierte und datierte der Kalkschneider Gerhard
+Schmidt das Portal an der inneren Ostseite.{[}4{]} Die Jahreszahl 1605
+zusammen mit den Initialen CL für den Kalkschneider Christoph Limmerich
+über der Tür zum Altan markieren den Abschluss der Arbeiten.{[}5{]}
 
 Seit 1710/11 wurde der Saal unter Graf Carl Ludwig behutsam dem barocken
 Zeitgeschmack angepasst und inhaltlich vom Jagd- zum gräflichen
@@ -408,8 +455,7 @@ ganzfigurigen Porträts männlicher Vorfahren zum Teil in Ritterrüstung,
 die dem Rittersaal seinen heutigen Namen gaben, schuf bereits 1710 Peter
 Franz Tassaert aus Rothenburg.{[}9{]}
 
-\section{\texorpdfstring{\textbf{Beschreibung des
-Raumes}}{Beschreibung des Raumes}}\label{beschreibung-des-raumes}
+\section{Beschreibung des Raumes}\label{beschreibung-des-raumes}
 
 Der 36,4 Meter lange, 11,7 Meter breite und 8,25 Meter hohe Saal{[}10{]}
 wird durch hohe segmentbogenförmige Fensternischen gegliedert, deren
@@ -525,9 +571,9 @@ seine Gemahlin Anna von Österreich-Tirol starb 1618. Die Gemälde
 stammten demnach aus der Zeit des Grafen Georg Friedrich von
 Hohenlohe-Weikersheim, der mit Eva von Waldstein verheiratet war.
 
-{[}1{]} HZAN La 130 Bü 152, Schadensinventar von 1639. Die Kenntnis und
-die Transkription dieser Archivalie verdankt die Autorin Frieder
-Leipold.
+\href{https://www.deckenmalerei.eu/edit/451519cf-21f1-45da-b455-d7e7268ed471\#_ftnref1}{{[}1{]}}
+HZAN La 130 Bü 152, Schadensinventar von 1639. Die Kenntnis und die
+Transkription dieser Archivalie verdankt die Autorin Frieder Leipold.
 
 {[}2{]} Der erhaltene Vertrag (HZAN We 50 D6) in Transkription bei
 Freeden, Kamin, 1950, S. 144--145. Bezahlt wurde Juncker im Oktober
@@ -606,14 +652,70 @@ dem die Ledertapeten verkürzt als „tappezereien von gold`` bezeichnet
 wurden, was Käpplinger in Unkenntnis des Vorgängerinventars als textile
 Wandbespannungen deutete.
 
-\chapter{Gallery Full Image}\label{gallery-full-image}
+\chapter{Bildergallerie}\label{bildergallerie}
+
+\begin{figure}[H]    
+\includegraphics[height=10cm]{./images/fmd10005862a.jpg}
+\caption{Knight's Hall + Room 72 - to the west}
+\label{fig:{https://previous.bildindex.de/bilder/fmd10005862a.jpg}}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[H]    
+\includegraphics[height=10cm]{./images/fmd10005864a.jpg}
+\caption{Lion couple – general view}
+\label{fig:{https://previous.bildindex.de/bilder/fmd10005864a.jpg}}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[H]    
+\includegraphics[height=10cm]{./images/fmd10005865a.jpg}
+\caption{Bear – general view}
+\label{fig:{https://previous.bildindex.de/bilder/fmd10005865a.jpg}}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[H]    
+\includegraphics[height=10cm]{./images/fmd10005867a.jpg}
+\caption{Monkey – general view}
+\label{fig:{https://previous.bildindex.de/bilder/fmd10005867a.jpg}}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[H]    
+\includegraphics[height=10cm]{./images/fmd10005866a.jpg}
+\caption{Deer pairs – general view}
+\label{fig:{https://previous.bildindex.de/bilder/fmd10005866a.jpg}}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[H]    
+\includegraphics[height=10cm]{./images/fmd10005859a.jpg}
+\caption{Knight's Hall + Room 72 - to the east}
+\label{fig:{https://previous.bildindex.de/bilder/fmd10005859a.jpg}}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[H]    
+\includegraphics[height=10cm]{./images/fmd10005860a.jpg}
+\caption{Knight's Hall + Room 72 - to the east}
+\label{fig:{https://previous.bildindex.de/bilder/fmd10005860a.jpg}}
+\end{figure}
+
+\clearpage
 
 \phantomsection\label{infogrid}
 \phantomsection\label{paintingName}
 
 \phantomsection\label{paintingYear}
 
-\phantomsection\label{paintingSize}{} {Wikidata}
+{ }
 
 \chapter{List of Items}\label{list-of-items}
 
@@ -677,7 +779,7 @@ text
     width=\dimexpr\textwidth\relax, 
     boxsep=15pt, % spacing between boxes
     arc=0pt, % no rounded edges
-    opacityback=0.35, % translucent-ish background
+    opacityback=0, % translucent-ish background
     fontupper=\color{white}, % fontcolor
     fontlower=\color{white}
     }
@@ -703,12 +805,8 @@ text
 \begin{tcolorbox}
 \centering
 
-%%%%%% Tagline at bottom
-{
-  TIB\\
-  Open Science Lab
-}
-\end{tcolorbox}
 
+\end{tcolorbox}
+\pagenumbering{gobble}
 
 \end{document}

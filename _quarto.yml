@@ -33,7 +33,6 @@ book:
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: [issue]
   downloads: [pdf,docx]
-  #downloads: [pdf]
   navbar:
     background: primary
     search: true
@@ -41,17 +40,20 @@ book:
       - text: "Contributors"
         href: contributors.html
       - text: "Map"
-        href: section-map.ipynb
+        href: section-map.html
       - text: "Full Image"
         href: section-fullimg.html
       - text: "About the Room"
         href: roomtext.html
       - text: "Data Visualisation"
         href: datavis.html
-
-  sidebar: false
-
-
+  sidebar: 
+    logo: none
+  bread-crumbs: false
+  page-footer: | 
+    ![](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png){fig-alt='Creative Commons License'}  
+    This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
+  page-navigation: true
 
 # Quarto allows commenting using either Hypothesis or Utterances
 # https://quarto.org/docs/reference/projects/books.html#comments
@@ -81,7 +83,7 @@ format:
     #extract-media: ./images
     code-overflow: wrap
 #    embed-resources: true
-    page-layout: custom
+  #  page-layout: custom
   # options for PDF output 
   # https://quarto.org/docs/reference/formats/pdf.html
   pdf:
@@ -97,8 +99,9 @@ format:
       - left=25mm
       - heightrounded
     classoption: openany 
-    toc-depth: 2
-    toc-title: Inhaltsverzeichnis
+    copyright: |
+      ![](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png){fig-alt='Creative Commons License'}  
+      This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
     #fontsize: 12pt
     papersize: a4
     include-in-header: in-header.tex

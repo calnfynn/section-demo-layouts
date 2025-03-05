@@ -13,7 +13,7 @@
     width=\dimexpr\textwidth\relax, 
     boxsep=15pt, % spacing between boxes
     arc=0pt, % no rounded edges
-    opacityback=0.35, % translucent-ish background
+    opacityback=0, % translucent-ish background
     fontupper=\color{white}, % fontcolor
     fontlower=\color{white}
     }
@@ -44,13 +44,9 @@ $endif$
 \begin{tcolorbox}
 \centering
 
-%%%%%% Tagline at bottom
-{
-  TIB\\
-  Open Science Lab
-}
-\end{tcolorbox}
 
+\end{tcolorbox}
+\pagenumbering{gobble}
 $if(titlepage-geometry)$
   \restoregeometry
 $endif$

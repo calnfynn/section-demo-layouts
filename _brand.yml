@@ -12,8 +12,9 @@ logo:
 
 typography:
   fonts:
-    - family: Sigmar
+    - family: Kanit
       source: google
+      weight: 600
   #     files: 
   #       - path: fonts/Asgard/Asgard-Regular-trial.woff2
   #       - path: fonts/Asgard/Asgard-Regular-Italic-trial.woff2
@@ -37,4 +38,4 @@ typography:
   #   - family: Original Surfer
   #     source: google
   base: Lato
-  headings: Sigmar
+  headings: Kanit

@@ -48,10 +48,11 @@ letzte Bearbeitung: 2023-10-16, 14:28
 
 Den Rittersaal von Schloss Weikersheim überspannt seit 1602 eine Decke mit 69 hierarchisch geordneten Jagdszenen des Würzburger Malers Balthasar Katzenberger. Nach 1708 kamen von Christian Thalwitzer im Saal und in mehreren Appartements bemalte Lambris mit jeweils eigenständigen Zyklen hinzu.
 
-### Zitierempfehlung:
+## Zitierempfehlung:
 
 Seeger, Ulrike: Weikersheim, Residenzschloss, in: Corpus der barocken Deckenmalerei in Deutschland, hg. von Stephan Hoppe, Hubert Locher und Matteo Burioni, München 2020, URL: [www.deckenmalerei.eu/42d06165-58e7-4653-bfe4-3d5f7091fc33](https://www.deckenmalerei.eu/42d06165-58e7-4653-bfe4-3d5f7091fc33), letzter Zugriff: 2025-03-03
 
 ---
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License</a>.
+![](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png){fig-alt="Creative Commons License"}
+This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
