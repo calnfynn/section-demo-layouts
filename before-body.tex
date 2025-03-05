@@ -3,13 +3,16 @@ $if(copyright)$
   \begin{titlepage}
   $_titlepage.tex()$
   \end{titlepage}
-  $copyright$
+  % $copyright$
   \end{frontmatter}
 
 $else$
+  \begin{frontmatter}
   \begin{titlepage}
   $_titlepage.tex()$
   \end{titlepage}
+  \end{frontmatter}
+
 $endif$
 
 \tableofcontents

@@ -45,10 +45,10 @@ $endif$
 
 % Authors
 \begin{tcolorbox}
-
+\centering
 $if(by-author/allbutlast)$
   $for(by-author/allbutlast)$
-    {\large{$by-author.name.literal$}}$for(by-author.affiliations)${\textsuperscript{$it.number$}}$sep$\textsuperscript{,}$endfor$%
+    {\centering\large{$by-author.name.literal$}}$for(by-author.affiliations)${\textsuperscript{$it.number$}}$sep$\textsuperscript{,}$endfor$%
   $if(by-author.email)$%
   $if(by-author.affiliations)$\textsuperscript{,}$endif$%
   {\textsuperscript{*}}%
@@ -56,7 +56,7 @@ $if(by-author/allbutlast)$
   $sep$, 
   $endfor$
   $for(by-author/last)$%
-    { and \large{$by-author.name.literal$}}%
+    {\centering and \large{$by-author.name.literal$}}%
   $for(by-author.affiliations)${\textsuperscript{$it.number$}}$sep$\textsuperscript{,}%
   $endfor$%
   $if(by-author.email)$%
@@ -66,7 +66,7 @@ $if(by-author/allbutlast)$
   $endfor$
   $else$
   $for(by-author/last)$%
-    {\large{$by-author.name.literal$}}%
+    {\centering\large{$by-author.name.literal$}}%
     $for(by-author.affiliations)$%
     {\textsuperscript{$it.number$}}$sep$\textsuperscript{,}$endfor$%
   $if(by-author.email)$%
@@ -127,8 +127,7 @@ $endif$
 
 %%%%%% Tagline at bottom
 {
-  TIB\\
-  Open Science Lab
+  Publikationsprototyp aus dem Open Science Lab der TIB
 }
 \end{tcolorbox}
 

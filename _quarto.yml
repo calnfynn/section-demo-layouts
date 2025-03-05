@@ -6,53 +6,48 @@ project:
 # https://quarto.org/docs/reference/projects/books.html
 book:
   title: "Der Große Saal" 
-  author: "CPS"
+  author: 
+    - name: "Computational Publishing Service (CPS)"
+      affiliations: 
+        - "Open Science Lab"
+        - "TIB"
+  doi: "10.5281/zenodo.14974149"
   date: today
   favicon: ./images/cps-logo.svg
   # this section determines which files will be added to the book as chapters
   chapters:
     - index.qmd
+    - roomtext.ipynb
+    - section-fullimg.ipynb
+    - section-map.ipynb
+    - datavis.ipynb
     - contributors.ipynb
-    #- section-map.ipynb
-    #- section-fullimg.ipynb
-    #- section-grid.ipynb
-    - part: "Schloss Weikersheim"
-      chapters: 
-        - section-map.ipynb
-    - part: "Der Große Saal"
-      chapters: 
-        - roomtext.ipynb
-        #- section-masonry.ipynb
-        - section-fullimg.ipynb
-        #- conceptforPDF.ipynb
-        - cataloguesection.ipynb
-        - datavis.ipynb
 
 
   cover-image: images/fmd10024322a.jpg
   repo-url: https://github.com/calnfynn/section-demo-layouts
-  repo-actions: [issue]
+  repo-actions: issue
   downloads: [pdf,docx]
   navbar:
     background: primary
     search: true
     left:
-      - text: "Contributors"
-        href: contributors.html
-      - text: "Map"
-        href: section-map.html
-      - text: "Full Image"
-        href: section-fullimg.html
-      - text: "About the Room"
+      - text: "Texte"
         href: roomtext.html
-      - text: "Data Visualisation"
+      - text: "Galerie"
+        href: section-fullimg.html
+      - text: "Karte"
+        href: section-map.html
+      - text: "Data Vis"
         href: datavis.html
+      - text: "Kolophon"
+        href: contributors.html
   sidebar: 
     logo: none
   bread-crumbs: false
-  page-footer: | 
-    ![](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png){fig-alt='Creative Commons License'}  
-    This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
+  # page-footer: | 
+  #   ![](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png){fig-alt='Creative Commons License'}  
+  #   This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
   page-navigation: true
 
 # Quarto allows commenting using either Hypothesis or Utterances
@@ -99,15 +94,17 @@ format:
       - left=25mm
       - heightrounded
     classoption: openany 
-    copyright: |
-      ![](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png){fig-alt='Creative Commons License'}  
-      This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
-    #fontsize: 12pt
+    # copyright: |
+    #   ![](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png){fig-alt='Creative Commons License'}  
+    #   This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+    # #fontsize: 12pt
     papersize: a4
     include-in-header: in-header.tex
     include-after-body: 
       text: |
         \printindex
+    urlcolor: darkgray
+    linkcolor: darkgray
     # title-boxcolor: gray!15!black
     # title-boxopacity: 0
     # title-boxfontcolor: black

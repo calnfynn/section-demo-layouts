@@ -1,6 +1,7 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
   a4paper,
@@ -222,14 +223,18 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Der Große Saal},
-  pdfauthor={CPS},
+  pdfauthor={Computational Publishing Service (CPS)},
   pdflang={de},
-  hidelinks,
+  colorlinks=true,
+  linkcolor={darkgray},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={darkgray},
   pdfcreator={LaTeX via pandoc}}
 
 
 \title{Der Große Saal}
-\author{CPS}
+\author{Computational Publishing Service (CPS)}
 \date{2025-03-05}
 
 \begin{document}
@@ -275,10 +280,12 @@
 
   % Authors
   \begin{tcolorbox}
-
+  \centering
     %
-      {\large{CPS}}%
+      {\centering\large{Computational Publishing Service (CPS)}}%
       %
+      {\textsuperscript{1}}\textsuperscript{,}%
+      {\textsuperscript{2}}%
     %
 
 
@@ -287,6 +294,15 @@
 
   \hangindent=1em
   \hangafter=1
+  %
+  {1}.~{Open Science Lab}%
+  %
+  %
+  \par\hangindent=1em\hangafter=1%
+  %
+  {2}.~{TIB}%
+  %
+  %
 
 
   %%%%%% Correspondence
@@ -309,15 +325,10 @@
 
   %%%%%% Tagline at bottom
   {
-    TIB\\
-    Open Science Lab
+    Publikationsprototyp aus dem Open Science Lab der TIB
   }
   \end{tcolorbox}
   \end{titlepage}
-  \pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/88x31.png}}\\
-  This work is licensed under a
-  \href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{Creative
-  Commons Attribution-NonCommercial-NoDerivs 4.0 International License}.
   \end{frontmatter}
 
 
@@ -339,7 +350,7 @@
 Name: Großer Saal (Rittersaal)
 
 ID:
-\href{https://www.deckenmalerei.eu/15685f4a-3727-4110-8967-1d8287431997}{15685f4a-3727-4110-8967-1d8287431997}
+\href{https://www.deckenmalerei.eu/15685f4a-3727-4110-8967-1d8287431997}{https://www.deckenmalerei.eu}
 
 Typ: Raum
 
@@ -383,38 +394,25 @@ Balthasar Katzenberger. Nach 1708 kamen von Christian Thalwitzer im Saal
 und in mehreren Appartements bemalte Lambris mit jeweils eigenständigen
 Zyklen hinzu.
 
-\section{Zitierempfehlung:}\label{zitierempfehlung}
+\subsection{Prototyp der
+Veröffentlichung}\label{prototyp-der-veruxf6ffentlichung}
 
-Seeger, Ulrike: Weikersheim, Residenzschloss, in: Corpus der barocken
-Deckenmalerei in Deutschland, hg. von Stephan Hoppe, Hubert Locher und
-Matteo Burioni, München 2020, URL:
-\href{https://www.deckenmalerei.eu/42d06165-58e7-4653-bfe4-3d5f7091fc33}{www.deckenmalerei.eu/42d06165-58e7-4653-bfe4-3d5f7091fc33},
-letzter Zugriff: 2025-03-03
+Diese Veröffentlichung ist ein Prototyp des Computational Publishing
+Service des Open Science Lab der TIB. Der Prototyp ist eine
+Proof-of-Concept-Demonstration für die Verwendung von Jupyter Notebooks
+und Wikibase, um verknüpfte offene Daten automatisch zu einer
+Multiformat-Publikation zusammenzustellen und in einem akademischen
+Repositorium zu hinterlegen.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/88x31.png}}
+
 This work is licensed under a
 \href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{Creative
 Commons Attribution-NonCommercial-NoDerivs 4.0 International License}.
 
 \bookmarksetup{startatroot}
-
-\chapter{Contributors}\label{contributors}
-
-Name 1, \emph{University X}, \href{https://orcid.org/}{Orchid}
-
-Name 2, \emph{University Y}, \href{https://orcid.org/}{Orchid}
-
-Name 3, \emph{University Z}, \href{https://orcid.org/}{Orchid}
-
-\part{Schloss Weikersheim}
-
-\chapter{Karte}\label{karte}
-
-\pandocbounded{\includegraphics[keepaspectratio]{images/museumsmap.png}}
-
-\part{Der Große Saal}
 
 \chapter{Raum: Der Große Saal
 (Rittersaal)}\label{raum-der-grouxdfe-saal-rittersaal}
@@ -652,9 +650,12 @@ dem die Ledertapeten verkürzt als „tappezereien von gold`` bezeichnet
 wurden, was Käpplinger in Unkenntnis des Vorgängerinventars als textile
 Wandbespannungen deutete.
 
-\chapter{Bildergallerie}\label{bildergallerie}
+\bookmarksetup{startatroot}
 
-\begin{figure}[H]    
+\chapter{Galerie}\label{galerie}
+
+\begin{figure}[H]
+\centering
 \includegraphics[height=10cm]{./images/fmd10005862a.jpg}
 \caption{Knight's Hall + Room 72 - to the west}
 \label{fig:{https://previous.bildindex.de/bilder/fmd10005862a.jpg}}
@@ -662,7 +663,8 @@ Wandbespannungen deutete.
 
 \clearpage
 
-\begin{figure}[H]    
+\begin{figure}[H]
+\centering
 \includegraphics[height=10cm]{./images/fmd10005864a.jpg}
 \caption{Lion couple – general view}
 \label{fig:{https://previous.bildindex.de/bilder/fmd10005864a.jpg}}
@@ -670,7 +672,8 @@ Wandbespannungen deutete.
 
 \clearpage
 
-\begin{figure}[H]    
+\begin{figure}[H]
+\centering
 \includegraphics[height=10cm]{./images/fmd10005865a.jpg}
 \caption{Bear – general view}
 \label{fig:{https://previous.bildindex.de/bilder/fmd10005865a.jpg}}
@@ -678,7 +681,8 @@ Wandbespannungen deutete.
 
 \clearpage
 
-\begin{figure}[H]    
+\begin{figure}[H]
+\centering
 \includegraphics[height=10cm]{./images/fmd10005867a.jpg}
 \caption{Monkey – general view}
 \label{fig:{https://previous.bildindex.de/bilder/fmd10005867a.jpg}}
@@ -686,7 +690,8 @@ Wandbespannungen deutete.
 
 \clearpage
 
-\begin{figure}[H]    
+\begin{figure}[H]
+\centering
 \includegraphics[height=10cm]{./images/fmd10005866a.jpg}
 \caption{Deer pairs – general view}
 \label{fig:{https://previous.bildindex.de/bilder/fmd10005866a.jpg}}
@@ -694,7 +699,8 @@ Wandbespannungen deutete.
 
 \clearpage
 
-\begin{figure}[H]    
+\begin{figure}[H]
+\centering
 \includegraphics[height=10cm]{./images/fmd10005859a.jpg}
 \caption{Knight's Hall + Room 72 - to the east}
 \label{fig:{https://previous.bildindex.de/bilder/fmd10005859a.jpg}}
@@ -702,7 +708,8 @@ Wandbespannungen deutete.
 
 \clearpage
 
-\begin{figure}[H]    
+\begin{figure}[H]
+\centering
 \includegraphics[height=10cm]{./images/fmd10005860a.jpg}
 \caption{Knight's Hall + Room 72 - to the east}
 \label{fig:{https://previous.bildindex.de/bilder/fmd10005860a.jpg}}
@@ -717,47 +724,29 @@ Wandbespannungen deutete.
 
 { }
 
-\chapter{List of Items}\label{list-of-items}
+\bookmarksetup{startatroot}
 
-\begin{itemize}
-\tightlist
-\item
-  a
-\item
-  b
-\item
-  c
-\item
-  d
-\item
-  e
-\end{itemize}
+\chapter{Karte: Schloss Weikersheim}\label{karte-schloss-weikersheim}
 
-\chapter{Sources \& Data Models}\label{sources-data-models}
+\pandocbounded{\includegraphics[keepaspectratio]{images/museumsmap.png}}
 
-\begin{itemize}
-\tightlist
-\item
-  f
-\item
-  g
-\item
-  h
-\item
-  i
-\item
-  j
-\item
-  k
-\end{itemize}
+\bookmarksetup{startatroot}
 
-\chapter{Data Visualisation}\label{data-visualisation}
+\chapter{Data Vis}\label{data-vis}
 
-text
+\section{Einfaches Beziehungsmodell}\label{einfaches-beziehungsmodell}
 
-text
+\pandocbounded{\includegraphics[keepaspectratio]{./images/image__3_.png}}
 
-text
+\bookmarksetup{startatroot}
+
+\chapter{Kolophon}\label{kolophon}
+
+Name 1, \emph{University X}, \href{https://orcid.org/}{Orcid}
+
+Name 2, \emph{University Y}, \href{https://orcid.org/}{Orcid}
+
+Name 3, \emph{University Z}, \href{https://orcid.org/}{Orcid}
 
 
 \backmatter

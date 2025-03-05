@@ -59,7 +59,14 @@ thead, tbody, tfoot, tr, td, th, .table th, .table td {
 }
 
 #paintingName {
-  font-variant: small-caps;
+  /* font-variant: small-caps; */ 
   font-weight: bold;
   font-size: larger;
+}
+
+.allcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
 }
