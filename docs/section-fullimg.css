@@ -16,6 +16,12 @@
   justify-content: space-between;
 }
 
+.navig p {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
 .fixed-top {
   position: absolute;
 } 

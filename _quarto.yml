@@ -24,7 +24,7 @@ book:
     - contributors.ipynb
 
 
-  cover-image: images/fmd10024322a.jpg
+  cover-image: images/cover.jpg
   repo-url: https://github.com/calnfynn/section-demo-layouts
   repo-actions: issue
   downloads: [pdf,docx]
@@ -103,19 +103,17 @@ format:
     include-after-body: 
       text: |
         \printindex
-    urlcolor: darkgray
-    linkcolor: darkgray
+    urlcolor: CornflowerBlue
+    #linkcolor: blue
     # title-boxcolor: gray!15!black
     # title-boxopacity: 0
     # title-boxfontcolor: black
-    # boxlinks: true
-    keep-tex: true 
-    #extract-media: ./images
+    # keep-tex: true 
     template-partials:
       - "_titlepage.tex" 
       - "before-body.tex"
       - "after-body.tex"
-    title-bg-image: "images/fmd10024322a.jpg"
+    title-bg-image: "images/cover.jpg"
     title-bg-location: "LR"
     title-bg-size: "1.1"
 
