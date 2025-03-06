@@ -19,23 +19,7 @@ typography:
   #       - path: fonts/Asgard/Asgard-Regular-trial.woff2
   #       - path: fonts/Asgard/Asgard-Regular-Italic-trial.woff2
   #         style: italic
-  #       - path: fonts/Asgard/Asgard-Regular-Bold-Italic-trial.woff2
-  #         style: italic
-  #         weight: bold
-  #       - path: fonts/Asgard/Asgard-Regular-Bold-trial.woff2
-  #         weight: bold
     - family: Lato
       source: google
-  #     files: 
-  #       - path: https://www.dafont.com/boring-sans-a.charmap
-  #       - path: ./fonts/Boring-Sans/Boring-Sans-A-Italic-trial.ttf
-  #         style: italic
-  #       - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-Bold-Italic-trial.ttf
-  #         style: italic
-  #         weight: bold
-  #       - path: ./fonts/Boring-Sans/Boring-Sans-A-Regular-Bold-trial.ttf
-  #         weight: bold
-  #   - family: Original Surfer
-  #     source: google
   base: Lato
   headings: Kanit
